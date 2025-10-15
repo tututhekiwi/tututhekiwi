@@ -9,13 +9,13 @@
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://www.tututhekiwi.com/" />
 
-  <!-- FAVICON / TAB ICON (your uploaded coin at repo root) -->
+  <!-- FAVICON / TAB ICON -->
   <link rel="icon" href="/tutu-coin-512.png" type="image/png" sizes="32x32" />
   <link rel="icon" href="/tutu-coin-512.png" type="image/png" sizes="192x192" />
   <link rel="icon" href="/tutu-coin-512.png" type="image/png" sizes="512x512" />
   <link rel="apple-touch-icon" href="/tutu-coin-512.png" sizes="180x180" />
 
-  <!-- SOCIAL PREVIEW (your uploaded OG at repo root) -->
+  <!-- SOCIAL PREVIEW -->
   <meta property="og:title" content="Tutu the Kiwi — Official" />
   <meta property="og:description" content="Whanau-owned creativity from Aotearoa." />
   <meta property="og:type" content="website" />
@@ -27,9 +27,6 @@
   <meta name="twitter:title" content="Tutu the Kiwi — Official" />
   <meta name="twitter:description" content="Whanau-owned creativity from Aotearoa." />
   <meta name="twitter:image" content="https://www.tututhekiwi.com/og-tututhekiwi.png" />
-
-  <!-- Preload hero if present (safe even if missing) -->
-  <link rel="preload" as="image" href="/images/hero-tutu.jpg" imagesrcset="/images/hero-tutu.jpg 1200w, /images/hero-tutu@2x.jpg 2400w" imagesizes="100vw">
 
   <link rel="stylesheet" href="/styles.css" />
 </head>
@@ -55,7 +52,6 @@
         <p>Meet Tutu the Kiwi and our growing whanau of books and merch.</p>
         <a class="btn" href="#products">Shop the collection</a>
       </div>
-      <!-- CSS sets the background image to /images/hero-tutu.jpg if it exists -->
     </section>
 
     <!-- PRODUCTS GRID -->
@@ -63,21 +59,21 @@
       <h2 class="section-title">Featured</h2>
       <div class="grid">
         <article class="card">
-          <img src="/images/book-1.jpg" alt="Tutu Book One cover" loading="lazy" />
+          <img data-src="/images/book-1.jpg" alt="Tutu Book One cover" loading="lazy">
           <div class="card-body">
             <h3>Tutu Book One</h3>
             <p>First adventures with heart.</p>
           </div>
         </article>
         <article class="card">
-          <img src="/images/book-2.jpg" alt="Tutu Book Two cover" loading="lazy" />
+          <img data-src="/images/book-2.jpg" alt="Tutu Book Two cover" loading="lazy">
           <div class="card-body">
             <h3>Tutu Book Two</h3>
             <p>New journeys across Aotearoa.</p>
           </div>
         </article>
         <article class="card">
-          <img src="/images/merch-1.jpg" alt="Tutu merch bundle" loading="lazy" />
+          <img data-src="/images/merch-1.jpg" alt="Tutu merch bundle" loading="lazy">
           <div class="card-body">
             <h3>Merch Bundle</h3>
             <p>Stickers, tees, and more.</p>
@@ -89,7 +85,7 @@
     <!-- ABOUT -->
     <section id="about" class="section alt">
       <div class="about-wrap">
-        <img class="about-img" src="/images/tutu-profile.jpg" alt="Illustration of Tutu the Kiwi" loading="lazy" />
+        <img class="about-img" data-src="/images/tutu-profile.jpg" alt="Illustration of Tutu the Kiwi" loading="lazy">
         <div>
           <h2 class="section-title">About Tutu</h2>
           <p>Tutu the Kiwi is a spark of curiosity made feathery. We create joyful stories and art rooted in Aotearoa values — manaakitanga, whanaungatanga, and aroha — here written with double vowels.</p>
@@ -103,11 +99,11 @@
       <form class="contact" method="POST" action="https://formspree.io/f/your-form-id">
         <label>
           <span>Name</span>
-          <input name="name" type="text" required />
+          <input name="name" type="text" required>
         </label>
         <label>
           <span>Email</span>
-          <input name="email" type="email" required />
+          <input name="email" type="email" required>
         </label>
         <label class="full">
           <span>Message</span>
@@ -134,6 +130,17 @@
     });
     // Year
     document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Placeholder loader: if an /images/* file is missing, swap to the coin.
+    const FALLBACK = '/tutu-coin-512.png';
+    document.querySelectorAll('img[data-src]').forEach(img => {
+      const src = img.getAttribute('data-src');
+      img.src = src;
+      img.addEventListener('error', () => {
+        img.src = FALLBACK;
+        img.classList.add('placeholder');
+      }, { once:true });
+    });
   </script>
 </body>
 </html>
