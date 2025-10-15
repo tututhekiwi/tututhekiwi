@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.tututhekiwi.com/sitemap.xml
