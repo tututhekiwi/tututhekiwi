@@ -3,60 +3,126 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tutu the Kiwi — Official</title>
-  <meta name="description" content="Whānau-owned creativity from Aotearoa. Tutu the Kiwi — stories, art, and community.">
 
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://tututhekiwi.github.io/tututhekiwi/">
+  <title>Tutu the Kiwi</title>
+  <meta name="description" content="Whanau creativity from Aotearoa — stories, art, and adventures with Tutu the Kiwi." />
+  <link rel="canonical" href="https://www.tututhekiwi.com/" />
 
-  <!-- Favicons -->
-  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png">
-  <link rel="icon" href="/favicon-512.png" sizes="512x512" type="image/png">
+  <!-- Favicon / App Icons -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a3d2e">
 
-  <!-- Open Graph / Social -->
-  <meta property="og:title" content="Tutu the Kiwi — Official">
-  <meta property="og:description" content="Whānau-owned creativity from Aotearoa.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tutu the Kiwi">
+  <meta property="og:description" content="Whanau creativity from Aotearoa — stories, art, and adventures with Tutu the Kiwi.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://tututhekiwi.github.io/tututhekiwi/">
-  <meta property="og:image" content="https://tututhekiwi.github.io/tututhekiwi/images/og-tututhekiwi.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://tututhekiwi.github.io/tututhekiwi/images/og-tututhekiwi.png">
+  <meta property="og:url" content="https://www.tututhekiwi.com/">
+  <meta property="og:image" content="https://www.tututhekiwi.com/images/og-tututhekiwi.png">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tutu the Kiwi">
+  <meta name="twitter:description" content="Whanau creativity from Aotearoa — stories, art, and adventures with Tutu the Kiwi.">
+  <meta name="twitter:image" content="https://www.tututhekiwi.com/images/og-tututhekiwi.png">
+
+  <link rel="stylesheet" href="/styles.css">
 </head>
+
 <body>
-  <header>
-    <img src="images/logo.png" alt="Tutu the Kiwi Logo" class="logo">
-    <h1>Tutu the Kiwi — Official</h1>
+  <header class="hero">
+    <img src="/images/tutu-main.png" alt="Tutu the Kiwi" class="hero-image" />
+    <h1>Tutu the Kiwi</h1>
+    <p class="subtitle">Stories, art, and adventures from Aotearoa.</p>
   </header>
 
   <main>
-    <section class="hero">
-      <img src="images/hero.png" alt="Hero background" class="hero-img">
-      <div class="hero-text">
-        <h2>Whānau creativity from Aotearoa</h2>
-        <p>Stories, art, and community by Tutu the Kiwi.</p>
+    <section class="intro">
+      <h2>Kia ora!</h2>
+      <p>
+        Meet <strong>Tutu the Kiwi</strong> — a curious, kindhearted bird from Aotearoa who loves helping friends and exploring the world with wonder.
+      </p>
+      <p>
+        This website is Tutu’s home nest: full of creativity, colour, and stories that inspire imagination.
+      </p>
+    </section>
+
+    <section class="gallery">
+      <h2>Explore Tutu’s World</h2>
+      <div class="image-grid">
+        <img src="/images/tutu-main.png" alt="Tutu smiling" />
+        <img src="/images/og-tututhekiwi.png" alt="Tutu artwork" />
       </div>
     </section>
 
-    <section class="about">
-      <h2>About Tutu</h2>
-      <p>Tutu the Kiwi is more than a character — it’s a whānau-driven journey into stories, art, and creativity inspired by Aotearoa.</p>
-    </section>
-
-    <section class="products">
-      <h2>Books & Merchandise</h2>
-      <div class="product-grid">
-        <img src="images/book1.png" alt="Book One">
-        <img src="images/book2.png" alt="Book Two">
-      </div>
+    <section class="cta">
+      <h2>Follow the Journey</h2>
+      <p>
+        Visit <a href="https://instagram.com/tututhekiwi" target="_blank">@tututhekiwi</a> for art, updates, and behind-the-scenes adventures.
+      </p>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Tutu the Kiwi — All rights reserved.</p>
+    <p>© 2025 Tutu the Kiwi. All rights reserved.</p>
   </footer>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #fefefe;
+      color: #0a3d2e;
+      text-align: center;
+      line-height: 1.6;
+    }
+    .hero {
+      background: linear-gradient(180deg, #a7d4c2 0%, #fefefe 100%);
+      padding: 3rem 1rem 2rem;
+    }
+    .hero-image {
+      width: 140px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    .subtitle {
+      font-size: 1.1rem;
+      color: #285c4d;
+      margin-top: 0.5rem;
+    }
+    main {
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .gallery .image-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .gallery img {
+      width: 200px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+    a {
+      color: #0a3d2e;
+      text-decoration: underline;
+    }
+    footer {
+      background: #0a3d2e;
+      color: white;
+      padding: 1.5rem 0;
+      margin-top: 2rem;
+    }
+  </style>
 </body>
 </html>
