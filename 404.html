@@ -1,24 +1,26 @@
 <!doctype html>
 <html lang="en-NZ">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Page not found — Tutu the Kiwi</title>
-  <meta name="robots" content="noindex">
-  <meta name="theme-color" content="#0b7fab">
+  <link rel="icon" href="/tutu-coin-512.png" sizes="32x32" type="image/png">
+  <link rel="stylesheet" href="/styles.css">
   <style>
-    html,body{height:100%;margin:0}
-    body{display:grid;place-items:center;background:#e5f4ff;font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;color:#0e1726}
-    .c{max-width:620px;text-align:center;padding:24px}
-    h1{margin:0 0 8px}
-    a{display:inline-block;margin-top:12px;color:#0b7fab;text-decoration:none;border-bottom:1px solid #0b7fab}
+    body{display:flex;align-items:center;justify-content:center;min-height:100vh;background:#f6fbfb;text-align:center;}
+    .notfound{max-width:480px;padding:40px;}
+    h1{font-size:90px;margin:0;color:#1f9aa6;}
+    p{color:#4b5a5e;}
+    a.btn{margin-top:20px;display:inline-block;}
+    img{max-width:160px;margin-top:30px;}
   </style>
 </head>
 <body>
-  <div class="c">
+  <div class="notfound">
     <h1>404</h1>
-    <p>Kāore i kitea te whārangi. Kia hoki tātou ki Tutu’s adventures.</p>
-    <a href="/">Return home</a>
+    <p>Looks like Tutu’s wandered off the page.<br>Let’s guide him back home.</p>
+    <a class="btn" href="/">Return Home</a>
+    <img src="/tutu-hero.png" alt="Tutu looking surprised">
   </div>
 </body>
 </html>
