@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Tutu the Kiwi</title>
-  <meta name="description" content="Stories, art, and adventures with Tutu the Kiwi from Aotearoa." />
+  <meta name="description" content="Whanau creativity from Aotearoa — stories, art, and adventures with Tutu the Kiwi." />
   <link rel="canonical" href="https://www.tututhekiwi.com/" />
 
-  <!-- Icons (use your Tutu icon PNGs) -->
+  <!-- Icons -->
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#0a3d2e">
 
-  <!-- Open Graph / Twitter -->
+  <!-- Social cards -->
   <meta property="og:title" content="Tutu the Kiwi">
   <meta property="og:description" content="Stories, art, and adventures with Tutu the Kiwi from Aotearoa.">
   <meta property="og:type" content="website">
@@ -29,38 +29,42 @@
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+  <!-- Site-wide paua texture sits on <body> via CSS -->
+
   <header class="hero">
-    <img src="/images/tutu-main.png" alt="Tutu the Kiwi illustration" class="hero-image" />
-    <h1 class="site-title">Tutu the Kiwi</h1>
-    <p class="subtitle">Stories, art, and adventures from Aotearoa.</p>
-    <nav class="nav">
-      <a href="/" aria-current="page">Home</a>
-      <a href="#world">World</a>
-      <a href="#follow">Follow</a>
-    </nav>
+    <div class="hero-inner">
+      <img src="/images/tutu-hero.png" alt="Tutu the Kiwi smiling and waving a star wand" class="hero-image" />
+      <div class="hero-copy">
+        <h1 class="site-title">Tutu the Kiwi</h1>
+        <p class="subtitle">Stories, art, and adventures from Aotearoa.</p>
+        <nav class="nav">
+          <a href="/" aria-current="page">Home</a>
+          <a href="#world">World</a>
+          <a href="#follow">Follow</a>
+        </nav>
+      </div>
+    </div>
   </header>
 
   <main id="content">
     <section class="intro" id="world">
-      <h2>Welcome</h2>
+      <h2>Kia ora!</h2>
       <p>
         Meet <strong>Tutu the Kiwi</strong> — a curious, kindhearted traveler who loves helping friends
         and exploring the wonders of Aotearoa.
       </p>
-      <p>
-        This site is Tutu’s home: bright colours, gentle humour, and a little mischief.
-      </p>
+      <p>This is Tutu’s home nest: bright colours, gentle humour, and a little mischief.</p>
     </section>
 
     <section class="gallery">
       <h2>Explore Tutu’s World</h2>
       <div class="image-grid">
         <figure>
-          <img src="/images/tutu-main.png" alt="Tutu smiling at the viewer">
+          <img src="/images/tutu-hero.png" alt="Tutu smiling">
           <figcaption>Tutu says kia ora!</figcaption>
         </figure>
         <figure>
-          <img src="/images/og-tututhekiwi.png" alt="Tutu logo artwork">
+          <img src="/images/og-tututhekiwi.png" alt="Tutu artwork">
           <figcaption>Logo artwork</figcaption>
         </figure>
       </div>
