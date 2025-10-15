@@ -5,116 +5,143 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Tutu the Kiwi — Adventures across Aotearoa</title>
-  <meta name="description" content="Follow Tutu the Kiwi’s road trip across Aotearoa — stories, books, and merch for whānau." />
+  <meta name="description" content="Follow Tutu the Kiwi’s road trip across Aotearoa: Hamilton → Auckland → Wellington → Christchurch → Dunedin. Books, merch, and whānau-friendly creativity." />
+  <meta name="theme-color" content="#0b7fab">
+  <meta name="color-scheme" content="light">
 
   <!-- Canonical -->
   <link rel="canonical" href="https://www.tututhekiwi.com/">
 
-  <!-- Icons (update paths if you already have different filenames) -->
+  <!-- Icons (adjust only if your filenames differ) -->
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="alternate icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/favicon-192.png" sizes="192x192">
 
+  <!-- Preload hero for faster Largest Contentful Paint -->
+  <link rel="preload" as="image" href="/images/tutu-nz-map.png" imagesrcset="/images/tutu-nz-map.png 1600w" imagesizes="100vw">
+
   <!-- Open Graph / Twitter -->
   <meta property="og:title" content="Tutu the Kiwi — Adventures across Aotearoa">
-  <meta property="og:description" content="Tutu’s Uber-style journey from Hamilton to Dunedin — cute, hand-painted, and proudly Aotearoa.">
+  <meta property="og:description" content="Soft painted map + Uber-style route. Kei te haere a Tutu!">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.tututhekiwi.com/">
   <meta property="og:image" content="https://www.tututhekiwi.com/images/tutu-nz-map.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Tutu the Kiwi — Adventures across Aotearoa">
-  <meta name="twitter:description" content="Tutu’s Uber-style journey across Aotearoa.">
+  <meta name="twitter:description" content="Soft painted map + Uber-style route.">
   <meta name="twitter:image" content="https://www.tututhekiwi.com/images/tutu-nz-map.png">
+
+  <!-- JSON-LD: Organization (basic; extend later) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Tutu the Kiwi",
+    "url":"https://www.tututhekiwi.com/",
+    "logo":"https://www.tututhekiwi.com/favicon-192.png",
+    "sameAs":[]
+  }
+  </script>
 
   <style>
     :root{
       --ink:#0e1726;
+      --ink-2:#314055;
       --sea:#e5f4ff;
-      --accent:#0ea5e9;
-      --warm:#fae9d6;
       --brand:#0b7fab;
+      --card:#ffffff;
+      --line:rgba(0,0,0,.08);
     }
-    *{box-sizing:border-box} html,body{margin:0;padding:0}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
     body{
       font-family: system-ui, -apple-system, Segoe UI, Roboto, "Inter", "Nunito Sans", Arial, sans-serif;
-      color:var(--ink); background:var(--sea);
-      line-height:1.4;
+      color:var(--ink); background:var(--sea); line-height:1.45;
+      text-rendering:optimizeLegibility; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
     }
-    header{padding:20px 16px}
+
+    /* Accessibility helpers */
+    .skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip:focus{left:16px;top:16px;width:auto;height:auto;background:#fff;color:#000;padding:.5rem .75rem;border-radius:.5rem;z-index:10}
+
+    header{padding:18px 16px}
     .container{max-width:1100px;margin:0 auto;padding:0 16px}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:1.15rem}
-    .badge{background:var(--brand);color:white;border-radius:999px;padding:4px 10px;font-size:.8rem}
+    .brand{display:flex;align-items:center;gap:12px}
+    .badge{background:var(--brand);color:white;border-radius:999px;padding:4px 10px;font-weight:700;font-size:.85rem}
 
     /* HERO */
     .hero{padding:12px 0 32px}
     .hero-card{
-      background:white;border-radius:18px;box-shadow:0 8px 30px rgba(0,0,0,.08);
-      overflow:hidden;border:1px solid rgba(0,0,0,.06)
+      background:var(--card);border-radius:18px;border:1px solid var(--line);
+      box-shadow:0 8px 30px rgba(0,0,0,.08); overflow:hidden;
     }
     .hero-top{padding:18px 18px 0}
-    .hero h1{margin:.3rem 0 .4rem;font-size:clamp(1.4rem,2.5vw,2rem)}
-    .hero p{margin:.2rem 0 1rem;color:#314055;max-width:65ch}
+    .hero h1{margin:.25rem 0 .35rem;font-size:clamp(1.6rem,2.8vw,2.1rem)}
+    .hero p{margin:.2rem 0 1rem;color:var(--ink-2);max-width:65ch}
     .hero-media{position:relative;background:linear-gradient(180deg,#bfe9ff, #eaf7ff)}
     .hero-media picture, .hero-media img{display:block;width:100%;height:auto}
     .cap{
-      display:flex;justify-content:space-between;align-items:center;gap:12px;
-      padding:12px 18px;background:#fff;border-top:1px solid rgba(0,0,0,.06)
+      display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;
+      padding:12px 18px;background:#fff;border-top:1px solid var(--line)
     }
     .cap small{color:#475569}
     .pill{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:4px 10px;font-size:.8rem}
 
-    /* SECTIONS (placeholders you can fill later) */
-    section{padding:40px 0}
+    /* Sections */
+    main section{padding:40px 0}
     .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
     .card{background:white;border:1px solid #e6e6e6;border-radius:14px;padding:16px}
-    .card h3{margin:.2rem 0 .4rem}
+    .card h3{margin:.2rem 0 .4rem;font-size:1.05rem}
+
     footer{padding:40px 16px;color:#475569}
   </style>
 </head>
 <body>
-  <header class="container">
-    <div class="brand">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="container" role="banner">
+    <div class="brand" aria-label="Site identity">
       <span class="badge">Tutu the Kiwi</span>
-      <span>Whānau creativity from Aotearoa</span>
+      <strong>Whānau creativity from Aotearoa</strong>
     </div>
   </header>
 
-  <main class="hero container">
-    <div class="hero-card">
+  <main id="main" class="hero container" role="main">
+    <article class="hero-card" aria-labelledby="trip-title">
       <div class="hero-top">
-        <h1>Tutu’s Aotearoa Road-Trip</h1>
+        <h1 id="trip-title">Tutu’s Aotearoa Road-Trip</h1>
         <p>Hamilton → Auckland → Wellington → Christchurch → Dunedin. A soft, storybook map with Uber-style route. Kei te haere a Tutu!</p>
       </div>
 
       <div class="hero-media">
-        <!-- If you later add a WebP, place it at /images/tutu-nz-map.webp and this will auto-use it -->
         <picture>
+          <!-- Add a WebP later for smaller size -->
           <source srcset="/images/tutu-nz-map.webp" type="image/webp">
           <img
             src="/images/tutu-nz-map.png"
-            width="1600" height="900" loading="eager" decoding="async"
-            alt="Tutu the Kiwi driving an orange Kombi across a painted map of Aotearoa with a dotted route from Hamilton to Dunedin, labelled Auckland, Wellington, Christchurch, Dunedin." />
+            width="1600" height="900" loading="eager" decoding="async" fetchpriority="high"
+            alt="Painted map of Aotearoa with Tutu the Kiwi driving an orange Kombi and a dotted route from Hamilton to Dunedin, with city labels." />
         </picture>
       </div>
 
       <div class="cap">
-        <small>Artwork: Official Tutu Base Model • Painted map of Aotearoa</small>
+        <small>Artwork: Official Tutu Base Model • Painted Aotearoa map</small>
         <span class="pill">1600×900 PNG</span>
       </div>
-    </div>
+    </article>
   </main>
 
-  <!-- Placeholder sections you can fill later -->
-  <section class="container">
-    <h2>Books &amp; Products</h2>
-    <div class="cards">
-      <div class="card"><h3>Main Storybook</h3><p>Cover + blurb coming next.</p></div>
-      <div class="card"><h3>Merch</h3><p>Shirts, hoodies, stickers — gallery to follow.</p></div>
-      <div class="card"><h3>News</h3><p>Tutu’s latest travels across Aotearoa.</p></div>
+  <!-- Placeholder sections (fill when ready) -->
+  <section class="container" aria-labelledby="books">
+    <h2 id="books">Books &amp; Products</h2>
+    <div class="cards" role="list">
+      <div class="card" role="listitem"><h3>Main Storybook</h3><p>Cover + blurb coming next.</p></div>
+      <div class="card" role="listitem"><h3>Merch</h3><p>Shirts, hoodies, stickers — gallery to follow.</p></div>
+      <div class="card" role="listitem"><h3>News</h3><p>Tutu’s latest travels across Aotearoa.</p></div>
     </div>
   </section>
 
-  <footer class="container">
+  <footer class="container" role="contentinfo">
     © <span id="y"></span> Tutu the Kiwi — Made in Aotearoa.
   </footer>
 
