@@ -3,85 +3,84 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tutu the Kiwi — Whānau Creativity from Aotearoa</title>
-  <meta name="description" content="Whānau-owned creativity from Aotearoa. Tutu the Kiwi — stories, art, kindness, and merch." />
 
-  <!-- Favicon + tab icon -->
-  <link rel="icon" href="/images/tutu-coin-512.png" type="image/png" sizes="32x32">
+  <title>Tutu the Kiwi</title>
+  <meta name="description" content="Whānau creativity from Aotearoa — stories, art, and adventures with Tutu the Kiwi." />
+  <link rel="canonical" href="https://www.tututhekiwi.com/" />
 
-  <!-- Social preview -->
-  <meta property="og:title" content="Tutu the Kiwi — Official" />
-  <meta property="og:description" content="Stories, art, kindness — from Aotearoa." />
-  <meta property="og:image" content="/images/og-tututhekiwi.png" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.tututhekiwi.com/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="/images/og-tututhekiwi.png" />
+  <!-- Icons (using files that exist in your repo now) -->
+  <link rel="icon" href="/tutu-coin-512.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/tutu-coin-512.png" sizes="180x180">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a3d2e">
 
-  <link rel="stylesheet" href="styles.css" />
+  <!-- Social cards (pointing at the exact uploaded filename) -->
+  <meta property="og:title" content="Tutu the Kiwi">
+  <meta property="og:description" content="Stories, art, and adventures with Tutu the Kiwi from Aotearoa.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.tututhekiwi.com/">
+  <meta property="og:image" content="https://www.tututhekiwi.com/og-tututhekiwi.png.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tutu the Kiwi">
+  <meta name="twitter:description" content="Stories, art, and adventures with Tutu the Kiwi from Aotearoa.">
+  <meta name="twitter:image" content="https://www.tututhekiwi.com/og-tututhekiwi.png.png">
+
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+  <!-- Paua background is applied via CSS -->
 
-  <!-- Hero -->
   <header class="hero">
-    <img src="/images/tutu-coin-512.png" alt="Tutu the Kiwi logo" class="logo">
-    <h1>Stories, art, and kindness — from Aotearoa</h1>
-    <p>Meet Tutu the Kiwi and our growing whānau of books and merch.</p>
-    <a href="#products" class="button">Shop the collection</a>
+    <div class="hero-inner">
+      <img src="/tutu-hero.png.png" alt="Tutu the Kiwi smiling and waving a star wand" class="hero-image" />
+      <div class="hero-copy">
+        <h1 class="site-title">Tutu the Kiwi</h1>
+        <p class="subtitle">Stories, art, and adventures from Aotearoa.</p>
+        <nav class="nav">
+          <a href="/" aria-current="page">Home</a>
+          <a href="#world">World</a>
+          <a href="#follow">Follow</a>
+        </nav>
+      </div>
+    </div>
   </header>
 
-  <!-- Featured -->
-  <section id="products" class="featured">
-    <h2>Featured</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="/images/book-1.jpg" alt="Tutu Book One cover">
-        <h3>Tutu Book One</h3>
-        <p>First adventures with heart.</p>
+  <main id="content">
+    <section class="intro" id="world">
+      <h2>Kia ora!</h2>
+      <p>
+        Meet <strong>Tutu the Kiwi</strong> — a curious, kindhearted traveller who loves helping friends
+        and exploring the wonders of Aotearoa.
+      </p>
+      <p>This is Tutu’s home nest: bright colours, gentle humour, and a little mischief.</p>
+    </section>
+
+    <section class="gallery">
+      <h2>Explore Tutu’s World</h2>
+      <div class="image-grid">
+        <figure>
+          <img src="/tutu-main.png.png" alt="Tutu illustration">
+          <figcaption>Tutu says kia ora!</figcaption>
+        </figure>
+        <figure>
+          <img src="/van.png.png" alt="Van illustration">
+          <figcaption>On the road with Tutu</figcaption>
+        </figure>
       </div>
-      <div class="card">
-        <img src="/images/book-2.jpg" alt="Tutu Book Two cover">
-        <h3>Tutu Book Two</h3>
-        <p>New journeys across Aotearoa.</p>
-      </div>
-      <div class="card">
-        <img src="/images/merch-1.jpg" alt="Merch bundle">
-        <h3>Merch Bundle</h3>
-        <p>Stickers, tees, and more.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About -->
-  <section class="about">
-    <img src="/images/tutu-profile.jpg" alt="Illustration of Tutu the Kiwi">
-    <div>
-      <h2>About Tutu</h2>
-      <p>Tutu the Kiwi is a spark of curiosity made feathery. We create joyful stories and art rooted in Aotearoa values — manaakitanga, whanaungatanga, and aroha — here written with double vowels.</p>
-    </div>
-  </section>
+    <section class="cta" id="follow">
+      <h2>Join the Journey</h2>
+      <p>
+        Follow <a href="https://instagram.com/tututhekiwi" target="_blank" rel="noopener">@tututhekiwi</a>
+        for new art and updates.
+      </p>
+    </section>
+  </main>
 
-  <!-- Kombi -->
-  <section class="kombi">
-    <h2>Tutu on the Road</h2>
-    <img src="/images/van.png" alt="Tutu's Kombi van" class="kombi-van">
-    <p>Follow Tutu’s adventures across Aotearoa.</p>
-  </section>
-
-  <!-- Contact -->
-  <section class="contact">
-    <h2>Korero | Contact</h2>
-    <form action="https://formspree.io/f/your-id" method="POST">
-      <input type="text" name="name" placeholder="Name" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <textarea name="message" placeholder="Message"></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>© 2025 Tutu the Kiwi — Hamilton, Aotearoa.</p>
+  <footer class="footer">
+    <p>© 2025 Tutu the Kiwi.</p>
   </footer>
-
 </body>
 </html>
