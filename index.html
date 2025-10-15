@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tutu the Kiwi — Official</title>
+  <meta name="description" content="Whanau-owned creativity from Aotearoa. Tutu the Kiwi — stories, art, and community." />
+  <link rel="canonical" href="https://www.tututhekiwi.com/">
+
+  <!-- Icons -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/favicon-192.png" sizes="192x192">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Tutu the Kiwi — Official" />
+  <meta property="og:description" content="Whanau-owned creativity from Aotearoa. Tutu the Kiwi — stories, art, and community." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.tututhekiwi.com/" />
+  <meta property="og:image" content="/images/og-tututhekiwi.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tutu the Kiwi — Official" />
+  <meta name="twitter:description" content="Whanau-owned creativity from Aotearoa. Tutu the Kiwi — stories, art, and community." />
+  <meta name="twitter:image" content="/images/og-tututhekiwi.png" />
+
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <img src="/favicon-192.png" alt="Tutu the Kiwi icon" class="logo" width="64" height="64" />
+      <h1>Tutu the Kiwi</h1>
+      <nav>
+        <a href="#stories">Stories</a>
+        <a href="#shop">Shop</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h2>Whanau creativity from Aotearoa</h2>
+      <p>Tutu the Kiwi is a playful universe of books, art, and community — built with aroha.</p>
+      <img src="/images/og-tututhekiwi.png" alt="Tutu the Kiwi — hero image" class="hero-img" />
+      <div class="cta-row">
+        <a class="btn" href="#shop">Explore Products</a>
+        <a class="btn ghost" href="#stories">Read a Story</a>
+      </div>
+    </section>
+
+    <section id="stories" class="cards">
+      <article class="card">
+        <h3>Little Tutu</h3>
+        <p>Sweet, simple tales for the littlest readers.</p>
+      </article>
+      <article class="card">
+        <h3>Tutu’s Big Adventures</h3>
+        <p>Curious kiwi, big-hearted quests across Aotearoa.</p>
+      </article>
+      <article class="card">
+        <h3>Tutu Legends</h3>
+        <p>Epic adventures tinged with myth and wonder.</p>
+      </article>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:hello@tututhekiwi.com">hello@tututhekiwi.com</a></p>
+      <p>Instagram: <a href="https://instagram.com/tututhekiwi" target="_blank" rel="noopener">@tututhekiwi</a></p>
+      <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+        <input type="email" name="email" placeholder="Your email" required>
+        <textarea name="message" placeholder="Kia ora! Write your message..." required></textarea>
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>© <span id="y"></span> Tutu the Kiwi — Hamilton, Aotearoa.</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
