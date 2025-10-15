@@ -1,152 +1,31 @@
-<!doctype html>
-<html lang="en-NZ">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- BOOKS SECTION -->
+<section class="container" id="books" aria-labelledby="books-title">
+  <h2 id="books-title">Books by Tutu the Kiwi</h2>
+  <p>Stories born in Aotearoa — celebrating curiosity, whānau, and adventure.</p>
 
-  <title>Tutu the Kiwi — Adventures across Aotearoa</title>
-  <meta name="description" content="Follow Tutu the Kiwi’s road trip across Aotearoa: Hamilton → Auckland → Wellington → Christchurch → Dunedin. Books, merch, and whānau-friendly creativity." />
-  <meta name="theme-color" content="#0b7fab">
-  <meta name="color-scheme" content="light">
-
-  <!-- Canonical -->
-  <link rel="canonical" href="https://www.tututhekiwi.com/">
-
-  <!-- Icons (adjust only if your filenames differ) -->
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="alternate icon" href="/favicon-32.png" sizes="32x32" type="image/png">
-  <link rel="apple-touch-icon" href="/favicon-192.png" sizes="192x192">
-
-  <!-- Preload hero for faster Largest Contentful Paint -->
-  <link rel="preload" as="image" href="/images/tutu-nz-map.png" imagesrcset="/images/tutu-nz-map.png 1600w" imagesizes="100vw">
-
-  <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="Tutu the Kiwi — Adventures across Aotearoa">
-  <meta property="og:description" content="Soft painted map + Uber-style route. Kei te haere a Tutu!">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.tututhekiwi.com/">
-  <meta property="og:image" content="https://www.tututhekiwi.com/images/tutu-nz-map.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Tutu the Kiwi — Adventures across Aotearoa">
-  <meta name="twitter:description" content="Soft painted map + Uber-style route.">
-  <meta name="twitter:image" content="https://www.tututhekiwi.com/images/tutu-nz-map.png">
-
-  <!-- JSON-LD: Organization (basic; extend later) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"Tutu the Kiwi",
-    "url":"https://www.tututhekiwi.com/",
-    "logo":"https://www.tututhekiwi.com/favicon-192.png",
-    "sameAs":[]
-  }
-  </script>
-
-  <style>
-    :root{
-      --ink:#0e1726;
-      --ink-2:#314055;
-      --sea:#e5f4ff;
-      --brand:#0b7fab;
-      --card:#ffffff;
-      --line:rgba(0,0,0,.08);
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Inter", "Nunito Sans", Arial, sans-serif;
-      color:var(--ink); background:var(--sea); line-height:1.45;
-      text-rendering:optimizeLegibility; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-    }
-
-    /* Accessibility helpers */
-    .skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
-    .skip:focus{left:16px;top:16px;width:auto;height:auto;background:#fff;color:#000;padding:.5rem .75rem;border-radius:.5rem;z-index:10}
-
-    header{padding:18px 16px}
-    .container{max-width:1100px;margin:0 auto;padding:0 16px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .badge{background:var(--brand);color:white;border-radius:999px;padding:4px 10px;font-weight:700;font-size:.85rem}
-
-    /* HERO */
-    .hero{padding:12px 0 32px}
-    .hero-card{
-      background:var(--card);border-radius:18px;border:1px solid var(--line);
-      box-shadow:0 8px 30px rgba(0,0,0,.08); overflow:hidden;
-    }
-    .hero-top{padding:18px 18px 0}
-    .hero h1{margin:.25rem 0 .35rem;font-size:clamp(1.6rem,2.8vw,2.1rem)}
-    .hero p{margin:.2rem 0 1rem;color:var(--ink-2);max-width:65ch}
-    .hero-media{position:relative;background:linear-gradient(180deg,#bfe9ff, #eaf7ff)}
-    .hero-media picture, .hero-media img{display:block;width:100%;height:auto}
-    .cap{
-      display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;
-      padding:12px 18px;background:#fff;border-top:1px solid var(--line)
-    }
-    .cap small{color:#475569}
-    .pill{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:4px 10px;font-size:.8rem}
-
-    /* Sections */
-    main section{padding:40px 0}
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
-    .card{background:white;border:1px solid #e6e6e6;border-radius:14px;padding:16px}
-    .card h3{margin:.2rem 0 .4rem;font-size:1.05rem}
-
-    footer{padding:40px 16px;color:#475569}
-  </style>
-</head>
-<body>
-  <a class="skip" href="#main">Skip to content</a>
-
-  <header class="container" role="banner">
-    <div class="brand" aria-label="Site identity">
-      <span class="badge">Tutu the Kiwi</span>
-      <strong>Whānau creativity from Aotearoa</strong>
-    </div>
-  </header>
-
-  <main id="main" class="hero container" role="main">
-    <article class="hero-card" aria-labelledby="trip-title">
-      <div class="hero-top">
-        <h1 id="trip-title">Tutu’s Aotearoa Road-Trip</h1>
-        <p>Hamilton → Auckland → Wellington → Christchurch → Dunedin. A soft, storybook map with Uber-style route. Kei te haere a Tutu!</p>
-      </div>
-
-      <div class="hero-media">
-        <picture>
-          <!-- Add a WebP later for smaller size -->
-          <source srcset="/images/tutu-nz-map.webp" type="image/webp">
-          <img
-            src="/images/tutu-nz-map.png"
-            width="1600" height="900" loading="eager" decoding="async" fetchpriority="high"
-            alt="Painted map of Aotearoa with Tutu the Kiwi driving an orange Kombi and a dotted route from Hamilton to Dunedin, with city labels." />
-        </picture>
-      </div>
-
-      <div class="cap">
-        <small>Artwork: Official Tutu Base Model • Painted Aotearoa map</small>
-        <span class="pill">1600×900 PNG</span>
-      </div>
+  <div class="cards" role="list">
+    <!-- BOOK 1 -->
+    <article class="card" role="listitem">
+      <img src="/images/noa-cookie-cloud-cover.png" alt="Cover of 'Noa and the Missing Cookie Cloud'" width="400" height="400" style="width:100%;border-radius:10px;margin-bottom:12px;object-fit:cover;">
+      <h3>Noa and the Missing Cookie Cloud</h3>
+      <p>Noa’s adventure begins when a cookie cloud vanishes! A warm, bilingual story about kindness, curiosity, and courage.</p>
+      <p><strong>Coming soon in print + eBook</strong></p>
     </article>
-  </main>
 
-  <!-- Placeholder sections (fill when ready) -->
-  <section class="container" aria-labelledby="books">
-    <h2 id="books">Books &amp; Products</h2>
-    <div class="cards" role="list">
-      <div class="card" role="listitem"><h3>Main Storybook</h3><p>Cover + blurb coming next.</p></div>
-      <div class="card" role="listitem"><h3>Merch</h3><p>Shirts, hoodies, stickers — gallery to follow.</p></div>
-      <div class="card" role="listitem"><h3>News</h3><p>Tutu’s latest travels across Aotearoa.</p></div>
-    </div>
-  </section>
+    <!-- BOOK 2 -->
+    <article class="card" role="listitem">
+      <img src="/images/tutu-finds-his-glow-cover.png" alt="Cover of 'Tutu Finds His Glow'" width="400" height="400" style="width:100%;border-radius:10px;margin-bottom:12px;object-fit:cover;">
+      <h3>Tutu Finds His Glow</h3>
+      <p>Join Tutu on his glowing discovery through the forests and seas of Aotearoa — a tale of friendship and belonging.</p>
+      <p><strong>Launches 2025</strong></p>
+    </article>
 
-  <footer class="container" role="contentinfo">
-    © <span id="y"></span> Tutu the Kiwi — Made in Aotearoa.
-  </footer>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+    <!-- BOOK 3 -->
+    <article class="card" role="listitem">
+      <img src="/images/tutu-activity-book.png" alt="Cover of 'Tutu’s Big Adventure Activity Book'" width="400" height="400" style="width:100%;border-radius:10px;margin-bottom:12px;object-fit:cover;">
+      <h3>Tutu’s Big Adventure Activity Book</h3>
+      <p>Games, colouring pages, and cookie-crumb clues. Designed for tamariki to play, learn, and laugh with Tutu!</p>
+      <p><strong>Printable edition</strong></p>
+    </article>
+  </div>
+</section>
