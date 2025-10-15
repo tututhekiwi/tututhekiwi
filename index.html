@@ -8,31 +8,37 @@
   <meta name="description" content="Tutu the Kiwi — stories, art, merch, and adventures from Aotearoa. Whānau-first, joyful, and proudly Māori." />
   <link rel="canonical" href="https://www.tututhekiwi.com/">
 
-  <link rel="icon" href="/tutu-coin-512.png" sizes="32x32" type="image/png">
-  <link rel="apple-touch-icon" href="/tutu-coin-512.png" sizes="180x180">
+  <!-- Favicon / icons -->
+  <link rel="icon" href="/tutu-logo.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/tutu-logo.png" sizes="180x180">
   <link rel="manifest" href="/site.webmanifest">
 
+  <!-- Open Graph -->
   <meta property="og:title" content="Tutu the Kiwi — Whānau creativity from Aotearoa">
   <meta property="og:description" content="Follow Tutu’s adventures, explore the map of Aotearoa, and peek at new books and merch.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.tututhekiwi.com/">
   <meta property="og:image" content="https://www.tututhekiwi.com/og-tututhekiwi.png">
 
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Tutu the Kiwi — Whānau creativity from Aotearoa">
   <meta name="twitter:description" content="Stories, art, and adventures with Tutu the Kiwi.">
   <meta name="twitter:image" content="https://www.tututhekiwi.com/og-tututhekiwi.png">
 
+  <!-- Styles -->
+  <link rel="preload" href="/hero-bg.jpg" as="image">
   <link rel="stylesheet" href="/styles.css">
 </head>
 
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <!-- HEADER -->
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="/" aria-label="Tutu the Kiwi home">
-        <img src="/tutu-coin-512.png" alt="Tutu the Kiwi coin icon" width="40" height="40">
+        <img src="/tutu-logo.png" alt="Tutu the Kiwi logo" width="44" height="44" decoding="async">
         <span>Tutu the Kiwi</span>
       </a>
       <nav class="nav">
@@ -45,8 +51,9 @@
     </div>
   </header>
 
-  <section class="hero">
-    <img class="hero-figure" src="/tutu-hero.png" alt="Tutu the Kiwi smiling and waving">
+  <!-- HERO -->
+  <section class="hero" aria-label="Homepage hero with Tutu">
+    <img class="hero-figure" src="/tutu-hero.png" alt="Tutu the Kiwi smiling and waving" width="640" height="640" decoding="async">
     <div class="hero-content wrap">
       <h1>Stories, art, and adventures — made with aroha.</h1>
       <p>Welcome to Tutu’s whānau-first world from Aotearoa. Explore the map, visit the Weather Park, and check out our books and goodies.</p>
@@ -57,6 +64,7 @@
     </div>
   </section>
 
+  <!-- MAIN -->
   <main id="main">
 
     <!-- MAP -->
@@ -67,7 +75,7 @@
           <p>Tutu travels the motu in his trusty van — starting in Kirikiriroa (Hamilton) and visiting major cities. Track the journey and plan the next stop.</p>
         </div>
         <figure class="art map-wrap">
-          <img src="/tutu-nz-map.png" alt="Cartoon map of Aotearoa with Tutu’s travel route">
+          <img src="/tutu-nz-map.png" alt="Cartoon map of Aotearoa with Tutu’s travel route and city checkpoints">
           <img class="van" src="/van.png" alt="Tutu’s van driving across the map">
         </figure>
       </div>
@@ -82,7 +90,7 @@
           <a class="btn" href="#books">Read the stories</a>
         </div>
         <figure class="art">
-          <img src="/tutu-weather-park.png" alt="Illustrated park with weather icons and sign reading ‘Tutu’s Weather Park’">
+          <img src="/tutu-weather-park.png" alt="Illustrated park with a sign reading ‘Tutu’s Weather Park’ and small weather icons">
         </figure>
       </div>
     </section>
@@ -116,6 +124,7 @@
         <div class="copy">
           <h2>Merch</h2>
           <p>Prints, tees, hoodies, and goodies featuring Tutu. Made to last, designed with care.</p>
+          <a class="btn" href="#about">Get updates</a>
         </div>
         <figure class="art">
           <img src="/merch-1.jpg" alt="Merch selection featuring Tutu the Kiwi artwork">
@@ -131,13 +140,14 @@
         </figure>
         <div class="copy">
           <h2>About</h2>
-          <p>Tutu the Kiwi is a whānau-led creative world from Aotearoa — joyful stories, respectful design, and cultural care.</p>
+          <p>Tutu the Kiwi is a whānau-led creative world from Aotearoa — joyful stories, respectful design, and cultural care. We use macrons and make sure our fonts support them correctly.</p>
           <p><strong>Kia ora e te whānau.</strong> Thanks for being here.</p>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="wrap">
       <p>© <span id="y"></span> Tutu the Kiwi — Made with aroha in Aotearoa.</p>
@@ -145,6 +155,7 @@
     </div>
   </footer>
 
+  <!-- SCRIPT -->
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
