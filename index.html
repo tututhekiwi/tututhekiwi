@@ -8,6 +8,9 @@
   <meta name="description" content="Tutu the Kiwi — stories, art, merch, and adventures from Aotearoa. Whānau-first, joyful, and proudly Māori.">
   <link rel="canonical" href="https://www.tututhekiwi.com/">
 
+  <!-- Brand color for mobile UI -->
+  <meta name="theme-color" content="#0b6a6a">
+
   <!-- Favicon / icons -->
   <link rel="icon" href="/favicon-512.png?v=20251016" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/favicon-512.png?v=20251016" sizes="180x180">
@@ -27,18 +30,30 @@
   <meta name="twitter:image" content="https://www.tututhekiwi.com/og-tututhekiwi.png?v=20251016">
 
   <link rel="stylesheet" href="/styles.css?v=20251016">
+
+  <!-- Simple Organization schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Tutu the Kiwi",
+    "url": "https://www.tututhekiwi.com/",
+    "logo": "https://www.tututhekiwi.com/favicon-512.png"
+  }
+  </script>
 </head>
 
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <!-- HEADER -->
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="/" aria-label="Tutu the Kiwi home">
         <img src="/tutu-logo.png?v=20251016" alt="Tutu the Kiwi logo" width="44" height="44" decoding="async">
         <span>Tutu the Kiwi</span>
       </a>
-      <nav class="nav">
+      <nav class="nav" aria-label="Primary">
         <a href="#map">Map</a>
         <a href="#weather-park">Weather Park</a>
         <a href="#books">Books</a>
@@ -48,8 +63,13 @@
     </div>
   </header>
 
-  <section class="hero">
-    <img class="hero-figure" src="/tutu-hero.png?v=20251016" alt="Tutu the Kiwi smiling and waving" width="640" height="640" decoding="async" fetchpriority="high">
+  <!-- HERO -->
+  <section class="hero" aria-label="Homepage hero with Tutu">
+    <img class="hero-figure"
+         src="/tutu-hero.png?v=20251016"
+         alt="Tutu the Kiwi smiling and waving"
+         width="640" height="640"
+         decoding="async" fetchpriority="high">
     <div class="hero-content wrap">
       <h1>Stories, art, and adventures — made with aroha.</h1>
       <p>Welcome to Tutu’s whānau-first world from Aotearoa. Explore the map, visit the Weather Park, and check out our books and goodies.</p>
@@ -60,8 +80,8 @@
     </div>
   </section>
 
+  <!-- MAIN -->
   <main id="main">
-
     <!-- MAP -->
     <section id="map" class="section">
       <div class="wrap grid-2">
@@ -70,8 +90,17 @@
           <p>Tutu travels the motu in his trusty van — starting in Kirikiriroa (Hamilton) and visiting major cities. Track the journey and plan the next stop.</p>
         </div>
         <figure class="art map-wrap">
-          <img src="/tutu-nz-map.png?v=20251016" alt="Cartoon map of Aotearoa with Tutu’s travel route and city checkpoints" width="1200" height="900" loading="eager" decoding="async">
-          <img class="van" src="/van.png?v=20251016" alt="Tutu’s van driving across the map" width="180" height="110">
+          <img
+            src="/tutu-nz-map.png?v=20251016"
+            alt="Cartoon map of Aotearoa with Tutu’s travel route and city checkpoints"
+            width="1200" height="900"
+            loading="eager" decoding="async"
+            srcset="/tutu-nz-map.png?v=20251016 1200w"
+            sizes="(max-width: 860px) 92vw, 600px">
+          <img class="van"
+               src="/van.png?v=20251016"
+               alt="Tutu’s van driving across the map"
+               width="180" height="110">
         </figure>
       </div>
     </section>
@@ -85,7 +114,13 @@
           <a class="btn" href="#books">Read the stories</a>
         </div>
         <figure class="art">
-          <img src="/tutu-weather-park.png?v=20251016" alt="Illustrated park with a sign reading ‘Tutu’s Weather Park’ and small weather icons" width="1400" height="700" loading="lazy" decoding="async">
+          <img
+            src="/tutu-weather-park.png?v=20251016"
+            alt="Illustrated park with a sign reading ‘Tutu’s Weather Park’ and small weather icons"
+            width="1400" height="700"
+            loading="lazy" decoding="async"
+            srcset="/tutu-weather-park.png?v=20251016 1400w"
+            sizes="(max-width: 860px) 92vw, 600px">
         </figure>
       </div>
     </section>
@@ -96,14 +131,20 @@
         <h2>Books</h2>
         <div class="cards">
           <article class="card">
-            <img src="/book-1.jpg?v=20251016" alt="Book cover: Noa and the Missing Cookie Cloud" loading="lazy" decoding="async">
+            <img src="/book-1.jpg?v=20251016"
+                 alt="Book cover: Noa and the Missing Cookie Cloud"
+                 width="800" height="1180"
+                 loading="lazy" decoding="async">
             <div class="card-body">
               <h3>Noa and the Missing Cookie Cloud</h3>
               <p>Warm, funny, and delicious. A whānau favourite.</p>
             </div>
           </article>
           <article class="card">
-            <img src="/book-2.jpg?v=20251016" alt="Second Tutu the Kiwi book cover" loading="lazy" decoding="async">
+            <img src="/book-2.jpg?v=20251016"
+                 alt="Book cover: Tutu te Kiwi — He Haerenga ki te Ngahere"
+                 width="800" height="1180"
+                 loading="lazy" decoding="async">
             <div class="card-body">
               <h3>More adventures coming</h3>
               <p>New titles are baking. Watch this space.</p>
@@ -122,7 +163,10 @@
           <a class="btn" href="#about">Get updates</a>
         </div>
         <figure class="art">
-          <img src="/merch-1.jpg?v=20251016" alt="Merch selection featuring Tutu the Kiwi artwork" loading="lazy" decoding="async">
+          <img src="/merch-1.jpg?v=20251016"
+               alt="Merch selection featuring Tutu the Kiwi artwork"
+               width="1200" height="1200"
+               loading="lazy" decoding="async">
         </figure>
       </div>
     </section>
@@ -131,7 +175,10 @@
     <section id="about" class="section">
       <div class="wrap grid-2">
         <figure class="art">
-          <img src="/tutu-profile.jpg?v=20251016" alt="Portrait of Tutu the Kiwi" loading="lazy" decoding="async">
+          <img src="/tutu-profile.jpg?v=20251016"
+               alt="Portrait of Tutu the Kiwi"
+               width="1024" height="1024"
+               loading="lazy" decoding="async">
         </figure>
         <div class="copy">
           <h2>About</h2>
@@ -142,23 +189,51 @@
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="wrap">
       <p>© <span id="y"></span> Tutu the Kiwi — Made with aroha in Aotearoa.</p>
-      <img class="paua" src="/paua-bag-2400.jpg?v=20251016" alt="Pāua texture accent" width="160" height="100" loading="lazy" decoding="async">
+      <img class="paua" src="/paua-bag-2400.jpg?v=20251016"
+           alt="Pāua texture accent" width="160" height="100" loading="lazy" decoding="async">
     </div>
   </footer>
 
+  <!-- Back to top -->
+  <button class="to-top" aria-label="Back to top">↑</button>
+
+  <!-- Tiny enhancements -->
   <script>
-    // Year stamp
+    // Copyright year
     document.getElementById('y').textContent = new Date().getFullYear();
 
-    // Optional: if any image still fails, soft-hide the broken element to avoid showing long alt text blocks
+    // Hide any stubborn broken images (prevents long alt text blocks)
     document.querySelectorAll('img').forEach(img => {
-      img.addEventListener('error', () => {
-        img.style.display = 'none';
-      }, { once: true });
+      img.addEventListener('error', () => { img.style.display = 'none'; }, { once: true });
     });
+
+    // Active nav highlighting based on section in view
+    const sections = [...document.querySelectorAll('main section')];
+    const navLinks = [...document.querySelectorAll('.nav a')];
+    const byId = id => navLinks.find(a => a.getAttribute('href') === '#' + id);
+
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          navLinks.forEach(a => a.removeAttribute('aria-current'));
+          const link = byId(e.target.id);
+          if (link) link.setAttribute('aria-current', 'true');
+        }
+      });
+    }, { rootMargin: "-40% 0px -55% 0px", threshold: 0.01 });
+
+    sections.forEach(s => io.observe(s));
+
+    // Back-to-top button
+    const topBtn = document.querySelector('.to-top');
+    const toggleTopBtn = () => topBtn.classList.toggle('show', window.scrollY > 500);
+    window.addEventListener('scroll', toggleTopBtn);
+    topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    toggleTopBtn();
   </script>
 </body>
 </html>
