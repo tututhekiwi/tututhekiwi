@@ -1,23 +1,59 @@
-<!doctype html>
-<html lang="en-NZ">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tutu Image Check</title>
-<style>
-  body{font-family:system-ui, sans-serif; margin:0; padding:2rem; background:#fff}
-  h1{margin:0 0 1rem}
-  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:1rem}
-  figure{margin:0; border:1px solid #ddd; border-radius:12px; padding:.75rem}
-  img{width:100%; height:auto; border-radius:10px}
-  figcaption{font-size:.9rem; color:#555; margin-top:.5rem; word-break:break-all}
-</style>
-<h1>Image Check</h1>
-<div class="grid">
-  <figure><img src="/favicon-16.png" alt=""><figcaption>/favicon-16.png</figcaption></figure>
-  <figure><img src="/favicon-32.png" alt=""><figcaption>/favicon-32.png</figcaption></figure>
-  <figure><img src="/apple-touch-icon.png" alt=""><figcaption>/apple-touch-icon.png</figcaption></figure>
-  <figure><img src="/favicon-192.png" alt=""><figcaption>/favicon-192.png</figcaption></figure>
-  <figure><img src="/favicon-512.png" alt=""><figcaption>/favicon-512.png</figcaption></figure>
-  <figure><img src="/images/tutu-main.png" alt=""><figcaption>/images/tutu-main.png</figcaption></figure>
-  <figure><img src="/images/og-tututhekiwi.png" alt=""><figcaption>/images/og-tututhekiwi.png</figcaption></figure>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Image Check — Tutu the Kiwi</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+    .ok { color: #15803d; } .bad { color: #b91c1c; } .row { display:flex; gap:.75rem; align-items:center; margin:.35rem 0; }
+    code { background:#f4f4f5; padding:.1rem .35rem; border-radius:.25rem; }
+  </style>
+</head>
+<body>
+  <h1>🖼️ Tutu Image Loader</h1>
+  <p>Checks that every image actually loads on GitHub Pages.</p>
+  <div id="results"></div>
+
+  <script>
+    const files = [
+      "images/tutu-hero.png",
+      "images/map.webp",
+      "images/tutu-weather-park.png",
+      "images/books.jpg",
+      "images/merch.webp",
+      "images/tutu-profile.jpg",
+      "images/tutu-logo.png",
+      "images/tutu-main.png",
+      "images/tutu-nz-map.png",
+      "images/van.png",
+      "images/og-tututhekiwi.png",
+      "assets/favicon-512.png",
+      "images/tutu-coin-512.png"
+    ];
+    const results = document.getElementById('results');
+
+    function test(src){
+      return new Promise(resolve => {
+        const img = new Image();
+        const t = setTimeout(() => resolve({src, ok:false, status:"timeout"}), 8000);
+        img.onload = () => { clearTimeout(t); resolve({src, ok:true}); };
+        img.onerror = () => { clearTimeout(t); resolve({src, ok:false, status:"error"}); };
+        img.src = src + "?cache=" + Date.now();
+      });
+    }
+
+    (async () => {
+      for (const f of files){
+        const r = await test(f);
+        const row = document.createElement('div');
+        row.className = 'row';
+        row.innerHTML = r.ok
+          ? `<span class="ok">✅</span> <code>${f}</code>`
+          : `<span class="bad">❌</span> <code>${f}</code> <small>(${r.status})</small>`;
+        results.appendChild(row);
+      }
+    })();
+  </script>
+</body>
+</html>
