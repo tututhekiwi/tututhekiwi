@@ -16,7 +16,6 @@ jobs:
           node-version: 20
       - name: Install deps
         run: |
-          npm --version || true
           npm init -y >/dev/null 2>&1 || true
           npm i cheerio@1.0.0-rc.12 globby@14.0.0 --no-audit --no-fund
       - name: Run local asset check
@@ -29,7 +28,6 @@ jobs:
       - name: Link check with lychee
         uses: lycheeverse/lychee-action@v2
         with:
-          # We explicitly list key pages so it doesn't miss anything.
           args: >
             --verbose --no-progress --timeout 20 --retry-wait-time 2 --max-redirects 5
             https://tututhekiwi.com/
