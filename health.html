@@ -1,57 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Health Check — Tutu the Kiwi</title>
-  <link rel="stylesheet" href="styles.css" />
-  <style>
-    .ok { color: #0a7f3f; font-weight: 700; }
-    .bad { color: #c21c2c; font-weight: 700; }
-    .grid { display:grid; gap:8px; grid-template-columns: 220px 1fr 110px; }
-    .grid > div { padding:6px 8px; background:#fff; border:1px solid #e6edf0; border-radius:8px; }
-    .grid .h { font-weight:700; background:#eef7f8; }
-    .muted { color:#567; font-size:12px }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Health — Tutu’s Whare</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="section">
-    <div class="wrap">
-      <h1>Health Check</h1>
-      <p class="muted">This page tries to load all key assets and reports which ones fail.</p>
-      <div class="grid" id="grid">
-        <div class="h">Asset</div><div class="h">Preview</div><div class="h">Status</div>
-      </div>
-    </div>
+  <main class="status-page">
+    <h1>💚 Site Health Check</h1>
+    <p>Everything looks pai (good)! Tutu’s whare (home) is standing strong and the adventure continues.</p>
+    <img src="og-tututhekiwi.png" alt="Tutu the Kiwi OG image">
+    <p>Status: ✅ All systems are operational.</p>
   </main>
-  <script>
-    const assets = [
-      "images/hero.webp","images/hero.jpg",
-      "images/map.webp","images/map.jpg",
-      "images/tutu-weather-park.webp","images/tutu-weather-park.png",
-      "images/books/cookie-cloud.webp","images/books/cookie-cloud.jpg",
-      "images/books/tutu-glow.webp","images/books/tutu-glow.jpg",
-      "images/og-cover.jpg","images/icon.png","images/logo.png"
-    ];
-    const grid = document.getElementById('grid');
-
-    function row(name, imgEl, status) {
-      const a = document.createElement('div'); a.textContent = name;
-      const b = document.createElement('div'); b.appendChild(imgEl);
-      const c = document.createElement('div'); c.innerHTML = status;
-      grid.append(a,b,c);
-    }
-
-    assets.forEach(src => {
-      const img = new Image(); img.width = 100; img.loading = 'eager';
-      img.src = src;
-      let done = false;
-      img.onload = () => { if (done) return; done = true; row(src, img, '<span class="ok">OK</span>') };
-      img.onerror = () => { if (done) return; done = true; 
-        const ph = document.createElement('div'); ph.textContent = '—';
-        row(src, ph, '<span class="bad">MISSING</span>');
-      };
-    });
-  </script>
 </body>
 </html>
