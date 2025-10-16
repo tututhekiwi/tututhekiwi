@@ -1,0 +1,73 @@
+name: Site check
+
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: "0 * * * *"   # every hour, on the hour
+
+jobs:
+  linkcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install lychee link checker
+        uses: lycheeverse/lychee-action@v1.9.0
+        with:
+          args: >
+            --no-progress
+            --max-concurrency 8
+            --fail
+            --base .
+            .
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  assetcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify required assets exist
+        run: |
+          set -euo pipefail
+          required=(
+            images/hero.webp
+            images/hero.jpg
+            images/map.webp
+            images/map.jpg
+            images/tutu-weather-park.webp
+            images/tutu-weather-park.png
+            images/books/cookie-cloud.webp
+            images/books/cookie-cloud.jpg
+            images/books/tutu-glow.webp
+            images/books/tutu-glow.jpg
+            images/og-cover.jpg
+            images/icon.png
+            images/logo.png
+          )
+          missing=0
+          for f in "${required[@]}"; do
+            if [ ! -f "$f" ]; then
+              echo "MISSING: $f"
+              missing=1
+            fi
+          done
+          if [ $missing -ne 0 ]; then
+            echo "::error::One or more required assets are missing."
+            exit 1
+          fi
+
+  report:
+    needs: [linkcheck, assetcheck]
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Post status summary
+        run: |
+          echo "### Site check summary" >> $GITHUB_STEP_SUMMARY
+          echo "- linkcheck: ${{ needs.linkcheck.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "- assetcheck: ${{ needs.assetcheck.result }}" >> $GITHUB_STEP_SUMMARY
