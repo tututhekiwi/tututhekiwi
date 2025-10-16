@@ -3,237 +3,181 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <title>Tutu the Kiwi — Whānau creativity from Aotearoa</title>
-  <meta name="description" content="Tutu the Kiwi — stories, art, merch, and adventures from Aotearoa. Whānau-first, joyful, and proudly Māori.">
-  <link rel="canonical" href="https://www.tututhekiwi.com/">
 
-  <!-- Brand color for mobile UI -->
-  <meta name="theme-color" content="#0b6a6a">
+  <!-- Canonical + meta SEO -->
+  <link rel="canonical" href="https://tututhekiwi.com/" />
+  <meta name="description" content="Whānau-first stories, art, and adventures from Aotearoa. Discover Tutu the Kiwi's books, maps, and creative world." />
 
-  <!-- Favicon / icons -->
-  <link rel="icon" href="/favicon-512.png?v=20251016" sizes="32x32" type="image/png">
-  <link rel="apple-touch-icon" href="/favicon-512.png?v=20251016" sizes="180x180">
-  <link rel="manifest" href="/site.webmanifest">
+  <!-- Open Graph & Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Tutu the Kiwi — Whānau creativity from Aotearoa" />
+  <meta property="og:description" content="Whānau-first stories, art, and adventures from Aotearoa." />
+  <meta property="og:url" content="https://tututhekiwi.com/" />
+  <meta property="og:image" content="https://tututhekiwi.com/assets/og-cover.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tutu the Kiwi — Whānau creativity from Aotearoa" />
+  <meta name="twitter:description" content="Whānau-first stories, art, and adventures from Aotearoa." />
+  <meta name="twitter:image" content="https://tututhekiwi.com/assets/og-cover.jpg" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Tutu the Kiwi — Whānau creativity from Aotearoa">
-  <meta property="og:description" content="Follow Tutu’s adventures, explore the map of Aotearoa, and peek at new books and merch.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.tututhekiwi.com/">
-  <meta property="og:image" content="https://www.tututhekiwi.com/og-tututhekiwi.png?v=20251016">
+  <!-- Favicon + PWA basics -->
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/favicon-192.png" sizes="192x192" />
+  <meta name="theme-color" content="#3b7d6a" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Tutu the Kiwi — Whānau creativity from Aotearoa">
-  <meta name="twitter:description" content="Stories, art, and adventures with Tutu the Kiwi.">
-  <meta name="twitter:image" content="https://www.tututhekiwi.com/og-tututhekiwi.png?v=20251016">
+  <!-- Styles -->
+  <style>
+    :root {
+      --tutu-green: #2e7d73;
+      --tutu-blue: #009db2;
+      --tutu-orange: #ff914d;
+      --tutu-bg: #f5fbfa;
+    }
 
-  <link rel="stylesheet" href="/styles.css?v=20251016">
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background-color: var(--tutu-bg);
+      color: #222;
+      scroll-behavior: smooth;
+    }
 
-  <!-- Simple Organization schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Tutu the Kiwi",
-    "url": "https://www.tututhekiwi.com/",
-    "logo": "https://www.tututhekiwi.com/favicon-512.png"
-  }
-  </script>
+    header {
+      background-color: var(--tutu-green);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      color: var(--tutu-orange);
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    section:nth-child(even) {
+      background: #fff;
+    }
+
+    h1, h2 {
+      color: var(--tutu-green);
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: var(--tutu-green);
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    .hero {
+      text-align: center;
+    }
+
+    .hero img {
+      width: 80%;
+      max-width: 600px;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 1.5rem;
+      background: var(--tutu-orange);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .cta:hover { background: #e67528; }
+
+  </style>
 </head>
 
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a href="#main" class="skip-link">Skip to content</a>
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="wrap">
-      <a class="brand" href="/" aria-label="Tutu the Kiwi home">
-        <img src="/tutu-logo.png?v=20251016" alt="Tutu the Kiwi logo" width="44" height="44" decoding="async">
-        <span>Tutu the Kiwi</span>
-      </a>
-      <nav class="nav" aria-label="Primary">
-        <a href="#map">Map</a>
-        <a href="#weather-park">Weather Park</a>
-        <a href="#books">Books</a>
-        <a href="#merch">Merch</a>
-        <a href="#about">About</a>
-      </nav>
-    </div>
+  <header>
+    <h1>Tutu the Kiwi</h1>
+    <nav>
+      <a href="#map">Map</a>
+      <a href="#weather-park">Weather Park</a>
+      <a href="#books">Books</a>
+      <a href="#merch">Merch</a>
+      <a href="#about">About</a>
+    </nav>
   </header>
 
-  <!-- HERO -->
-  <section class="hero" aria-label="Homepage hero with Tutu">
-    <img class="hero-figure"
-         src="/tutu-hero.png?v=20251016"
-         alt="Tutu the Kiwi smiling and waving"
-         width="640" height="640"
-         decoding="async" fetchpriority="high">
-    <div class="hero-content wrap">
-      <h1>Stories, art, and adventures — made with aroha.</h1>
-      <p>Welcome to Tutu’s whānau-first world from Aotearoa. Explore the map, visit the Weather Park, and check out our books and goodies.</p>
-      <div class="hero-cta">
-        <a class="btn" href="#map">Explore the map</a>
-        <a class="btn btn-ghost" href="#books">See the books</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- MAIN -->
   <main id="main">
-    <!-- MAP -->
-    <section id="map" class="section">
-      <div class="wrap grid-2">
-        <div class="copy">
-          <h2>Tutu’s Aotearoa Map</h2>
-          <p>Tutu travels the motu in his trusty van — starting in Kirikiriroa (Hamilton) and visiting major cities. Track the journey and plan the next stop.</p>
-        </div>
-        <figure class="art map-wrap">
-          <img
-            src="/tutu-nz-map.png?v=20251016"
-            alt="Cartoon map of Aotearoa with Tutu’s travel route and city checkpoints"
-            width="1200" height="900"
-            loading="eager" decoding="async"
-            srcset="/tutu-nz-map.png?v=20251016 1200w"
-            sizes="(max-width: 860px) 92vw, 600px">
-          <img class="van"
-               src="/van.png?v=20251016"
-               alt="Tutu’s van driving across the map"
-               width="180" height="110">
-        </figure>
-      </div>
+    <section class="hero">
+      <img src="/assets/hero.webp" alt="Tutu the Kiwi waving hello" width="1920" height="1080" loading="eager" decoding="async" />
+      <h2>Whānau creativity from Aotearoa</h2>
+      <p>Join Tutu on adventures through stories, art, and imagination — celebrating culture, kindness, and creativity.</p>
+      <a href="#books" class="cta">Explore Books</a>
     </section>
 
-    <!-- WEATHER PARK -->
-    <section id="weather-park" class="section alt">
-      <div class="wrap grid-2">
-        <div class="copy">
-          <h2>Tutu’s Weather Park</h2>
-          <p>A cheerful park where tamariki can spot the sun, wind, rain, and snow — all in Tutu’s colour palette.</p>
-          <a class="btn" href="#books">Read the stories</a>
-        </div>
-        <figure class="art">
-          <img
-            src="/tutu-weather-park.png?v=20251016"
-            alt="Illustrated park with a sign reading ‘Tutu’s Weather Park’ and small weather icons"
-            width="1400" height="700"
-            loading="lazy" decoding="async"
-            srcset="/tutu-weather-park.png?v=20251016 1400w"
-            sizes="(max-width: 860px) 92vw, 600px">
-        </figure>
-      </div>
+    <section id="map">
+      <h2>Tutu’s Aotearoa Map</h2>
+      <img src="/assets/map.webp" alt="Cartoon map of Aotearoa with Tutu's journey" width="1200" height="800" loading="lazy" decoding="async" />
+      <p>Follow Tutu’s travels across Aotearoa! Each stop marks a story, a friend, or a creative adventure along the way.</p>
     </section>
 
-    <!-- BOOKS -->
-    <section id="books" class="section">
-      <div class="wrap">
-        <h2>Books</h2>
-        <div class="cards">
-          <article class="card">
-            <img src="/book-1.jpg?v=20251016"
-                 alt="Book cover: Noa and the Missing Cookie Cloud"
-                 width="800" height="1180"
-                 loading="lazy" decoding="async">
-            <div class="card-body">
-              <h3>Noa and the Missing Cookie Cloud</h3>
-              <p>Warm, funny, and delicious. A whānau favourite.</p>
-            </div>
-          </article>
-          <article class="card">
-            <img src="/book-2.jpg?v=20251016"
-                 alt="Book cover: Tutu te Kiwi — He Haerenga ki te Ngahere"
-                 width="800" height="1180"
-                 loading="lazy" decoding="async">
-            <div class="card-body">
-              <h3>More adventures coming</h3>
-              <p>New titles are baking. Watch this space.</p>
-            </div>
-          </article>
-        </div>
-      </div>
+    <section id="weather-park">
+      <h2>Tutu’s Weather Park</h2>
+      <img src="/assets/tutu-weather-park.png" alt="Illustrated park scene showing Tutu’s Weather Park" width="1400" height="700" loading="lazy" decoding="async" />
+      <p>Discover the Weather Park — where the sun, rain, and snow play together in harmony!</p>
     </section>
 
-    <!-- MERCH -->
-    <section id="merch" class="section alt">
-      <div class="wrap grid-2">
-        <div class="copy">
-          <h2>Merch</h2>
-          <p>Prints, tees, hoodies, and goodies featuring Tutu. Made to last, designed with care.</p>
-          <a class="btn" href="#about">Get updates</a>
-        </div>
-        <figure class="art">
-          <img src="/merch-1.jpg?v=20251016"
-               alt="Merch selection featuring Tutu the Kiwi artwork"
-               width="1200" height="1200"
-               loading="lazy" decoding="async">
-        </figure>
-      </div>
+    <section id="books">
+      <h2>Books</h2>
+      <img src="/assets/books.webp" alt="Tutu the Kiwi book collection" width="1000" height="700" loading="lazy" decoding="async" />
+      <p>Dive into Tutu’s world through stories filled with aroha, adventure, and laughter.</p>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="section">
-      <div class="wrap grid-2">
-        <figure class="art">
-          <img src="/tutu-profile.jpg?v=20251016"
-               alt="Portrait of Tutu the Kiwi"
-               width="1024" height="1024"
-               loading="lazy" decoding="async">
-        </figure>
-        <div class="copy">
-          <h2>About</h2>
-          <p>Tutu the Kiwi is a whānau-led creative world from Aotearoa — joyful stories, respectful design, and cultural care.</p>
-          <p><strong>Kia ora e te whānau.</strong> Thanks for being here.</p>
-        </div>
-      </div>
+    <section id="merch">
+      <h2>Merchandise</h2>
+      <img src="/assets/merch.webp" alt="Tutu the Kiwi merch — shirts and goodies" width="1000" height="700" loading="lazy" decoding="async" />
+      <p>Get official Tutu the Kiwi shirts, hoodies, and goodies made with love right here in Aotearoa.</p>
+    </section>
+
+    <section id="about">
+      <h2>About Tutu</h2>
+      <p>Tutu the Kiwi was created by Hamaka Murray to share stories, art, and whānau-focused creativity from Aotearoa. The kaupapa is all about celebrating kindness, creativity, and connection.</p>
+      <p>Follow us on Instagram and Facebook for new stories, art, and adventures!</p>
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="wrap">
-      <p>© <span id="y"></span> Tutu the Kiwi — Made with aroha in Aotearoa.</p>
-      <img class="paua" src="/paua-bag-2400.jpg?v=20251016"
-           alt="Pāua texture accent" width="160" height="100" loading="lazy" decoding="async">
-    </div>
+  <footer>
+    <p>© 2025 Tutu the Kiwi — Whānau creativity from Aotearoa</p>
+    <p><a href="https://instagram.com/tututhekiwi" style="color:white;">Instagram</a> · 
+       <a href="https://facebook.com/tututhekiwi" style="color:white;">Facebook</a> · 
+       <a href="mailto:kiaora@tututhekiwi.com" style="color:white;">Contact</a></p>
   </footer>
 
-  <!-- Back to top -->
-  <button class="to-top" aria-label="Back to top">↑</button>
-
-  <!-- Tiny enhancements -->
-  <script>
-    // Copyright year
-    document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Hide any stubborn broken images (prevents long alt text blocks)
-    document.querySelectorAll('img').forEach(img => {
-      img.addEventListener('error', () => { img.style.display = 'none'; }, { once: true });
-    });
-
-    // Active nav highlighting based on section in view
-    const sections = [...document.querySelectorAll('main section')];
-    const navLinks = [...document.querySelectorAll('.nav a')];
-    const byId = id => navLinks.find(a => a.getAttribute('href') === '#' + id);
-
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          navLinks.forEach(a => a.removeAttribute('aria-current'));
-          const link = byId(e.target.id);
-          if (link) link.setAttribute('aria-current', 'true');
-        }
-      });
-    }, { rootMargin: "-40% 0px -55% 0px", threshold: 0.01 });
-
-    sections.forEach(s => io.observe(s));
-
-    // Back-to-top button
-    const topBtn = document.querySelector('.to-top');
-    const toggleTopBtn = () => topBtn.classList.toggle('show', window.scrollY > 500);
-    window.addEventListener('scroll', toggleTopBtn);
-    topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-    toggleTopBtn();
-  </script>
+  <!-- Lightweight analytics (optional) -->
+  <script defer data-domain="tututhekiwi.com" src="https://plausible.io/js/script.js"></script>
 </body>
 </html>
