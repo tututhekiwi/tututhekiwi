@@ -1,93 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-NZ">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tutu the Kiwi — Whānau creativity from Aotearoa</title>
-
-  <!-- Meta / SEO -->
-  <meta name="description" content="Join Tutu on adventures through stories, art, and imagination — celebrating culture, kindness, and creativity." />
+  <title>Tutu the Kiwi — Whānau stories, art & adventures from Aotearoa</title>
+  <meta name="description" content="Join Tutu the Kiwi for joyful whānau-first stories and art from Aotearoa. Explore the map, visit the Weather Park, and browse books & merch." />
+  <meta name="theme-color" content="#ffffff" />
   <link rel="canonical" href="https://tututhekiwi.com/" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Tutu the Kiwi" />
-  <meta property="og:description" content="Whānau creativity from Aotearoa — stories, art, and adventures with Tutu." />
+  <!-- Open Graph & Twitter -->
   <meta property="og:type" content="website" />
+  <meta property="og:title" content="Tutu the Kiwi — Whānau creativity from Aotearoa" />
+  <meta property="og:description" content="Stories, art, and adventures — made with aroha." />
+  <meta property="og:image" content="https://tututhekiwi.com/assets/og-cover.jpg" />
   <meta property="og:url" content="https://tututhekiwi.com/" />
-  <meta property="og:image" content="https://tututhekiwi.com/images/og-tututhekiwi.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tutu the Kiwi — Whānau creativity from Aotearoa" />
+  <meta name="twitter:description" content="Adventures through art and imagination from Aotearoa." />
 
-  <!-- Icons / Manifest -->
-  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png" />
-  <link rel="apple-touch-icon" href="images/tutu-coin-512.png" />
-  <link rel="manifest" href="site.webmanifest" />
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
 
-  <link rel="stylesheet" href="styles.css" />
+  <!-- Fonts & CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Tutu the Kiwi",
+    "url": "https://tututhekiwi.com",
+    "logo": "https://tututhekiwi.com/assets/hero.webp",
+    "sameAs": [
+      "https://instagram.com/tututhekiwi",
+      "https://facebook.com/tututhekiwi"
+    ]
+  }
+  </script>
 </head>
-<body>
-  <header>
-    <nav>
-      <div class="logo">Tutu the Kiwi</div>
-      <ul>
-        <li><a href="#map">Map</a></li>
-        <li><a href="#weather">Weather Park</a></li>
-        <li><a href="#books">Books</a></li>
-        <li><a href="#merch">Merch</a></li>
-        <li><a href="#about">About</a></li>
-      </ul>
-    </nav>
 
-    <div class="hero">
-      <img src="images/tutu-hero.png" alt="Tutu the Kiwi waving hello" decoding="async" />
-      <h1>Whānau creativity from Aotearoa</h1>
-      <p>Join Tutu on adventures through stories, art, and imagination — celebrating culture, kindness, and creativity.</p>
-      <a href="#books" class="cta-button">Explore Books</a>
-    </div>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a href="/" class="logo-link" aria-label="Return to Tutu the Kiwi homepage">
+      <img src="/assets/hero.webp" alt="Tutu the Kiwi waving hello" width="600" height="400" />
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#map" aria-label="Go to Tutu’s Aotearoa Map">Map</a>
+      <a href="#weather-park" aria-label="Go to Tutu’s Weather Park">Weather Park</a>
+      <a href="#books" aria-label="See Tutu’s Books">Books</a>
+      <a href="#merch" aria-label="See Tutu’s Merch">Merch</a>
+      <a href="#about" aria-label="Learn about Tutu the Kiwi">About</a>
+    </nav>
   </header>
 
-  <main>
-    <section id="map">
+  <main id="main">
+    <!-- Hero -->
+    <section id="hero" class="hero">
+      <img src="/assets/hero.webp" alt="Tutu the Kiwi greeting visitors" width="1200" height="800" loading="eager" />
+      <h1>Stories, art, and adventures — made with aroha.</h1>
+      <p>Whānau creativity from Aotearoa. Explore, learn, and laugh with Tutu the Kiwi.</p>
+      <a class="cta" href="#map">Start Exploring</a>
+    </section>
+
+    <!-- Map -->
+    <section id="map" class="map-section">
       <h2>Tutu’s Aotearoa Map</h2>
-      <img src="images/map.webp" alt="Cartoon map of Aotearoa with Tutu's journey" loading="lazy" decoding="async" />
-      <p>Follow Tutu’s travels across Aotearoa. Each stop marks a story, a friend, or a creative adventure.</p>
+      <img src="/assets/map.webp" alt="Cartoon map of Aotearoa with Tutu’s Kombi journey" width="1200" height="800" loading="lazy" decoding="async" />
     </section>
 
-    <section id="weather">
+    <!-- Weather Park -->
+    <section id="weather-park" class="weather-section">
       <h2>Tutu’s Weather Park</h2>
-      <img src="images/tutu-weather-park.png" alt="Illustrated Tutu's Weather Park" loading="lazy" decoding="async" />
-      <p>Discover the Weather Park — where the sun, rain, and snow play together in harmony.</p>
+      <img src="/assets/tutu-weather-park.png" alt="Illustration of Tutu’s Weather Park with sun, rainclouds, and wind" width="1400" height="700" loading="lazy" decoding="async" />
     </section>
 
-    <section id="books">
-      <h2>Books</h2>
-      <img src="images/books.jpg" alt="Tutu the Kiwi book collection" loading="lazy" decoding="async" />
-      <p>Dive into Tutu’s world — stories filled with aroha, adventure, and laughter.</p>
+    <!-- Books -->
+    <section id="books" class="books-section">
+      <h2>Tutu’s Books</h2>
+      <img src="/assets/books.webp" alt="Collection of Tutu the Kiwi storybooks" width="1000" height="700" loading="lazy" decoding="async" />
+      <p>Discover stories that bring Tutu’s world to life — for kids, families, and classrooms.</p>
     </section>
 
-    <section id="merch">
-      <h2>Merchandise</h2>
-      <img src="images/merch.webp" alt="Tutu merch — shirts and goodies" loading="lazy" decoding="async" />
-      <p>Get official Tutu the Kiwi shirts, hoodies, and goodies made with love in Aotearoa.</p>
+    <!-- Merch -->
+    <section id="merch" class="merch-section">
+      <h2>Tutu’s Merch</h2>
+      <img src="/assets/merch.webp" alt="Tutu the Kiwi merch — shirts, hoodies, mugs" width="1000" height="700" loading="lazy" decoding="async" />
+      <p>Wear your favourite Kiwi! Explore limited edition Tutu gear.</p>
     </section>
 
-    <section id="about">
-      <h2>About Tutu</h2>
-      <p>
-        Tutu the Kiwi was created by Hamaka Murray to share stories, art, and whānau-focused creativity from Aotearoa.
-        The kaupapa is all about celebrating kindness, creativity, and connection.
-      </p>
-      <p>Follow us on Instagram and Facebook for new stories, art, and adventures!</p>
+    <!-- About -->
+    <section id="about" class="about-section">
+      <h2>About Tutu the Kiwi</h2>
+      <p>Tutu the Kiwi celebrates whānau, creativity, and the spirit of Aotearoa. From illustrated books to community storytelling — each project is made with heart and aroha.</p>
+      <p>Follow Tutu’s adventures and join the journey!</p>
     </section>
   </main>
 
-  <footer>
-    <p>© 2025 Tutu the Kiwi — Whānau creativity from Aotearoa</p>
-    <div class="footer-links">
-      <a href="https://instagram.com/tututhekiwi" target="_blank" rel="noopener">📸 Instagram</a> ·
-      <a href="https://facebook.com/tututhekiwi" target="_blank" rel="noopener">📘 Facebook</a> ·
-      <a href="mailto:kiaora@tututhekiwi.com">📬 Contact</a>
+  <footer class="site-footer">
+    <div class="social-links">
+      <a href="https://instagram.com/tututhekiwi" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://facebook.com/tututhekiwi" target="_blank" rel="noopener noreferrer">Facebook</a>
     </div>
+    <p><a href="mailto:info@tututhekiwi.com">Contact</a></p>
+    <p>&copy; 2025 Tutu the Kiwi. All rights reserved.</p>
   </footer>
 
-  <script src="app.js" defer></script>
+  <!-- Scripts -->
+  <script src="/scripts/main.js" defer></script>
 </body>
 </html>
