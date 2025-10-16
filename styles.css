@@ -1,48 +1,13 @@
-:root{
-  --brand:#0a7a6a;
-  --ink:#103a37;
-  --bg:#eef8f6;
-  --card:#ffffff;
-  --accent:#f49f51;
+/* existing styles here ... */
+
+/* Gentle float animation for hero image */
+@media (prefers-reduced-motion: no-preference) {
+  .hero img {
+    animation: floaty 5s ease-in-out infinite;
+    transform-origin: 50% 100%;
+  }
+  @keyframes floaty {
+    0%,100% { transform: translateY(0) rotate(0deg); }
+    50%     { transform: translateY(-6px) rotate(-1.2deg); }
+  }
 }
-
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-  line-height:1.6;
-  color:var(--ink);
-  background:var(--bg);
-}
-
-header nav{
-  display:flex; justify-content:space-between; align-items:center;
-  background:var(--brand); color:#fff; padding:.8rem 1rem;
-}
-header nav .logo{font-weight:700}
-header nav ul{list-style:none; display:flex; gap:1rem; margin:0; padding:0}
-header nav a{color:#fff; text-decoration:none}
-header nav a:hover{opacity:.9}
-
-.hero{
-  background: url("images/hero-bg.jpg") center/cover no-repeat;
-  text-align:center; padding:3rem 1rem;
-}
-.hero img{width:180px; height:auto; display:block; margin:0 auto 1rem}
-.hero h1{margin:.2rem 0}
-.cta-button{
-  display:inline-block; padding:.6rem 1rem; margin-top:.6rem;
-  background:var(--accent); color:#20302e; border-radius:.5rem; text-decoration:none; font-weight:600;
-}
-
-main{max-width:980px; margin:2rem auto; padding:0 1rem}
-section{background:var(--card); border-radius:12px; padding:1.25rem; margin:1rem 0; box-shadow:0 1px 8px rgba(0,0,0,.05)}
-section h2{margin-top:0}
-section img{max-width:100%; height:auto; border-radius:10px}
-
-footer{padding:2rem 1rem; background:var(--brand); color:#fff; text-align:center}
-footer a{color:#fff; text-decoration:none}
-.footer-links{margin-top:.5rem}
-
-.error-page, .status-page{max-width:720px; margin:3rem auto; padding:0 1rem; text-align:center}
-.error-page img, .status-page img{max-width:260px; width:100%; height:auto; margin:1rem auto}
