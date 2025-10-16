@@ -20,105 +20,54 @@
   <meta name="twitter:description" content="Whānau-first stories, art, and adventures from Aotearoa." />
   <meta name="twitter:image" content="https://tututhekiwi.com/assets/og-cover.jpg" />
 
-  <!-- Favicon + PWA basics -->
+  <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" href="/favicon-192.png" sizes="192x192" />
-  <meta name="theme-color" content="#3b7d6a" />
+  <meta name="theme-color" content="#2e7d73" />
 
-  <!-- Styles -->
   <style>
-    :root {
-      --tutu-green: #2e7d73;
-      --tutu-blue: #009db2;
-      --tutu-orange: #ff914d;
-      --tutu-bg: #f5fbfa;
-    }
+    :root { --tutu-green:#2e7d73; --tutu-orange:#ff914d; --tutu-bg:#f5fbfa; --header-h:72px; }
 
-    body {
-      margin: 0;
-      font-family: system-ui, sans-serif;
-      background-color: var(--tutu-bg);
-      color: #222;
-      scroll-behavior: smooth;
-    }
+    /* Fix: smooth anchor scroll + offset for sticky header */
+    html { scroll-behavior:smooth; scroll-padding-top: var(--header-h); }
 
-    header {
-      background-color: var(--tutu-green);
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
+    body { margin:0; font-family:system-ui, sans-serif; background:var(--tutu-bg); color:#222; }
 
-    nav a {
-      color: white;
-      margin-left: 1rem;
-      text-decoration: none;
-      font-weight: 500;
+    header{
+      position:sticky; top:0; z-index:1000;
+      height:var(--header-h);
+      display:flex; align-items:center; justify-content:space-between;
+      padding:0 2rem; background:var(--tutu-green); color:#fff;
+      box-shadow:0 2px 6px rgba(0,0,0,.05);
     }
-    nav a:hover {
-      color: var(--tutu-orange);
-    }
+    header h1{ font-size:1.1rem; margin:0; letter-spacing:.3px; }
+    nav a{ color:#fff; text-decoration:none; margin-left:1rem; font-weight:600 }
+    nav a:hover{ color:var(--tutu-orange); }
 
-    section {
-      padding: 4rem 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+    .skip-link{ position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
+    .skip-link:focus{ left:1rem; top:1rem; width:auto; height:auto; padding:.5rem .75rem; background:#fff; color:#000; border-radius:.5rem; }
 
-    section:nth-child(even) {
-      background: #fff;
-    }
+    main{ display:block; }
+    section{ padding:4rem 2rem; max-width:1200px; margin:0 auto; }
+    section:nth-of-type(even){ background:#fff; border-radius:16px; }
 
-    h1, h2 {
-      color: var(--tutu-green);
-      margin-bottom: 1rem;
-    }
+    h2{ color:var(--tutu-green); margin:0 0 1rem; }
+    p{ margin:.5rem 0 1rem; line-height:1.55; }
 
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: var(--tutu-green);
-      color: white;
-      font-size: 0.9rem;
-    }
+    img{ max-width:100%; height:auto; border-radius:12px; }
 
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-    }
+    .hero{ text-align:center; padding-top:3rem; }
+    .hero img{ width:min(80%, 640px); }
+    .cta{ display:inline-block; margin-top:1rem; background:var(--tutu-orange); color:#fff;
+          padding:.75rem 1.25rem; border-radius:10px; text-decoration:none; font-weight:700; }
+    .cta:hover{ filter:brightness(.95); }
 
-    .hero {
-      text-align: center;
-    }
-
-    .hero img {
-      width: 80%;
-      max-width: 600px;
-    }
-
-    .cta {
-      display: inline-block;
-      margin-top: 1.5rem;
-      background: var(--tutu-orange);
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .cta:hover { background: #e67528; }
-
+    footer{ text-align:center; padding:2.5rem 1rem; background:var(--tutu-green); color:#fff; font-size:.95rem; }
+    footer a{ color:#fff; }
   </style>
 </head>
-
 <body>
-  <a href="#main" class="skip-link">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <header>
     <h1>Tutu the Kiwi</h1>
@@ -132,8 +81,10 @@
   </header>
 
   <main id="main">
-    <section class="hero">
-      <img src="/assets/hero.webp" alt="Tutu the Kiwi waving hello" width="1920" height="1080" loading="eager" decoding="async" />
+    <section class="hero" id="home">
+      <!-- Ensure this file exists: /assets/hero.webp -->
+      <img src="/assets/hero.webp" alt="Tutu the Kiwi waving hello"
+           width="1920" height="1080" loading="eager" decoding="async" />
       <h2>Whānau creativity from Aotearoa</h2>
       <p>Join Tutu on adventures through stories, art, and imagination — celebrating culture, kindness, and creativity.</p>
       <a href="#books" class="cta">Explore Books</a>
@@ -141,26 +92,34 @@
 
     <section id="map">
       <h2>Tutu’s Aotearoa Map</h2>
-      <img src="/assets/map.webp" alt="Cartoon map of Aotearoa with Tutu's journey" width="1200" height="800" loading="lazy" decoding="async" />
-      <p>Follow Tutu’s travels across Aotearoa! Each stop marks a story, a friend, or a creative adventure along the way.</p>
+      <!-- Ensure this file exists: /assets/map.webp -->
+      <img src="/assets/map.webp" alt="Cartoon map of Aotearoa with Tutu's journey"
+           width="1200" height="800" loading="lazy" decoding="async" />
+      <p>Follow Tutu’s travels across Aotearoa. Each stop marks a story, a friend, or a creative adventure.</p>
     </section>
 
     <section id="weather-park">
       <h2>Tutu’s Weather Park</h2>
-      <img src="/assets/tutu-weather-park.png" alt="Illustrated park scene showing Tutu’s Weather Park" width="1400" height="700" loading="lazy" decoding="async" />
-      <p>Discover the Weather Park — where the sun, rain, and snow play together in harmony!</p>
+      <!-- You already have this file name -->
+      <img src="/assets/tutu-weather-park.png" alt="Illustrated Tutu’s Weather Park"
+           width="1400" height="700" loading="lazy" decoding="async" />
+      <p>Discover the Weather Park — where the sun, rain, and snow play together in harmony.</p>
     </section>
 
     <section id="books">
       <h2>Books</h2>
-      <img src="/assets/books.webp" alt="Tutu the Kiwi book collection" width="1000" height="700" loading="lazy" decoding="async" />
-      <p>Dive into Tutu’s world through stories filled with aroha, adventure, and laughter.</p>
+      <!-- Ensure this file exists: /assets/books.webp -->
+      <img src="/assets/books.webp" alt="Tutu the Kiwi book collection"
+           width="1000" height="700" loading="lazy" decoding="async" />
+      <p>Dive into Tutu’s world — stories filled with aroha, adventure, and laughter.</p>
     </section>
 
     <section id="merch">
       <h2>Merchandise</h2>
-      <img src="/assets/merch.webp" alt="Tutu the Kiwi merch — shirts and goodies" width="1000" height="700" loading="lazy" decoding="async" />
-      <p>Get official Tutu the Kiwi shirts, hoodies, and goodies made with love right here in Aotearoa.</p>
+      <!-- Ensure this file exists: /assets/merch.webp -->
+      <img src="/assets/merch.webp" alt="Tutu merch — shirts and goodies"
+           width="1000" height="700" loading="lazy" decoding="async" />
+      <p>Get official Tutu the Kiwi shirts, hoodies, and goodies made with love in Aotearoa.</p>
     </section>
 
     <section id="about">
@@ -172,12 +131,14 @@
 
   <footer>
     <p>© 2025 Tutu the Kiwi — Whānau creativity from Aotearoa</p>
-    <p><a href="https://instagram.com/tututhekiwi" style="color:white;">Instagram</a> · 
-       <a href="https://facebook.com/tututhekiwi" style="color:white;">Facebook</a> · 
-       <a href="mailto:kiaora@tututhekiwi.com" style="color:white;">Contact</a></p>
+    <p>
+      <a href="https://instagram.com/tututhekiwi" rel="me">Instagram</a> ·
+      <a href="https://facebook.com/tututhekiwi" rel="me">Facebook</a> ·
+      <a href="mailto:kiaora@tututhekiwi.com">Contact</a>
+    </p>
   </footer>
 
-  <!-- Lightweight analytics (optional) -->
-  <script defer data-domain="tututhekiwi.com" src="https://plausible.io/js/script.js"></script>
+  <!-- Optional analytics -->
+  <!-- <script defer data-domain="tututhekiwi.com" src="https://plausible.io/js/script.js"></script> -->
 </body>
 </html>
