@@ -1,0 +1,46 @@
+name: Site audit (links + images)
+
+on:
+  push:
+  schedule:
+    - cron: "0 * * * *"  # hourly on the hour (UTC)
+
+jobs:
+  local-asset-audit:
+    name: Check HTML references match files
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install deps
+        run: |
+          npm --version || true
+          npm init -y >/dev/null 2>&1 || true
+          npm i cheerio@1.0.0-rc.12 globby@14.0.0 --no-audit --no-fund
+      - name: Run local asset check
+        run: node scripts/check-assets.js
+
+  live-site-audit:
+    name: Crawl live site (HTTP 200s, images, externals)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Link check with lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # We explicitly list key pages so it doesn't miss anything.
+          args: >
+            --verbose --no-progress --timeout 20 --retry-wait-time 2 --max-redirects 5
+            https://tututhekiwi.com/
+            https://tututhekiwi.com/about.html
+            https://tututhekiwi.com/contact.html
+            https://tututhekiwi.com/privacy.html
+            https://tututhekiwi.com/terms.html
+            https://tututhekiwi.com/sitemap.html
+            https://tututhekiwi.com/404.html
+            https://tututhekiwi.com/500.html
+            https://tututhekiwi.com/health.html
+            https://tututhekiwi.com/image-check.html
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
