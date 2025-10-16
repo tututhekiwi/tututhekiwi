@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://www.tututhekiwi.com/sitemap.xml
+Sitemap: https://tututhekiwi.com/sitemap.xml
