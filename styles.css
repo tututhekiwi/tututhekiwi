@@ -1,72 +1,83 @@
-:root{
-  --brand:#0a7a6a;
-  --ink:#103a37;
-  --bg:#eef8f6;
-  --card:#ffffff;
-  --accent:#f49f51;
+:root {
+  --tutu-green: #2e7d73;
+  --tutu-blue: #009db2;
+  --tutu-orange: #ff914d;
+  --bg: #f5fbfa;
+  --text: #222;
 }
 
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-  line-height:1.6;
-  color:var(--ink);
-  background:var(--bg);
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }
 
-header nav{
-  display:flex; justify-content:space-between; align-items:center;
-  background:var(--brand); color:#fff; padding:.8rem 1rem;
-}
-header nav .logo{font-weight:700}
-header nav ul{list-style:none; display:flex; gap:1rem; margin:0; padding:0}
-header nav a{color:#fff; text-decoration:none}
-header nav a:hover{opacity:.9}
-
-.hero{
-  background: url("images/hero-bg.jpg") center/cover no-repeat;
-  text-align:center; padding:3rem 1rem;
-}
-.hero img{width:180px; height:auto; display:block; margin:0 auto 1rem}
-.hero h1{margin:.2rem 0}
-
-/* CTA button improvements */
-a.cta-button{
-  display:inline-block;
-  padding:12px 20px;
-  background:var(--accent);
-  color:#20302e;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:bold;
-  transition:transform .15s ease, background .15s ease;
-}
-a.cta-button:hover{
-  background:#e48731;
-  transform:scale(1.05);
+body {
+  margin: 0;
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
 }
 
-main{max-width:980px; margin:2rem auto; padding:0 1rem}
-section{background:var(--card); border-radius:12px; padding:1.25rem; margin:1rem 0; box-shadow:0 1px 8px rgba(0,0,0,.05)}
-section h2{margin-top:0}
-section img{max-width:100%; height:auto; border-radius:10px}
+/* Skip link for keyboard users */
+.skip-link {
+  position: absolute; left: -9999px; top: auto;
+  background: #fff; color: #000; padding: .5rem .75rem; border-radius: .5rem;
+}
+.skip-link:focus { left: 1rem; top: 1rem; z-index: 9999; }
 
-footer{padding:2rem 1rem; background:var(--brand); color:#fff; text-align:center}
-footer a{color:#fff; text-decoration:none}
-.footer-links{margin-top:.5rem}
+/* Header & Nav */
+.site-header {
+  position: sticky; top: 0; z-index: 1000;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: .75rem 1rem; background: var(--tutu-green); color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+}
+.logo-link img { display: block; height: 48px; width: auto; border-radius: 8px; }
+.main-nav a {
+  color: #fff; text-decoration: none; font-weight: 600; margin-left: 1rem;
+}
+.main-nav a:hover { color: var(--tutu-orange); }
 
-.error-page, .status-page{max-width:720px; margin:3rem auto; padding:0 1rem; text-align:center}
-.error-page img, .status-page img{max-width:260px; width:100%; height:auto; margin:1rem auto}
+/* Sections */
+section { padding: 3rem 1.25rem; max-width: 1200px; margin: 0 auto; }
+h1, h2 { color: var(--tutu-green); margin: 0 0 1rem; }
 
-/* Gentle float animation for hero image */
-@media (prefers-reduced-motion: no-preference) {
-  .hero img {
-    animation: floaty 5s ease-in-out infinite;
-    transform-origin: 50% 100%;
-  }
-  @keyframes floaty {
-    0%,100% { transform: translateY(0) rotate(0deg); }
-    50%     { transform: translateY(-6px) rotate(-1.2deg); }
-  }
+.hero {
+  text-align: center;
+  padding-top: 2rem;
+}
+.hero img {
+  width: 100%; max-width: 900px; height: auto; border-radius: 12px;
+}
+.hero p { max-width: 720px; margin: .75rem auto; }
+.cta {
+  display: inline-block; margin-top: 1rem;
+  background: var(--tutu-orange); color: #fff; text-decoration: none;
+  padding: .75rem 1.25rem; border-radius: 10px; font-weight: 700;
+}
+.cta:hover { filter: brightness(.95); }
+
+.map-section img,
+.weather-section img,
+.books-section img,
+.merch-section img {
+  display: block; width: 100%; height: auto; border-radius: 12px; margin: 1rem auto;
+}
+
+.site-footer {
+  background: var(--tutu-green); color: #fff; text-align: center; padding: 2rem 1rem;
+}
+.site-footer a { color: #fff; text-decoration: underline; }
+.site-footer a:hover { color: var(--tutu-orange); }
+.social-links { margin-bottom: .5rem; }
+.social-links a { margin: 0 .5rem; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-nav a { margin-left: .75rem; }
+  .hero img { max-width: 100%; }
+  section { padding: 2rem 1rem; }
 }
