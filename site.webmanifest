@@ -1,16 +1,11 @@
 {
   "name": "Tutu the Kiwi",
   "short_name": "Tutu",
-  "start_url": "/index.html",
+  "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#2a8c7f",
-  "description": "Adventures of Tutu the Kiwi — stories, art, and aroha from Aotearoa.",
+  "background_color": "#f5fbfa",
+  "theme_color": "#2e7d73",
   "icons": [
-    {
-      "src": "assets/favicon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
   ]
 }
