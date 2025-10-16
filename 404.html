@@ -1,36 +1,27 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Page Not Found — Tutu the Kiwi</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: system-ui, sans-serif;
-      text-align: center;
-      background: #f5fbfa;
-      color: #2e7d73;
-      padding: 4rem;
-    }
-    a {
-      color: #ff914d;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 — Page not found</title>
+  <meta name="description" content="We couldn’t find that page." />
+  <link rel="icon" href="/images/icon.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <meta http-equiv="refresh" content="6;url=/" />
 </head>
 <body>
-  <h1>Oops! Tutu can’t find that page 🥝</h1>
-  <p>Looks like you’ve wandered off the trail — try one of these links:</p>
-  <p>
-    <a href="/">Home</a> •
-    <a href="/#map">Map</a> •
-    <a href="/#weather-park">Weather Park</a> •
-    <a href="/#books">Books</a> •
-    <a href="/#merch">Merch</a>
-  </p>
-  <p>© 2025 Tutu the Kiwi</p>
+  <main id="main">
+    <section class="section">
+      <div class="wrap" style="text-align:center">
+        <h1>Lost in the bush</h1>
+        <p>That page flew off with a cookie cloud. Heading home in <span id="count">6</span>…</p>
+        <p><a class="btn" href="/">Back to homepage</a></p>
+      </div>
+    </section>
+  </main>
+  <script>
+    let n=6; const el=document.getElementById('count');
+    setInterval(()=>{ if(n>0){ n--; el.textContent=n; } },1000);
+  </script>
 </body>
 </html>
