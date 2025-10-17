@@ -1,52 +1,55 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Books — Tutu the Kiwi</title>
-  <meta name="description" content="Browse Tutu the Kiwi books — current titles and what’s coming next." />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="/style.css">
+  <meta name="description" content="Browse Tutu the Kiwi books and previews." />
+  <link rel="canonical" href="/books.html">
+  <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
-  <header class="site-header">
-    <a class="logo" href="/">Tutu the Kiwi</a>
-    <nav aria-label="Primary">
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">☰</button>
-      <ul id="nav-links" data-collapsed="true">
-        <li><a href="/">Home</a></li><li><a href="/about.html">About</a></li>
-        <li><a aria-current="page" href="/books.html">Books</a></li><li><a href="/map.html">Map</a></li>
-        <li><a href="/weather.html">Weather</a></li><li><a href="/merch.html">Merch</a></li>
-        <li><a href="/adopt.html">Adopt</a></li><li><a href="/contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header class="site-header">
+  <a class="logo" href="/"><img src="/assets/img/logo.svg" alt="Tutu the Kiwi logo" width="120" height="40"></a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+  <nav id="site-nav" class="site-nav">
+    <a href="/">Home</a><a aria-current="page" href="/books.html">Books</a><a href="/map.html">Map</a><a href="/merch.html">Merch</a><a href="/about.html">About</a><a href="/terms.html">Terms</a>
+  </nav>
+</header>
 
-  <main id="main">
-    <h1>Tutu’s Books</h1>
-    <ul class="book-grid">
-      <li>
-        <img src="/images/book1.jpg" alt="Book 1 cover — Tutu Finds His Glow" width="600" height="900" loading="lazy">
-        <h2>Book 1: Tutu Finds His Glow</h2>
-      </li>
-      <li>
-        <img src="/images/book2.jpg" alt="Book 2 cover — title TBC" width="600" height="900" loading="lazy">
-        <h2>Book 2: Coming Soon</h2>
-      </li>
-      <li>
-        <img src="/images/book-mystery.jpg" alt="Mystery Book — coming soon" width="600" height="900" loading="lazy">
-        <h2>Mystery Book</h2>
-      </li>
-    </ul>
-  </main>
+<main class="wrap">
+  <h1>Books</h1>
 
-  <footer class="site-footer">
-    <p>© <span id="y"></span> Tutu the Kiwi • Hamilton, Aotearoa</p>
-  </footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <div class="grid cards">
+    <article class="card">
+      <img loading="lazy" src="/assets/img/books/book1.jpg" alt="Tutu Finds His Glow cover" width="400" height="600">
+      <h2>Tutu Finds His Glow</h2>
+      <p>A luminous first adventure set across Aotearoa.</p>
+      <a class="btn" href="#">Preview</a>
+    </article>
+
+    <article class="card">
+      <img loading="lazy" src="/assets/img/books/book2.jpg" alt="Noa and the Missing Cookie Cloud cover" width="400" height="600">
+      <h2>Noa and the Missing Cookie Cloud</h2>
+      <p>Whānau, cookies, and a breezy mystery.</p>
+      <a class="btn" href="#">Preview</a>
+    </article>
+
+    <article class="card">
+      <img loading="lazy" src="/assets/img/books/mystery.jpg" alt="Mystery book placeholder" width="400" height="600">
+      <h2>Coming Soon</h2>
+      <p>Next chapter teased — stay tuned.</p>
+      <a class="btn btn-secondary" href="/#cta">Get updates</a>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <nav class="footer-nav">
+    <a href="/">Home</a> · <a href="/books.html">Books</a> · <a href="/map.html">Map</a> · <a href="/merch.html">Merch</a> · <a href="/about.html">About</a> · <a href="/terms.html">Terms</a>
+  </nav>
+  <p>© <span id="year"></span> Tutu the Kiwi.</p>
+</footer>
+
+<script src="/assets/js/main.js" defer></script>
 </body>
 </html>
