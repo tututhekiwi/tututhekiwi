@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Awhina R.",
+    "message": "Mauri tū, mauri ora — kia kaha e Tutu!",
+    "city": "Kirikiriroa",
+    "date": "2025-10-05",
+    "handle": "@awhina",
+    "url": "https://instagram.com/awhina",
+    "color": "#ffb27a"
+  },
+  {
+    "name": "Te Māia K.",
+    "message": "For the tamariki — aroha nui.",
+    "city": "Tāmaki Makaurau",
+    "date": "2025-10-09",
+    "color": "#b6ece8"
+  },
+  {
+    "name": "Dan W.",
+    "message": "He manu tīoriori a Tutu! Proud to support.",
+    "city": "Pōneke",
+    "date": "2025-10-12",
+    "handle": "@danw",
+    "url": "https://example.com",
+    "color": "#ffd8a8"
+  }
+]
