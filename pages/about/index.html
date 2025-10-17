@@ -1,61 +1,82 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About — Tutu the Kiwi</title>
-  <meta name="description" content="Tutu the Kiwi was created by Hamaka Murray to celebrate whānau, creativity, and the spirit of Aotearoa." />
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="icon" href="../favicon.ico" />
+  <meta name="description" content="Learn about Tutu the Kiwi — a creative project sharing stories, art, and adventures from Aotearoa.">
+  <link rel="canonical" href="https://tututhekiwi.com/pages/about/">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/styles.css">
+
+  <!-- Icons / PWA -->
+  <link rel="icon" type="image/png" href="/icons/favicon.png">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/assets/site.webmanifest">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tutu the Kiwi">
+  <meta property="og:title" content="About — Tutu the Kiwi">
+  <meta property="og:description" content="Meet Tutu the Kiwi — a whānau-first creative journey celebrating Aotearoa through art and storytelling.">
+  <meta property="og:url" content="https://tututhekiwi.com/pages/about/">
+  <meta property="og:image" content="https://tututhekiwi.com/images/tutu-main.png">
+  <meta property="og:image:alt" content="Tutu the Kiwi portrait">
+  <meta name="twitter:card" content="summary_large_image">
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="../"><img src="../logo.svg" width="132" height="48" alt="Tutu the Kiwi logo"/></a>
-      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation">☰</button>
-      <nav id="site-nav" class="site-nav" aria-label="Primary">
-        <a href="../map/">Map</a>
-        <a href="../weather/">Weather Park</a>
-        <a href="../books/">Books</a>
-        <a href="../merch/">Merch</a>
-        <a class="active" href="./">About</a>
-      </nav>
-    </div>
+  <header>
+    <nav data-nav>
+      <button data-nav-toggle aria-expanded="false" aria-label="Toggle navigation">☰</button>
+      <ul class="nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/pages/about/" class="active">About</a></li>
+        <li><a href="/pages/books/">Books</a></li>
+        <li><a href="/pages/map/">Map</a></li>
+        <li><a href="/pages/merch/">Merch</a></li>
+        <li><a href="/pages/adopt/">Adopt</a></li>
+        <li><a href="/pages/contact/">Contact</a></li>
+        <li><a href="/pages/weather/">Weather</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main id="content" class="page">
-    <section class="mast">
-      <div class="container narrow">
-        <h1>About Tutu the Kiwi</h1>
-        <p>Tutu the Kiwi celebrates whānau, creativity, and the spirit of Aotearoa. From illustrated books to community storytelling — every project is made with heart.</p>
-        <ul>
-          <li><strong>Creator:</strong> Hamaka Murray</li>
-          <li><strong>Based:</strong> Kirikiriroa / Hamilton, Aotearoa</li>
-          <li><strong>Contact:</strong> <a href="mailto:kiaora@tututhekiwi.com">kiaora@tututhekiwi.com</a></li>
-        </ul>
-      </div>
+  <main>
+    <section class="about-hero">
+      <picture>
+        <source srcset="/images/tutu-hero.webp" type="image/webp">
+        <img src="/images/tutu-hero.png" alt="Tutu the Kiwi character" width="800" height="400" loading="lazy">
+      </picture>
+      <h1>About Tutu the Kiwi</h1>
+      <p>Tutu the Kiwi is a celebration of Aotearoa — through storytelling, illustration, and creativity.  
+      Each project, from books to art, is made with aroha for tamariki and whānau around the world.</p>
+    </section>
+
+    <section class="mission">
+      <h2>Our Mission</h2>
+      <p>To inspire curiosity, creativity, and connection through stories that reflect our whenua, te taiao (the natural world), and Māori values.  
+      Tutu reminds us that kindness, learning, and laughter can be found wherever we explore.</p>
+    </section>
+
+    <section class="creator">
+      <h2>Created by Hamaka Murray</h2>
+      <p>Hamaka is a storyteller and designer from Aotearoa who founded <strong>Tutu the Kiwi</strong> as part of a broader creative kaupapa to celebrate Māori identity and storytelling in digital spaces.  
+      The journey continues to grow with every book, every illustration, and every shared smile.</p>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <nav class="footer-nav" aria-label="Footer">
-        <a href="../">Home</a>
-        <a href="../map/">Map</a>
-        <a href="../weather/">Weather Park</a>
-        <a href="../books/">Books</a>
-        <a href="../merch/">Merch</a>
-        <a class="active" href="./">About</a>
-        <a href="../contact/">Contact</a>
-      </nav>
-      <p class="small">© <span id="y"></span> Tutu the Kiwi</p>
-    </div>
+  <footer>
+    <p>© 2025 Tutu the Kiwi — Created by Hamaka Murray</p>
+    <nav>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="/reflect.html">Reflect</a>
+    </nav>
+    <button id="toTop" aria-label="Back to top">⬆</button>
   </footer>
 
-  <script src="../script.js" defer></script>
+  <script src="/assets/main.js" defer></script>
 </body>
 </html>
-
