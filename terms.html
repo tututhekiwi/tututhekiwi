@@ -1,81 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Terms & Conditions — Tutu the Kiwi</title>
-  <meta name="description" content="Read the terms and conditions for using the Tutu the Kiwi website and related materials.">
-  <link rel="canonical" href="https://tututhekiwi.com/terms.html">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="/assets/styles.css">
-
-  <!-- Icons / PWA -->
-  <link rel="icon" type="image/png" href="/icons/favicon.png">
-  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" sizes="180x180">
-  <link rel="manifest" href="/assets/site.webmanifest">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Tutu the Kiwi">
-  <meta property="og:title" content="Terms & Conditions — Tutu the Kiwi">
-  <meta property="og:description" content="Terms and conditions for using Tutu the Kiwi content, site, and materials.">
-  <meta property="og:url" content="https://tututhekiwi.com/terms.html">
-  <meta property="og:image" content="https://tututhekiwi.com/images/hero.jpg">
-  <meta property="og:image:alt" content="Tutu the Kiwi illustration">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terms — Tutu the Kiwi</title>
+  <meta name="description" content="Terms of use for Tutu the Kiwi website." />
+  <link rel="canonical" href="/terms.html">
+  <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
-
 <body>
-  <header>
-    <nav data-nav>
-      <button data-nav-toggle aria-expanded="false" aria-label="Toggle navigation">☰</button>
-      <ul class="nav">
-        <li><a href="/">Home</a></li>
-        <li><a href="/pages/about/">About</a></li>
-        <li><a href="/pages/books/">Books</a></li>
-        <li><a href="/pages/map/">Map</a></li>
-        <li><a href="/pages/merch/">Merch</a></li>
-        <li><a href="/pages/contact/">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header class="site-header">
+  <a class="logo" href="/"><img src="/assets/img/logo.svg" alt="Tutu the Kiwi logo" width="120" height="40"></a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+  <nav id="site-nav" class="site-nav">
+    <a href="/">Home</a><a href="/books.html">Books</a><a href="/map.html">Map</a><a href="/merch.html">Merch</a><a href="/about.html">About</a><a aria-current="page" href="/terms.html">Terms</a>
+  </nav>
+</header>
 
-  <main>
-    <h1>Terms &amp; Conditions</h1>
-    <p>Welcome to <strong>Tutu the Kiwi</strong>. By accessing or using this website, you agree to comply with the following terms and conditions.</p>
+<main class="wrap">
+  <h1>Terms</h1>
+  <p>This site is provided “as is”. By using it you agree to our policy on copyright, privacy, and respectful conduct. Tutu and all associated artworks are © Tutu the Kiwi.</p>
+</main>
 
-    <h2>1. Use of Content</h2>
-    <p>All images, text, and designs on this website are the intellectual property of Hamaka Murray, unless otherwise stated.  
-    You may not reproduce, distribute, or use any content without written permission.</p>
+<footer class="site-footer">
+  <nav class="footer-nav">
+    <a href="/">Home</a> · <a href="/books.html">Books</a> · <a href="/map.html">Map</a> · <a href="/merch.html">Merch</a> · <a href="/about.html">About</a> · <a href="/terms.html">Terms</a>
+  </nav>
+  <p>© <span id="year"></span> Tutu the Kiwi.</p>
+</footer>
 
-    <h2>2. Privacy & Data</h2>
-    <p>We respect your privacy. No personal data is collected without consent.  
-    Any information shared via forms or contact channels is used solely for communication related to Tutu the Kiwi projects.</p>
-
-    <h2>3. Liability</h2>
-    <p>Tutu the Kiwi provides creative and educational material for general interest.  
-    While we take care to ensure accuracy, we are not liable for any errors, omissions, or outcomes arising from use of this site.</p>
-
-    <h2>4. Changes to Terms</h2>
-    <p>We may update these terms occasionally. Updates will be reflected on this page with a revised date.</p>
-
-    <h2>5. Contact</h2>
-    <p>For questions about these terms, please contact:  
-      <a href="mailto:kiaora@tututhekiwi.com">kiaora@tututhekiwi.com</a>
-    </p>
-  </main>
-
-  <footer>
-    <p>© 2025 Tutu the Kiwi — Created by Hamaka Murray</p>
-    <nav>
-      <a href="/privacy.html">Privacy</a>
-      <a href="/terms.html" class="active">Terms</a>
-      <a href="/reflect.html">Reflect</a>
-    </nav>
-    <button id="toTop" aria-label="Back to top">⬆</button>
-  </footer>
-
-  <script src="/assets/main.js" defer></script>
+<script src="/assets/js/main.js" defer></script>
 </body>
 </html>
