@@ -1,46 +1,38 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About — Tutu the Kiwi</title>
-  <meta name="description" content="About Tutu the Kiwi and our kaupapa—whānau-friendly stories, art, and learning from Aotearoa." />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="/style.css">
+  <meta name="description" content="About Tutu the Kiwi — kaupapa, creators, and journey." />
+  <link rel="canonical" href="/about.html">
+  <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
-    <a class="logo" href="/">Tutu the Kiwi</a>
-    <nav aria-label="Primary">
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">☰</button>
-      <ul id="nav-links" data-collapsed="true">
-        <li><a href="/">Home</a></li><li><a aria-current="page" href="/about.html">About</a></li>
-        <li><a href="/books.html">Books</a></li><li><a href="/map.html">Map</a></li>
-        <li><a href="/weather.html">Weather</a></li><li><a href="/merch.html">Merch</a></li>
-        <li><a href="/adopt.html">Adopt</a></li><li><a href="/contact.html">Contact</a></li>
-      </ul>
+    <a class="logo" href="/"><img src="/assets/img/logo.svg" alt="Tutu the Kiwi logo" width="120" height="40"></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav">
+      <a href="/">Home</a><a href="/books.html">Books</a><a href="/map.html">Map</a><a href="/merch.html">Merch</a><a aria-current="page" href="/about.html">About</a><a href="/terms.html">Terms</a>
     </nav>
   </header>
 
-  <main id="main" class="prose">
-    <h1>About Tutu the Kiwi</h1>
-    <p>Tutu celebrates whānau, creativity, and the playful spirit of Aotearoa. We make books, maps, and experiences that invite tamariki to explore, laugh, and learn.</p>
-    <h2 id="kaupapa">Kaupapa</h2>
-    <ul>
-      <li>Whānau-first storytelling with cultural care.</li>
-      <li>Macron-safe typography and accessible design.</li>
-      <li>Lightweight, fast site for all devices.</li>
-    </ul>
+  <main class="wrap">
+    <h1>About</h1>
+    <p>Tutu the Kiwi is a kaupapa from Aotearoa celebrating reo, whenua, and tamariki through story. We use macrons correctly and keep cultural details tight and respectful.</p>
+    <picture>
+      <source srcset="/assets/img/about.webp" type="image/webp">
+      <img loading="lazy" src="/assets/img/about.jpg" alt="Tutu with friends in a native bush clearing" width="1200" height="675">
+    </picture>
   </main>
 
   <footer class="site-footer">
-    <p>© <span id="y"></span> Tutu the Kiwi • Hamilton, Aotearoa</p>
+    <nav class="footer-nav">
+      <a href="/">Home</a> · <a href="/books.html">Books</a> · <a href="/map.html">Map</a> · <a href="/merch.html">Merch</a> · <a href="/about.html">About</a> · <a href="/terms.html">Terms</a>
+    </nav>
+    <p>© <span id="year"></span> Tutu the Kiwi.</p>
   </footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+
+  <script src="/assets/js/main.js" defer></script>
 </body>
 </html>
