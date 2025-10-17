@@ -1,1 +1,60 @@
 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tutu’s Aotearoa Map — Tutu the Kiwi</title>
+  <meta name="description" content="Follow Tutu’s travels around Aotearoa. Each stop marks a story, a friend, or a creative adventure." />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" href="../favicon.ico" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../"><img src="../logo.svg" width="132" height="48" alt="Tutu the Kiwi logo"/></a>
+      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a class="active" href="./">Map</a>
+        <a href="../weather/">Weather Park</a>
+        <a href="../books/">Books</a>
+        <a href="../merch/">Merch</a>
+        <a href="../about/">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="page">
+    <section class="mast">
+      <div class="container">
+        <h1>Tutu’s Aotearoa Map</h1>
+        <p class="lead">Explore locations and adventures around Aotearoa. New markers are added as stories go live.</p>
+        <picture>
+          <source srcset="../map.webp" type="image/webp" />
+          <img src="../map.jpg" alt="Cartoon map of Aotearoa with route markers" width="1200" height="760" loading="lazy" />
+        </picture>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="../">Home</a>
+        <a class="active" href="./">Map</a>
+        <a href="../weather/">Weather Park</a>
+        <a href="../books/">Books</a>
+        <a href="../merch/">Merch</a>
+        <a href="../about/">About</a>
+        <a href="../contact/">Contact</a>
+      </nav>
+      <p class="small">© <span id="y"></span> Tutu the Kiwi</p>
+    </div>
+  </footer>
+
+  <script src="../script.js" defer></script>
+</body>
+</html>
