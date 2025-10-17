@@ -11,3 +11,5 @@ Static site (HTML + CSS + a pinch of JS), deployed with GitHub Pages.
 ## Quick checks
 - Open `/image-check.html` after any change to confirm all images load (✅/❌).
 - `site.webmanifest` and `robots.txt` are configured for GH Pages.
+
+- 🌐 **Live site:** [tututhekiwi.com](https://tututhekiwi.com)
