@@ -1,0 +1,43 @@
+{
+  "name": "Tutu the Kiwi — Books & Adventures",
+  "short_name": "Tutu",
+  "lang": "en",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0b3d2e",
+  "description": "Stories, art, and adventures with Tutu the Kiwi from Aotearoa.",
+  "icons": [
+    {
+      "src": "/icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["books", "education", "kids", "entertainment"],
+  "shortcuts": [
+    {
+      "name": "About Tutu",
+      "short_name": "About",
+      "url": "/pages/about/"
+    },
+    {
+      "name": "Books",
+      "short_name": "Books",
+      "url": "/pages/books/"
+    },
+    {
+      "name": "Merch",
+      "short_name": "Merch",
+      "url": "/pages/merch/"
+    }
+  ]
+}
