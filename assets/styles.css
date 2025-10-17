@@ -159,3 +159,10 @@ img[width][height]{aspect-ratio: attr(width) / attr(height)}
   header, .site-footer, .btn {display:none}
   body{background:#fff; color:#111}
 }
+/* Admin tools bar */
+.tools-bar{
+  position:sticky; top:56px; z-index:19;
+  background:#0e1722; border-bottom:1px solid rgba(255,255,255,.06);
+  padding:8px 0;
+}
+
