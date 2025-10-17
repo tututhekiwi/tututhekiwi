@@ -1,1 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adopt a Feather — Tutu the Kiwi</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Adopt one of Tutu’s 60 feathers and help his glow grow brighter." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container row between center">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-logo" aria-hidden="true">🐤</span>
+        <span class="brand-text">Tutu the Kiwi</span>
+      </a>
+      <nav class="nav">
+        <a href="donate.html" class="nav-link">Donate</a>
+        <a href="adopt.html" class="nav-link active">Adopt a Feather</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Admin bar (hidden unless ?admin=1) -->
+  <aside id="toolsBar" class="tools-bar" hidden>
+    <div class="container row wrap between center">
+      <strong>Tools</strong>
+      <div class="row gap-sm">
+        <button id="btnExportCSV" class="btn btn-secondary" type="button">Export CSV</button>
+        <button id="btnCertCurrent" class="btn btn-ghost" type="button" title="Generate certificate for the chosen Feather #">Download Certificate (selected)</button>
+        <button id="btnResetAll" class="btn btn-ghost" type="button">Reset All (demo)</button>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="row between start wrap gap-lg">
+          <div class="col-6 min-300">
+            <h1>Adopt a Feather</h1>
+            <p class="lede">Pick a feather below, add your name and a short message (max 30 chars), then koha via Givealittle. Mā te kotahitanga ka whai hua — together, we make the glow.</p>
+
+            <form id="adoptForm" class="card form" autocomplete="on">
+              <label class="field">
+                <span class="label">Your name</span>
+                <input id="donorName" type="text" required maxlength="60" placeholder="e.g., Aroha R." />
+              </label>
+
+              <label class="field">
+                <span class="label">Short message</span>
+                <input id="donorMsg" type="text" maxlength="30" placeholder="e.g., Kia kaha!" />
+                <span class="help tiny">30 characters max</span>
+              </label>
+
+              <label class="field">
+                <span class="label">Feather #</span>
+                <input id="featherNum" type="number" min="1" max="60" required placeholder="1–60" />
+                <span class="help tiny">Choose an available feather (tap grid to auto-fill).</span>
+              </label>
+
+              <div class="row gap-sm">
+                <button class="btn btn-primary" type="submit">Reserve Feather</button>
+                <a class="btn btn-ghost" href="index.html">Back</a>
+              </div>
+
+              <p id="formNote" class="tiny muted" role="status"></p>
+            </form>
+
+            <div class="card">
+              <h3>After you reserve</h3>
+              <ol class="steps">
+                <li>You’ll be redirected to Givealittle to complete your koha.</li>
+                <li>Return here — your feather will glow and your certificate will download.</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="col-6 min-300">
+            <div class="panel-card">
+              <div class="row between center">
+                <h2 class="panel-title">Feathers adopted</h2>
+                <p class="panel-sub"><span id="countAdopt" class="stat">0</span> / 60</p>
+              </div>
+              <div id="gridAdopt" class="feather-grid" aria-label="Feather adoption grid (interactive)"></div>
+              <div class="panel-actions">
+                <a class="btn btn-secondary" id="goDonate" href="#" rel="noopener">Go to Givealittle</a>
+                <button class="btn btn-ghost" id="resetDemo" type="button" aria-label="Reset demo data">Reset demo</button>
+              </div>
+              <p class="tiny note">Tip: Tap any available feather to auto-fill the form with that number.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container row between center">
+      <p class="tiny">&copy; <span id="year"></span> Tutu the Kiwi</p>
+      <a class="tiny link" href="index.html">Back to Home</a>
+    </div>
+  </footer>
+
+  <script>
+    window.GIVEALITTLE_URL = "https://givealittle.co.nz/cause/tutu-the-kiwi"; /* replace with your real link */
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>
 
