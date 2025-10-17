@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://tututhekiwi.com/</loc></url>
+  <url><loc>https://tututhekiwi.com/map/</loc></url>
+  <url><loc>https://tututhekiwi.com/weather/</loc></url>
+  <url><loc>https://tututhekiwi.com/books/</loc></url>
+  <url><loc>https://tututhekiwi.com/merch/</loc></url>
+  <url><loc>https://tututhekiwi.com/about/</loc></url>
+  <url><loc>https://tututhekiwi.com/contact/</loc></url>
 </urlset>
