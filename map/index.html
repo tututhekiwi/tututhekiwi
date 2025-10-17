@@ -1,1 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Map — Tutu the Kiwi</title>
+  <meta name="description" content="Follow Tutu’s journey around Aotearoa on a playful map." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="logo" href="/">Tutu the Kiwi</a>
+    <nav aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">☰</button>
+      <ul id="nav-links" data-collapsed="true">
+        <li><a href="/">Home</a></li><li><a href="/about.html">About</a></li>
+        <li><a href="/books.html">Books</a></li><li><a aria-current="page" href="/map.html">Map</a></li>
+        <li><a href="/weather.html">Weather</a></li><li><a href="/merch.html">Merch</a></li>
+        <li><a href="/adopt.html">Adopt</a></li><li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1>Tutu’s Aotearoa Map</h1>
+    <picture>
+      <source srcset="/images/map.webp" type="image/webp">
+      <img src="/images/map.jpg" alt="Cartoon map of Aotearoa with Tutu’s Kombi journey" width="1400" height="900" loading="lazy">
+    </picture>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="y"></span> Tutu the Kiwi • Hamilton, Aotearoa</p>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
 
