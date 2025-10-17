@@ -3,96 +3,102 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tutu the Kiwi — Stories, Art, and Adventures in Aotearoa</title>
-  <meta name="description" content="Whānau-friendly stories and art featuring Tutu the Kiwi. Books, maps, weather, and creative adventures from Aotearoa." />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
-  <link rel="manifest" href="/site.webmanifest">
-  <meta property="og:title" content="Tutu the Kiwi" />
-  <meta property="og:description" content="Whānau-friendly stories and art featuring Tutu the Kiwi." />
-  <meta property="og:url" content="https://tututhekiwi.com/" />
+  <title>Tutu the Kiwi — Official Site</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Tutu the Kiwi — official home for books, adventures, merch, and updates from Aotearoa." />
+  <link rel="canonical" href="/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tutu the Kiwi — Official Site" />
+  <meta property="og:description" content="Books, adventures, merch, and updates from Aotearoa." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://tututhekiwi.com/og-cover.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="stylesheet" href="/style.css">
+  <meta property="og:image" content="/assets/img/og-cover.jpg" />
+  <meta property="og:url" content="/" />
+
+  <!-- Icons & PWA -->
+  <link rel="icon" href="/assets/icons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/assets/icons/favicon-32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/assets/icons/favicon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+
+  <!-- Styles -->
+  <link rel="preload" as="image" href="/assets/img/hero.webp" imagesrcset="/assets/img/hero.webp 1200w, /assets/img/hero@2x.webp 2400w" imagesizes="100vw">
+  <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
-    <a class="logo" href="/">Tutu the Kiwi</a>
-    <nav aria-label="Primary">
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">☰</button>
-      <ul id="nav-links" data-collapsed="true">
-        <li><a href="/">Home</a></li>
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/books.html">Books</a></li>
-        <li><a href="/map.html">Map</a></li>
-        <li><a href="/weather.html">Weather</a></li>
-        <li><a href="/merch.html">Merch</a></li>
-        <li><a href="/adopt.html">Adopt</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-      </ul>
+    <a class="logo" href="/"><img src="/assets/img/logo.svg" alt="Tutu the Kiwi logo" width="120" height="40"></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav">
+      <a href="/">Home</a>
+      <a href="/pages/books/">Books</a>
+      <a href="/pages/maps/">Map</a>
+      <a href="/pages/merch/">Merch</a>
+      <a href="/pages/about/">About</a>
+      <a href="/terms.html">Terms</a>
     </nav>
   </header>
 
-  <main id="main">
+  <main>
     <section class="hero">
-      <div class="hero-copy">
-        <h1>Kia ora! I’m Tutu the Kiwi</h1>
-        <p>Adventures for tamariki and whānau—books, maps, weather fun, and more from Aotearoa.</p>
-        <div class="cta-row">
-          <a class="button" href="/books.html">View Books</a>
-          <a class="button ghost" href="/map.html">Explore the Map</a>
-        </div>
-      </div>
-      <picture class="hero-art">
-        <source srcset="/images/hero.webp" type="image/webp">
-        <img src="/images/hero.jpg" alt="Tutu the Kiwi standing proudly with books and merch behind" width="1400" height="900" loading="eager">
+      <picture>
+        <source srcset="/assets/img/hero.webp" type="image/webp">
+        <img loading="eager" src="/assets/img/hero.jpg" alt="Tutu the Kiwi in a lush Aotearoa landscape" width="1600" height="900">
       </picture>
+      <div class="hero-text">
+        <h1>Kia ora — I’m Tutu!</h1>
+        <p>Explore my pukapuka, meet my whānau, and join the adventure across Aotearoa.</p>
+        <a class="btn" href="/pages/books/">Browse Books</a>
+      </div>
     </section>
 
-    <section class="grid">
-      <article class="card">
-        <img src="/images/books-spotlight.jpg" alt="Stack of Tutu books" width="800" height="600" loading="lazy">
-        <h2>Books</h2>
-        <p>Read cosy, curious tales like <em>Tutu Finds His Glow</em>. New stories are hatching.</p>
-        <a class="inline" href="/books.html">Browse books →</a>
-      </article>
+    <section class="books-carousel">
+      <h2>Featured Pukapuka</h2>
+      <div class="carousel" data-carousel>
+        <button class="carousel-btn prev" aria-label="Previous" data-prev>‹</button>
+        <ul class="carousel-track" data-track>
+          <!-- Book 1 -->
+          <li class="slide">
+            <img loading="lazy" src="/assets/img/books/book1.jpg" alt="Book 1 cover — Tutu Finds His Glow" width="400" height="600">
+            <p class="caption">Tutu Finds His Glow</p>
+          </li>
+          <!-- Book 2 -->
+          <li class="slide">
+            <img loading="lazy" src="/assets/img/books/book2.jpg" alt="Book 2 cover — Noa and the Missing Cookie Cloud" width="400" height="600">
+            <p class="caption">Noa and the Missing Cookie Cloud</p>
+          </li>
+          <!-- Mystery (placeholder) -->
+          <li class="slide">
+            <img loading="lazy" src="/assets/img/books/mystery.jpg" alt="Mystery book coming soon" width="400" height="600">
+            <p class="caption">Mystery Title — Coming Soon</p>
+          </li>
+        </ul>
+        <button class="carousel-btn next" aria-label="Next" data-next>›</button>
+      </div>
+      <div class="dots" data-dots aria-label="carousel pagination"></div>
+    </section>
 
-      <article class="card">
-        <img src="/images/map.jpg" alt="Cartoon map of Aotearoa with Tutu’s Kombi route" width="800" height="600" loading="lazy">
-        <h2>Map</h2>
-        <p>Follow Tutu’s road-trip across Aotearoa—cities, coastlines, and cheeky detours.</p>
-        <a class="inline" href="/map.html">Open the map →</a>
-      </article>
-
-      <article class="card">
-        <img src="/images/tutu-weather-park.png" alt="Illustration: Tutu’s Weather Park with sun, rain, wind, snow icons" width="800" height="600" loading="lazy">
-        <h2>Weather Park</h2>
-        <p>Sun hats ready or rain boots needed? Check the park before you head out.</p>
-        <a class="inline" href="/weather.html">See the weather →</a>
-      </article>
+    <section class="cta">
+      <h2>Support Tutu</h2>
+      <p>Help bring new adventures to life. Every koha counts.</p>
+      <a class="btn btn-secondary" href="https://givealittle.co.nz/tutus-60-day-adventure-help-bring-his-glow-to-life" target="_blank" rel="noopener">Givealittle</a>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© <span id="y"></span> Tutu the Kiwi • Hamilton, Aotearoa • <a href="https://www.tututhekiwi.com">tututhekiwi.com</a></p>
+    <nav class="footer-nav">
+      <a href="/">Home</a> ·
+      <a href="/pages/books/">Books</a> ·
+      <a href="/pages/maps/">Map</a> ·
+      <a href="/pages/merch/">Merch</a> ·
+      <a href="/pages/about/">About</a> ·
+      <a href="/terms.html">Terms</a>
+    </nav>
+    <p>© <span id="year"></span> Tutu the Kiwi — Kirikiriroa, Aotearoa.</p>
   </footer>
 
-  <script>
-    // Year
-    document.getElementById('y').textContent = new Date().getFullYear();
-    // Mobile nav
-    const btn = document.querySelector('.nav-toggle');
-    const list = document.getElementById('nav-links');
-    btn.addEventListener('click', () => {
-      const expanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!expanded));
-      list.dataset.collapsed = String(expanded);
-    });
-  </script>
+  <script src="/assets/js/main.js" defer></script>
 </body>
 </html>
