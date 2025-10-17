@@ -13,3 +13,6 @@ Static site (HTML + CSS + a pinch of JS), deployed with GitHub Pages.
 - `site.webmanifest` and `robots.txt` are configured for GH Pages.
 
 - 🌐 **Live site:** [tututhekiwi.com](https://tututhekiwi.com)
+
+- ![Deploy Status](https://github.com/tututhekiwi/tututhekiwi/actions/workflows/site-check.yml/badge.svg)
+
