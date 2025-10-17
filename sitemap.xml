@@ -1,10 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://tututhekiwi.com/</loc></url>
-  <url><loc>https://tututhekiwi.com/map/</loc></url>
-  <url><loc>https://tututhekiwi.com/weather/</loc></url>
-  <url><loc>https://tututhekiwi.com/books/</loc></url>
-  <url><loc>https://tututhekiwi.com/merch/</loc></url>
-  <url><loc>https://tututhekiwi.com/about/</loc></url>
-  <url><loc>https://tututhekiwi.com/contact/</loc></url>
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Root pages -->
+  <url>
+    <loc>https://tututhekiwi.com/</loc>
+    <lastmod>2025-10-17</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://tututhekiwi.com/404.html</loc>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://tututhekiwi.com/500.html</loc>
+    <priority>0.1</priority>
+  </url>
+
+  <!-- Core sections -->
+  <url>
+    <loc>https://tututhekiwi.com/pages/about/</loc>
+    <lastmod>2025-10-17</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://tututhekiwi.com/pages/books/</loc>
+    <lastmod>2025-10-17</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://tututhekiwi.com/pages/map/</loc>
+    <lastmod>2025-10-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tututhekiwi.com/pages/merch/</loc>
+    <lastmod>2025-10-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tututhekiwi.com/pages/adopt/</loc>
+    <lastmod>2025-10-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tututhekiwi.com/pages/contact/</loc>
+    <lastmod>2025-10-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://tututhekiwi.com/pages/weather/</loc>
+    <lastmod>2025-10-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Legal / meta pages -->
+  <url>
+    <loc>https://tututhekiwi.com/privacy.html</loc>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://tututhekiwi.com/terms.html</loc>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://tututhekiwi.com/reflect.html</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://tututhekiwi.com/health.html</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://tututhekiwi.com/image-check.html</loc>
+    <priority>0.2</priority>
+  </url>
+
 </urlset>
