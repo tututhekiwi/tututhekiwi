@@ -1,0 +1,109 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Tutu the Kiwi — Badge Logo</title>
+  <desc id="desc">Circular badge with teal kiwi head, orange beak, bold cream text curved along the bottom.</desc>
+
+  <defs>
+    <!-- Palette -->
+    <style>
+      :root{
+        --bg:#1d3b3a;         /* deep green ring */
+        --ring:#0b2f2e;       /* outer ring */
+        --teal1:#1a6b66;      /* feathers dark */
+        --teal2:#0f8d83;      /* feathers mid */
+        --teal3:#2bb4a5;      /* feathers light */
+        --eye:#f3ead9;        /* cream eye/letters */
+        --pupil:#0a1e20;      /* near black */
+        --beak:#f39b18;       /* orange beak */
+        --beak-d:#cf7708;     /* beak dark */
+        --accent:#284c49;     /* small ring accents */
+      }
+      text{font-family: system-ui, "Segoe UI", Roboto, Cantarell, "Helvetica Neue", Arial, sans-serif; font-weight:900; letter-spacing:.02em}
+    </style>
+
+    <!-- Bottom arc for text -->
+    <path id="text-arc" d="M 170 750 A 342 342 0 0 0 854 750"></path>
+    <!-- Subtle feather curve shapes -->
+    <linearGradient id="featherGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="var(--teal3)"></stop>
+      <stop offset="1" stop-color="var(--teal1)"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer soft background (poster vignette) -->
+  <radialGradient id="g-bg" cx="50%" cy="45%" r="70%">
+    <stop offset="0" stop-color="#977e2a"></stop>
+    <stop offset="1" stop-color="#5c4b16"></stop>
+  </radialGradient>
+  <rect x="0" y="0" width="1024" height="1024" fill="url(#g-bg)"></rect>
+
+  <!-- Badge base -->
+  <g transform="translate(512,512)">
+    <!-- Outer ring -->
+    <circle r="430" fill="var(--ring)"></circle>
+    <!-- Main badge disc -->
+    <circle r="420" fill="var(--bg)"></circle>
+
+    <!-- Inner dual accent arcs (left/right) -->
+    <g fill="none" stroke="var(--accent)" stroke-width="26" stroke-linecap="round">
+      <path d="M -360,-60 a360,360 0 0 1 0,120"></path>
+      <path d="M 360,-60 a360,360 0 0 0 0,120"></path>
+    </g>
+
+    <!-- Kiwi head group -->
+    <g id="kiwi" transform="translate(0,-40)">
+      <!-- Head base circle -->
+      <ellipse rx="280" ry="245" fill="var(--teal2)"></ellipse>
+
+      <!-- Feather swirls (stylised, layered) -->
+      <path d="M -255,-10
+               C -160,-120, -40,-160, 0,-160
+               C 50,-160, 170,-120, 245,-10
+               C 180,60, 60,110, 0,120
+               C -70,110, -170,70, -255,-10 Z" fill="url(#featherGrad)"></path>
+
+      <path d="M -210,60
+               C -120,10, -60,-10, 0,-10
+               C 70,-10, 120,10, 200,60
+               C 140,110, 60,145, 0,150
+               C -70,145, -140,110, -210,60 Z" fill="url(#featherGrad)" opacity=".9"></path>
+
+      <path d="M -190,-70 C -100,-120, -10,-130, 0,-130
+               C 20,-130, 110,-120, 180,-70
+               C 120,-95, 60,-105, 0,-105
+               C -70,-105, -130,-95, -190,-70 Z" fill="var(--teal1)" opacity=".8"></path>
+
+      <!-- Eyes -->
+      <g transform="translate(-110,-30)">
+        <circle r="70" fill="var(--eye)"></circle>
+        <circle r="34" fill="var(--pupil)"></circle>
+      </g>
+      <g transform="translate(110,-30)">
+        <circle r="70" fill="var(--eye)"></circle>
+        <circle r="34" fill="var(--pupil)"></circle>
+      </g>
+
+      <!-- Beak -->
+      <g transform="translate(0,30)">
+        <!-- Upper beak -->
+        <path d="M -70,-5
+                 C -10,-35, 10,-35, 70,-5
+                 C 85,5, 95,20, 100,40
+                 C 30,20, -30,20, -100,40
+                 C -95,20, -85,5, -70,-5 Z" fill="var(--beak)"></path>
+        <!-- Lower beak / line -->
+        <path d="M -88,35
+                 C -30,18, 30,18, 88,35" fill="none" stroke="var(--beak-d)" stroke-width="16" stroke-linecap="round"></path>
+        <!-- Nostril -->
+        <ellipse cx="14" cy="-2" rx="12" ry="8" fill="var(--beak-d)"></ellipse>
+      </g>
+    </g>
+
+    <!-- Curved text -->
+    <g aria-label="TUTU THE KIWI">
+      <text font-size="96" fill="var(--eye)" text-anchor="middle">
+        <textPath href="#text-arc" startOffset="50%">TUTU THE KIWI</textPath>
+      </text>
+    </g>
+  </g>
+</svg>
