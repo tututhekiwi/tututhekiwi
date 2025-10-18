@@ -1,59 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Image Check — Tutu the Kiwi</title>
-  <style>
-    body { font-family: system-ui, sans-serif; max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
-    .ok { color: #15803d; } .bad { color: #b91c1c; } .row { display:flex; gap:.75rem; align-items:center; margin:.35rem 0; }
-    code { background:#f4f4f5; padding:.1rem .35rem; border-radius:.25rem; }
-  </style>
+  <title>Image Check — Tutu</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}</style>
 </head>
-<body>
-  <h1>🖼️ Tutu Image Loader</h1>
-  <p>Checks that every image actually loads on GitHub Pages.</p>
-  <div id="results"></div>
+<body class="container">
+  <h1>Image Check</h1>
+  <p class="hint">If any tile shows a broken icon, its path/filename is wrong.</p>
+  <div class="grid">
+    <figure class="card"><img src="tutu-logo.png" alt=""><figcaption>tutu-logo.png</figcaption></figure>
+    <figure class="card"><img src="hero.webp" alt=""><figcaption>hero.webp</figcaption></figure>
 
-  <script>
-    const files = [
-      "images/tutu-hero.png",
-      "images/map.webp",
-      "images/tutu-weather-park.png",
-      "images/books.jpg",
-      "images/merch.webp",
-      "images/tutu-profile.jpg",
-      "images/tutu-logo.png",
-      "images/tutu-main.png",
-      "images/tutu-nz-map.png",
-      "images/van.png",
-      "images/og-tututhekiwi.png",
-      "assets/favicon-512.png",
-      "images/tutu-coin-512.png"
-    ];
-    const results = document.getElementById('results');
+    <figure class="card"><img src="assets/images/books/book1-cover.webp" alt=""><figcaption>assets/images/books/book1-cover.webp</figcaption></figure>
+    <figure class="card"><img src="assets/images/books/book2-cover.webp" alt=""><figcaption>assets/images/books/book2-cover.webp</figcaption></figure>
+    <figure class="card"><img src="assets/images/books/mystery-cover.webp" alt=""><figcaption>assets/images/books/mystery-cover.webp</figcaption></figure>
 
-    function test(src){
-      return new Promise(resolve => {
-        const img = new Image();
-        const t = setTimeout(() => resolve({src, ok:false, status:"timeout"}), 8000);
-        img.onload = () => { clearTimeout(t); resolve({src, ok:true}); };
-        img.onerror = () => { clearTimeout(t); resolve({src, ok:false, status:"error"}); };
-        img.src = src + "?cache=" + Date.now();
-      });
-    }
-
-    (async () => {
-      for (const f of files){
-        const r = await test(f);
-        const row = document.createElement('div');
-        row.className = 'row';
-        row.innerHTML = r.ok
-          ? `<span class="ok">✅</span> <code>${f}</code>`
-          : `<span class="bad">❌</span> <code>${f}</code> <small>(${r.status})</small>`;
-        results.appendChild(row);
-      }
-    })();
-  </script>
+    <figure class="card"><img src="assets/images/weather/tutu-weather-park.png" alt=""><figcaption>assets/images/weather/tutu-weather-park.png</figcaption></figure>
+    <figure class="card"><img src="assets/images/weather/heroes/sunny-day.webp" alt=""><figcaption>assets/images/weather/heroes/sunny-day.webp</figcaption></figure>
+    <figure class="card"><img src="assets/images/weather/icons/sunny.svg" alt=""><figcaption>assets/images/weather/icons/sunny.svg</figcaption></figure>
+  </div>
 </body>
 </html>
