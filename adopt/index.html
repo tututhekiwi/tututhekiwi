@@ -3,320 +3,260 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Adopt a Feather — Tutu the Kiwi</title>
-  <meta name="description" content="Adopt a Feather and help Tutu the Kiwi keep his story soaring — one bright dream at a time." />
-  <meta property="og:title" content="Adopt a Feather — Tutu the Kiwi" />
-  <meta property="og:description" content="Four luminous tiers to support Tutu’s world: Adopt a Feather, Three Feathers, a Wing, or become a Guardian of Flight." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="images/wing-glow-og.jpg" />
-  <meta name="theme-color" content="#0bbdbe" />
-
-  <!-- Font with full macron support -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
-
+  <title>Adopt a Feather – Tutu the Kiwi</title>
+  <meta name="description" content="Adopt a feather to support Tutu the Kiwi. Choose a single feather, three feathers, a whole wing, or become a Kōhanga Patron." />
+  <link rel="preload" as="image" href="/assets/images/adopt/adopt-wing.webp" imagesrcset="/assets/images/adopt/adopt-wing.webp 1200w" />
   <style>
     :root{
-      --turquoise:#12D5D7;
-      --turquoise-700:#079fa1;
-      --gold:#FFC44D;
-      --ink:#0c1920;
-      --ink-70: rgba(12,25,32,.70);
-      --ink-50: rgba(12,25,32,.50);
-      --glass: rgba(10,20,25,.35);
-      --ring: rgba(255,255,255,.35);
-      --white:#ffffff;
+      --bg:#0b0f10;
+      --card:#11161a;
+      --ink:#e9f1f2;
+      --muted:#b6c4c7;
+      --accent:#38bdf8; /* cool blue to echo pāua tones */
+      --accent-2:#f59e0b; /* warm orange to echo beak/feet */
+      --ring: 0 0 0 2px var(--accent);
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --grid-gap: clamp(1rem, 2vw, 1.25rem);
+      --max: 1200px;
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:"Noto Sans", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol";
-      color:var(--white);
-      background: radial-gradient(1200px 600px at 20% 0%, var(--gold) 0%, rgba(255,196,77,0.6) 45%, rgba(10,20,25,1) 60%),
-                  linear-gradient(180deg, #031318 0%, #071b22 100%);
-    }
-
-    /* HERO */
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,#071015,#0b1418 40%, #0b0f10 100%);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;height:auto;display:block}
+    .wrap{max-width:var(--max);margin:0 auto;padding:clamp(16px,3vw,28px)}
+    header{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:8px}
+    .brand{display:flex;align-items:center;gap:.75rem}
+    .brand .dot{width:12px;height:12px;border-radius:50%;background:radial-gradient(circle at 30% 30%, #7dd3fc, #2563eb 60%, #0ea5e9)}
+    .brand h1{margin:0;font-size:1rem;letter-spacing:.04em;font-weight:700;text-transform:uppercase;color:#cfe8f5}
+    nav a{opacity:.9;padding:.4rem .7rem;border-radius:10px}
+    nav a:hover{background:rgba(255,255,255,.06)}
     .hero{
-      position:relative;
-      min-height:70svh;
+      margin-top:clamp(8px,2vw,16px);
       display:grid;
-      place-items:end start;
-      padding:clamp(16px, 4vw, 48px);
-      overflow:hidden;
-      border-bottom:1px solid rgba(255,255,255,.08);
-      background:
-        radial-gradient(900px 500px at 18% 5%, var(--gold) 0%, rgba(255,196,77,0.0) 65%),
-        radial-gradient(1000px 600px at 65% 35%, rgba(18,213,215,.28) 0%, rgba(18,213,215,0) 70%),
-        linear-gradient(180deg, rgba(6,22,28,.85), rgba(6,22,28,.85));
+      grid-template-columns: 1.1fr .9fr;
+      gap:var(--grid-gap);
+      align-items:center;
     }
-    .hero::before{
-      content:"";
-      position:absolute; inset:0;
-      background-image:url("images/wing-glow.webp"); /* ← update path to your image */
-      background-size:cover;
-      background-position:center right;
-      filter: saturate(110%) contrast(105%) brightness(0.95);
-      opacity:.85;
-      z-index:-2;
-      transform:translateZ(0);
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
     }
-    .hero::after{
-      content:"";
-      position:absolute; inset:0;
-      background: radial-gradient(800px 400px at 20% 10%, rgba(255,201,94,.85) 0%, rgba(255,201,94,.2) 40%, rgba(255,201,94,0) 60%),
-                  radial-gradient(1000px 600px at 70% 35%, rgba(18,213,215,.55) 0%, rgba(18,213,215,0) 60%);
-      mix-blend-mode: screen;
-      z-index:-1;
-      pointer-events:none;
-    }
-    .badge{
-      display:inline-flex; gap:.5rem; align-items:center;
-      padding:.4rem .75rem;
-      border:1px solid var(--ring);
-      border-radius:999px;
-      background:linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.04));
-      backdrop-filter: blur(6px);
-      font-weight:700; letter-spacing:.02em; text-transform:uppercase; font-size:.75rem;
-      color:#eaffff;
-    }
-    .title{
-      margin:.9rem 0 0;
-      font-weight:800;
-      line-height:1.05;
-      font-size:clamp(2rem, 4vw + 1rem, 4rem);
-      text-shadow: 0 6px 30px rgba(18,213,215,.35);
-    }
-    .subtitle{
-      max-width:68ch;
-      margin:1rem 0 2.25rem;
-      color:#e5fbfb;
-      font-size:clamp(1rem, 1.2vw + .6rem, 1.25rem);
-      line-height:1.6;
-    }
-    .cta-row{display:flex; gap:.8rem; flex-wrap:wrap}
-    .btn{
-      appearance:none; border:none; cursor:pointer;
-      padding:.9rem 1.1rem; border-radius:14px;
-      font-weight:700; letter-spacing:.02em;
-      box-shadow: 0 8px 32px rgba(0,0,0,.25);
-      transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
-      text-decoration:none; color:var(--white);
-    }
-    .btn.primary{
-      background: linear-gradient(135deg, var(--turquoise) 0%, #6ff2f3 60%);
-      color:#002a2b;
-    }
-    .btn.primary:hover{ transform: translateY(-1px); box-shadow:0 12px 38px rgba(18,213,215,.45)}
-    .btn.ghost{
-      background: rgba(255,255,255,.10);
-      border:1px solid rgba(255,255,255,.25);
-    }
-    .btn.ghost:hover{ transform: translateY(-1px); box-shadow:0 10px 28px rgba(255,255,255,.18)}
-
-    /* SECTION */
-    .section{
-      position:relative;
-      padding: clamp(28px, 6vw, 80px) min(4vw, 24px);
-      background:
-        radial-gradient(1000px 600px at 15% 0%, rgba(255,196,77,.18), rgba(255,196,77,0) 55%),
-        radial-gradient(900px 600px at 85% 10%, rgba(18,213,215,.18), rgba(18,213,215,0) 60%);
-    }
-    .intro{
-      max-width: 1100px;
-      margin: 0 auto 1.2rem;
-      padding: 0 12px;
-      text-align:center;
-    }
-    .intro p{
-      margin:.5rem auto 0; max-width:72ch; color:#dffbfb; line-height:1.75;
-    }
-
-    /* GRID */
-    .grid{
-      --cols: 1;
-      display:grid;
-      grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
-      gap:clamp(16px, 2.8vw, 28px);
-      max-width:1100px;
-      margin: 28px auto 0;
-      padding: 0 12px;
-    }
-    @media (min-width:720px){ .grid{ --cols: 2 } }
-    @media (min-width:1040px){ .grid{ --cols: 4 } }
-
     .card{
-      position:relative;
-      display:flex; flex-direction:column;
-      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
-      border:1px solid rgba(255,255,255,.16);
-      border-radius:20px;
-      padding:20px;
-      backdrop-filter: blur(6px);
-      box-shadow: 0 18px 60px rgba(0,0,0,.25), inset 0 0 0 1px rgba(255,255,255,.06);
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
       overflow:hidden;
-      min-height: 320px;
     }
-    .card::before{
-      content:"";
-      position:absolute; inset:-1px;
-      background:
-        radial-gradient(400px 200px at 20% -5%, rgba(255,196,77,.55), rgba(255,196,77,0) 60%),
-        radial-gradient(480px 260px at 80% 105%, rgba(18,213,215,.55), rgba(18,213,215,0) 60%);
-      opacity:.25; z-index:-1;
+    .hero-copy{padding:clamp(16px,2.5vw,28px)}
+    .eyebrow{font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+    .title{font-size:clamp(1.6rem, 3vw, 2.4rem);line-height:1.15;margin:.2rem 0 .6rem}
+    .subtitle{color:var(--muted);margin:0 0 1rem}
+    .badges{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+    .badge{
+      font-size:.85rem;padding:.35rem .6rem;border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.04)
     }
-    .card h3{
-      margin:.2rem 0 .4rem; font-size:1.25rem; line-height:1.2; font-weight:800;
+    .cta-row{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem}
+    .btn{
+      appearance:none;border:0;cursor:pointer;
+      padding:.9rem 1.05rem;border-radius:14px;font-weight:700;
+      transition:transform .12s ease, box-shadow .12s ease, background .2s ease;
     }
-    .pill{
-      display:inline-flex; align-items:center; gap:.5rem;
-      font-size:.8rem; font-weight:700; letter-spacing:.02em;
-      padding:.35rem .7rem;
-      border-radius:999px;
-      color:#042a2b;
-      background: linear-gradient(135deg, #a7fff9, var(--turquoise));
-      border:1px solid rgba(255,255,255,.55);
-      box-shadow: inset 0 0 0 1px rgba(0,0,0,.06);
+    .btn-primary{background:linear-gradient(180deg, var(--accent), #1d9fe5);color:#001521;box-shadow:0 8px 24px rgba(56,189,248,.28)}
+    .btn-primary:hover{transform:translateY(-1px)}
+    .btn-ghost{background:rgba(255,255,255,.06);color:var(--ink);border:1px solid rgba(255,255,255,.14)}
+    .hero-media{position:relative}
+    .hero-media img{
+      border-radius:var(--radius);
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:0 18px 40px rgba(0,0,0,.45);
     }
-    .price{
-      margin:.5rem 0 1rem; font-weight:800; font-size:1.5rem; color:#eaffff;
-      text-shadow: 0 2px 18px rgba(18,213,215,.25);
+    .tiers{margin-top:clamp(18px,3vw,32px)}
+    .tiers-grid{
+      display:grid; gap:var(--grid-gap);
+      grid-template-columns: repeat(4, 1fr);
     }
-    .card p{ color:#e7fbfb; line-height:1.65 }
-    .spacer{ flex:1 1 auto }
-    .card .btn{ width:100%; text-align:center; margin-top:1rem }
-
-    /* Accent dividers inside cards */
-    .divider{
-      height:1px; width:100%; margin:1rem 0;
-      background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.35) 50%, rgba(255,255,255,0) 100%);
-      opacity:.5;
-    }
-
-    /* Footer note */
-    .footnote{
-      max-width:1000px; margin: 28px auto 0; padding:0 12px; text-align:center; color:#c7f5f5;
-      font-size:.95rem;
-    }
-
-    /* Accessibility focus */
-    :focus-visible{
-      outline: 3px solid #b8fffb;
-      outline-offset: 2px;
-      border-radius: 10px;
-    }
+    @media (max-width: 1100px){ .tiers-grid{grid-template-columns: repeat(2, 1fr);} }
+    @media (max-width: 620px){ .tiers-grid{grid-template-columns: 1fr;} }
+    .plan{position:relative; padding:clamp(16px,2.2vw,24px)}
+    .plan h3{margin:.2rem 0 .4rem;font-size:1.2rem}
+    .plan .price{font-weight:800;font-size:1.8rem;margin:.2rem 0 .6rem;color:#d9f3ff}
+    .plan ul{list-style:none;padding:0;margin:0;display:grid;gap:.45rem;color:var(--muted)}
+    .plan li{display:flex;gap:.45rem;align-items:flex-start}
+    .plan li::before{content:"✓"; color:var(--accent-2); font-weight:900; margin-top:1px}
+    .plan .action{margin-top:clamp(12px,2vw,16px)}
+    .plan.featured{outline: var(--ring); box-shadow:0 18px 50px rgba(56,189,248,.20)}
+    .how{margin-top:clamp(20px,3vw,40px)}
+    .how-steps{display:grid;gap:var(--grid-gap);grid-template-columns:repeat(3,1fr)}
+    @media (max-width:900px){.how-steps{grid-template-columns:1fr}}
+    .step{padding:clamp(14px,2vw,20px)}
+    .step .num{font-weight:900;color:var(--accent-2)}
+    footer{margin-top:clamp(24px,4vw,48px);color:var(--muted);font-size:.9rem;border-top:1px solid rgba(255,255,255,.08);padding-top:clamp(14px,2vw,22px)}
+    .small{font-size:.86rem;color:#9fb1b5}
+    .legal{opacity:.85}
+    /* Focus visible for keyboard nav */
+    :focus-visible{outline: var(--ring)}
   </style>
 </head>
-
 <body>
-  <header class="hero" role="banner" aria-label="Adopt a Feather hero">
-    <div>
-      <span class="badge" aria-hidden="true">Kaupapa • Community • Aroha</span>
-      <h1 class="title">Adopt a Feather</h1>
-      <p class="subtitle">
-        Every wing begins with a single feather. Your koha helps Tutu the Kiwi keep his story soaring —
-        carrying the spirit of Aotearoa to tamariki everywhere.
-      </p>
-      <div class="cta-row">
-        <a class="btn primary" href="#tiers">See Adoption Tiers</a>
-        <a class="btn ghost" href="#how-it-works">How it works</a>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <h1>Tutu the Kiwi</h1>
       </div>
-    </div>
-  </header>
+      <nav aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/adopt/" aria-current="page">Adopt</a>
+        <a href="/shop/">Shop</a>
+        <a href="/about/">About</a>
+      </nav>
+    </header>
 
-  <main id="tiers" class="section" role="main">
-    <div class="intro" id="how-it-works">
-      <h2 class="badge" style="gap:.6rem">Choose your kōwhiringa • Your way to help</h2>
-      <p>
-        Select a tier below and receive beautiful keepsakes — from digital certificates to personalised art and prints.
-        Each tier includes a unique adoption ID and updates from Tutu’s ongoing adventures.
-      </p>
-    </div>
-
-    <section class="grid" aria-label="Adoption Tiers">
-      <!-- Tier 1 -->
-      <article class="card" aria-labelledby="tier1-title">
-        <span class="pill" aria-hidden="true">Tier 1</span>
-        <h3 id="tier1-title">Adopt a Feather</h3>
-        <div class="price">$10 <span style="opacity:.8; font-weight:600; font-size:.9rem">koha</span></div>
-        <p>
-          Your journey begins with one glowing feather — a small act with a big ripple. Receive a digital
-          adoption certificate with your name and a unique feather ID.
-        </p>
-        <div class="divider"></div>
-        <ul style="margin:0; padding-left:1.1rem; line-height:1.6">
-          <li>Digital certificate (PDF)</li>
-          <li>Unique feather ID</li>
-          <li>Project updates via email</li>
-        </ul>
-        <div class="spacer"></div>
-        <a class="btn primary" href="/checkout?tier=feather" aria-label="Adopt one feather for ten dollars">Adopt — $10</a>
-      </article>
-
-      <!-- Tier 2 -->
-      <article class="card" aria-labelledby="tier2-title">
-        <span class="pill" aria-hidden="true">Tier 2</span>
-        <h3 id="tier2-title">Adopt Three Feathers</h3>
-        <div class="price">$25 <span style="opacity:.8; font-weight:600; font-size:.9rem">koha</span></div>
-        <p>
-          Three feathers, one purpose: growth, unity, and whānau. Includes your certificate and behind-the-scenes
-          peeks at sketches and storyboards from Tutu’s next adventure.
-        </p>
-        <div class="divider"></div>
-        <ul style="margin:0; padding-left:1.1rem; line-height:1.6">
-          <li>Digital certificate (PDF) for 3 feathers</li>
-          <li>Early access: BTS images & notes</li>
-          <li>Unique adoption bundle ID</li>
-        </ul>
-        <div class="spacer"></div>
-        <a class="btn primary" href="/checkout?tier=three-feathers" aria-label="Adopt three feathers for twenty five dollars">Adopt — $25</a>
-      </article>
-
-      <!-- Tier 3 -->
-      <article class="card" aria-labelledby="tier3-title">
-        <span class="pill" aria-hidden="true">Tier 3</span>
-        <h3 id="tier3-title">Adopt a Wing</h3>
-        <div class="price">$75 <span style="opacity:.8; font-weight:600; font-size:.9rem">koha</span></div>
-        <p>
-          Lift others higher. Receive a personalised digital artwork of the luminous wing with your name subtly woven
-          into the light, plus a thank-you message from Tutu.
-        </p>
-        <div class="divider"></div>
-        <ul style="margin:0; padding-left:1.1rem; line-height:1.6">
-          <li>Personalised wing artwork (PNG/WebP)</li>
-          <li>Name woven into the glow</li>
-          <li>Message of gratitude from Tutu</li>
-        </ul>
-        <div class="spacer"></div>
-        <a class="btn primary" href="/checkout?tier=wing" aria-label="Adopt a wing for seventy five dollars">Adopt — $75</a>
-      </article>
-
-      <!-- Tier 4 -->
-      <article class="card" aria-labelledby="tier4-title">
-        <span class="pill" aria-hidden="true">Tier 4</span>
-        <h3 id="tier4-title">Guardian of Flight</h3>
-        <div class="price">$150 <span style="opacity:.8; font-weight:600; font-size:.9rem">koha</span></div>
-        <p>
-          Become one of Tutu’s kaitiaki — protectors of his journey. You’ll receive a signed fine-art print,
-          your name on the <em>Wall of Wings</em>, and an exclusive origin-story note.
-        </p>
-        <div class="divider"></div>
-        <ul style="margin:0; padding-left:1.1rem; line-height:1.6">
-          <li>Signed A4 fine-art print of the wing</li>
-          <li>Name listed on the Wall of Wings</li>
-          <li>Exclusive story note from Hamaka</li>
-        </ul>
-        <div class="spacer"></div>
-        <a class="btn primary" href="/checkout?tier=guardian" aria-label="Become a Guardian of Flight for one hundred and fifty dollars">Become a Guardian — $150</a>
-      </article>
+    <section class="hero">
+      <div class="card hero-copy">
+        <p class="eyebrow">Koha • Community • Story</p>
+        <h2 class="title">Adopt a Feather — help Tutu find his glow</h2>
+        <p class="subtitle">Pick a tier, receive a beautiful digital certificate, and follow updates as we build Tutu’s world. Your support keeps the wairua bright and the adventures rolling.</p>
+        <div class="badges">
+          <span class="badge">Instant certificate</span>
+          <span class="badge">Name wall (opt-in)</span>
+          <span class="badge">Behind-the-scenes updates</span>
+        </div>
+        <div class="cta-row">
+          <a href="#tiers" class="btn btn-primary">Choose a Tier</a>
+          <a href="#how-it-works" class="btn btn-ghost">How it works</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <!-- Use your approved image here -->
+        <img src="/assets/images/adopt/adopt-wing.webp"
+             alt="Intricately detailed kiwi wing with luminous feathers, Tutu’s world glow." width="1200" height="800" loading="eager" />
+      </div>
     </section>
 
-    <p class="footnote">
-      Every adoption includes a unique ID and confirmation email. Koha amounts are in NZD. Physical prints ship within Aotearoa;
-      international shipping available at cost.
-    </p>
-  </main>
+    <section id="tiers" class="tiers">
+      <div class="tiers-grid">
+        <!-- Tier 1 -->
+        <article class="card plan" id="tier-single-feather" aria-labelledby="t1">
+          <p class="eyebrow">Tier 1</p>
+          <h3 id="t1">Single Feather</h3>
+          <p class="price">$ —</p>
+          <ul>
+            <li>Personalised digital certificate (PNG + PDF)</li>
+            <li>Monthly progress email</li>
+            <li>Optional name on supporter wall</li>
+          </ul>
+          <div class="action">
+            <a class="btn btn-primary" href="#buy-single" data-shopify-buy="SINGLE_FEATHER_HANDLE">Adopt this</a>
+          </div>
+        </article>
+
+        <!-- Tier 2 -->
+        <article class="card plan featured" id="tier-three-feathers" aria-labelledby="t2">
+          <p class="eyebrow">Tier 2</p>
+          <h3 id="t2">Three Feathers</h3>
+          <p class="price">$ —</p>
+          <ul>
+            <li>Everything in Single Feather</li>
+            <li>Early peeks at new art</li>
+            <li>Quarterly behind-the-scenes mini-update</li>
+          </ul>
+          <div class="action">
+            <a class="btn btn-primary" href="#buy-three" data-shopify-buy="THREE_FEATHERS_HANDLE">Adopt these</a>
+          </div>
+        </article>
+
+        <!-- Tier 3 -->
+        <article class="card plan" id="tier-whole-wing" aria-labelledby="t3">
+          <p class="eyebrow">Tier 3</p>
+          <h3 id="t3">Whole Wing</h3>
+          <p class="price">$ —</p>
+          <ul>
+            <li>Everything in Three Feathers</li>
+            <li>Exclusive hi-res wallpaper set</li>
+            <li>Annual supporter livestream invite</li>
+          </ul>
+          <div class="action">
+            <a class="btn btn-primary" href="#buy-wing" data-shopify-buy="WHOLE_WING_HANDLE">Adopt the wing</a>
+          </div>
+        </article>
+
+        <!-- Tier 4 -->
+        <article class="card plan" id="tier-kohanga" aria-labelledby="t4">
+          <p class="eyebrow">Tier 4</p>
+          <h3 id="t4">Kōhanga Patron</h3>
+          <p class="price">$ —</p>
+          <ul>
+            <li>Everything in Whole Wing</li>
+            <li>Name credit on the site (opt-in)</li>
+            <li>Annual limited print (digital & printable)</li>
+          </ul>
+          <div class="action">
+            <a class="btn btn-primary" href="#buy-kohanga" data-shopify-buy="KOHANGA_PATRON_HANDLE">Become a Patron</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="how">
+      <div class="wrap-in">
+        <h2 class="title">How it works</h2>
+        <div class="how-steps">
+          <div class="card step">
+            <p class="num">1</p>
+            <h3>Pick your tier</h3>
+            <p class="small">Choose from Single Feather, Three Feathers, Whole Wing, or Kōhanga Patron.</p>
+          </div>
+          <div class="card step">
+            <p class="num">2</p>
+            <h3>Get your certificate</h3>
+            <p class="small">Instantly receive a personalised certificate you can share or print.</p>
+          </div>
+          <div class="card step">
+            <p class="num">3</p>
+            <h3>Follow the journey</h3>
+            <p class="small">We’ll send updates as Tutu’s world grows — art drops, milestones, and more.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p class="small legal">Adoptions are supporter contributions (koha) that fund creative development. They’re not charitable donations and aren’t tax-deductible. Digital items are delivered by email.</p>
+      <p class="small">© <span id="yr"></span> Tutu the Kiwi • All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Placeholder Shopify Buy integration; replace HANDLES with real product handles -->
+  <script>
+    // Year stamp
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // If/when you plug in Shopify Buy SDK, you can programmatically attach to the data-shopify-buy attributes.
+    // Example sketch (commented):
+    /*
+    (function(){
+      const map = {
+        'SINGLE_FEATHER_HANDLE': 'your-shopify-product-handle-1',
+        'THREE_FEATHERS_HANDLE': 'your-shopify-product-handle-2',
+        'WHOLE_WING_HANDLE': 'your-shopify-product-handle-3',
+        'KOHANGA_PATRON_HANDLE': 'your-shopify-product-handle-4'
+      };
+      document.querySelectorAll('[data-shopify-buy]').forEach(btn=>{
+        btn.addEventListener('click', (e)=>{
+          e.preventDefault();
+          const handle = btn.getAttribute('data-shopify-buy');
+          const product = map[handle];
+          if(product){
+            // redirect to product page for now (simple + robust)
+            window.location.href = `/products/${product}`;
+          }
+        });
+      });
+    })();
+    */
+  </script>
 </body>
 </html>
