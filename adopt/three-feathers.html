@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Adopt — Three Feathers</title>
+  <meta name="description" content="Adopt three glowing feathers to support Tutu the Kiwi. Includes certificate, early art peeks, and updates."/>
+  <link rel="stylesheet" href="/assets/css/adopt.css"/>
+  <link rel="preload" as="image" href="/assets/images/adopt/three-feathers.webp"/>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <h1>Tutu the Kiwi</h1>
+      </div>
+      <nav aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/adopt/">Adopt</a>
+        <a href="/shop/">Shop</a>
+        <a href="/about/">About</a>
+      </nav>
+    </header>
+
+    <section class="section">
+      <div class="section-grid">
+        <div class="section-media">
+          <img src="/assets/images/adopt/three-feathers.webp" alt="Three luminous feathers artwork (placeholder)." width="1200" height="800" loading="eager"/>
+        </div>
+        <div class="card section-copy">
+          <p class="eyebrow">Tier 2</p>
+          <h2 class="title">Three Feathers</h2>
+          <p class="subtitle">A trio for momentum — more glow, more go.</p>
+          <p class="price">$ —</p>
+          <ul class="feature-list">
+            <li>Everything in Single Feather</li>
+            <li>Early peeks at new art</li>
+            <li>Quarterly behind-the-scenes mini-update</li>
+          </ul>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="/products/YOUR_THREE_FEATHERS_HANDLE">Adopt these feathers</a>
+            <a class="btn btn-ghost" href="/adopt/">Back to tiers</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p class="small legal">Adoptions are supporter contributions (koha). Not tax-deductible. Digital items are delivered by email.</p>
+      <p class="small">© <span id="yr"></span> Tutu the Kiwi</p>
+    </footer>
+  </div>
+  <script>document.getElementById('yr').textContent=new Date().getFullYear()</script>
+</body>
+</html>
