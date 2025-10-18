@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Adopt — Kōhanga Patron</title>
+  <meta name="description" content="Become a Kōhanga Patron to supercharge Tutu the Kiwi’s world-building."/>
+  <link rel="stylesheet" href="/assets/css/adopt.css"/>
+  <link rel="preload" as="image" href="/assets/images/adopt/kohanga.webp"/>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <h1>Tutu the Kiwi</h1>
+      </div>
+      <nav aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/adopt/">Adopt</a>
+        <a href="/shop/">Shop</a>
+        <a href="/about/">About</a>
+      </nav>
+    </header>
+
+    <section class="section">
+      <div class="section-grid">
+        <div class="section-media">
+          <img src="/assets/images/adopt/kohanga.webp" alt="Abstract pāua-toned glow background." width="1200" height="800" loading="eager"/>
+        </div>
+        <div class="card section-copy">
+          <p class="eyebrow">Tier 4</p>
+          <h2 class="title">Kōhanga Patron</h2>
+          <p class="subtitle">Nest patron — keep the kaupapa warm and growing.</p>
+          <p class="price">$ —</p>
+          <ul class="feature-list">
+            <li>Everything in Whole Wing</li>
+            <li>Name credit on the site (opt-in)</li>
+            <li>Annual limited print (digital & printable)</li>
+          </ul>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="/products/YOUR_KOHANGA_PATRON_HANDLE">Become a Patron</a>
+            <a class="btn btn-ghost" href="/adopt/">Back to tiers</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p class="small legal">Adoptions are supporter contributions (koha). Not tax-deductible. Digital items are delivered by email.</p>
+      <p class="small">© <span id="yr"></span> Tutu the Kiwi</p>
+    </footer>
+  </div>
+  <script>document.getElementById('yr').textContent=new Date().getFullYear()</script>
+</body>
+</html>
