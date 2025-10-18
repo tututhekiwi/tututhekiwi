@@ -1,14 +1,58 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Map — Tutu the Kiwi</title><link rel="stylesheet" href="/assets/css/styles.css">
-</head><body>
-<header class="site-header"><a class="logo" href="/"><img src="/assets/img/logo.svg" alt="Tutu the Kiwi" width="120" height="40"></a>
-<button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-<nav id="site-nav" class="site-nav">
-  <a href="/">Home</a><a href="/books.html">Books</a><a aria-current="page" href="/map.html">Map</a><a href="/merch.html">Merch</a><a href="/about.html">About</a><a href="/terms.html">Terms</a>
-</nav></header>
-<main class="wrap"><h1>Adventure Map</h1>
-<picture><source srcset="/assets/img/map.webp" type="image/webp"><img loading="lazy" src="/assets/img/map.jpg" alt="Stylised map of Aotearoa with Tutu’s stops" width="1600" height="900"></picture>
-</main>
-<footer class="site-footer"><nav class="footer-nav"><a href="/">Home</a> · <a href="/books.html">Books</a> · <a href="/map.html">Map</a> · <a href="/merch.html">Merch</a> · <a href="/about.html">About</a> · <a href="/terms.html">Terms</a></nav>
-<p>© <span id="year"></span> Tutu the Kiwi.</p></footer><script src="/assets/js/main.js" defer></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Tutu the Kiwi — Map of Adventures</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Follow Tutu’s travels across Aotearoa on an illustrated map.">
+  <link rel="canonical" href="https://www.tututhekiwi.com/map/">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">Tutu the Kiwi</a>
+    <nav aria-label="Primary">
+      <ul class="nav">
+        <li><a href="/books/">Books</a></li>
+        <li><a href="/map/">Map</a></li>
+        <li><a href="/merch/">Merch</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/terms.html">Terms</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="content">
+    <h1>Adventure Map</h1>
+    <p>Tūhura — explore the places Tutu visits as the world grows.</p>
+
+    <figure class="map">
+      <img src="/images/map.webp" alt="Cartoon map of Aotearoa with locations Tutu visits">
+      <figcaption>Tap/click points as they appear in future updates.</figcaption>
+    </figure>
+
+    <section class="weather-park">
+      <h2>Tutu’s Weather Park</h2>
+      <img src="/images/tutu-weather-park.png" alt="Tutu’s Weather Park with icons for sun, rain, wind, and snow">
+      <div class="icon-row">
+        <img src="/images/weather/sunny-day.webp" alt="Sunny day">
+        <img src="/images/weather/rainy-day.webp" alt="Rainy day">
+        <img src="/images/weather/windy-day.webp" alt="Windy day">
+        <img src="/images/weather/snowy-day.webp" alt="Snowy day">
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav aria-label="Footer">
+      <a href="/">Home</a> ·
+      <a href="/books/">Books</a> ·
+      <a href="/map/">Map</a> ·
+      <a href="/merch/">Merch</a> ·
+      <a href="/about/">About</a> ·
+      <a href="/terms.html">Terms</a>
+    </nav>
+    <p>© 2025 Tutu the Kiwi — Kirikiriroa, Aotearoa.</p>
+  </footer>
+</body>
+</html>
