@@ -4,77 +4,27 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tutu the Kiwi — Adventures across Aotearoa</title>
-  <meta name="description" content="Explore Tutu’s world — pukapuka, maps, weather, and ways to support the journey across Aotearoa." />
-  <link rel="icon" href="assets/images/ui/favicon.png" />
-  <style>
-    :root{
-      --bg:#ffffff; --text:#0f172a; --muted:#475569; --soft:#e2e8f0;
-      --brand:#0ea5e9; --brand-dark:#0284c7; --accent:#f59e0b;
-      --radius:16px; --shadow:0 8px 30px rgba(2,8,23,.08);
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
-      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial,sans-serif}
-    a{color:var(--brand);text-decoration:none}
-    a:hover{color:var(--brand-dark);text-decoration:underline}
-    img{max-width:100%;display:block}
-    .container{max-width:1100px;margin:0 auto;padding:20px}
-    header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--soft);z-index:50}
-    .nav{display:flex;align-items:center;gap:16px;justify-content:space-between}
-    .nav-left{display:flex;align-items:center;gap:14px}
-    .logo{height:40px;width:auto}
-    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:14px;flex-wrap:wrap}
-    nav a{padding:8px 10px;border-radius:10px}
-    nav a:hover{background:var(--soft);text-decoration:none}
-    .hero{display:grid;grid-template-columns:1.1fr 0.9fr;gap:28px;align-items:center;padding:28px 0}
-    .hero-card{background:#fff;border:1px solid var(--soft);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px}
-    .eyebrow{font-weight:600;color:var(--brand-dark);letter-spacing:.02em}
-    h1{font-size:clamp(28px,4.2vw,44px);line-height:1.15;margin:.25em 0 .3em}
-    p.lead{color:var(--muted);font-size:1.05rem;margin:.2em 0 1em}
-    .btn{display:inline-block;background:var(--brand);color:#fff;padding:10px 16px;border-radius:12px;font-weight:700}
-    .btn:hover{background:var(--brand-dark);text-decoration:none}
-    .hero-media{border-radius:var(--radius);overflow:hidden;border:1px solid var(--soft);box-shadow:var(--shadow)}
-    .section-title{font-size:1.4rem;margin:8px 0 14px;font-weight:800}
-    .carousel-wrap{position:relative}
-    .row{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 2px}
-    .card{min-width:280px;max-width:280px;background:#fff;border:1px solid var(--soft);border-radius:var(--radius);box-shadow:var(--shadow);scroll-snap-align:start}
-    .card img{height:190px;object-fit:cover;border-bottom:1px solid var(--soft)}
-    .card-body{padding:14px}
-    .card-title{font-weight:700;margin:0 0 6px}
-    .card-sub{color:var(--muted);font-size:.95rem;margin:0}
-    .hint{color:var(--muted);font-size:.92rem;margin-top:6px}
-    .support{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;margin-top:28px;border:1px dashed var(--soft);border-radius:var(--radius);padding:18px}
-    .support .btn{background:var(--accent)}
-    .support .btn:hover{background:#d97706}
-    footer{margin-top:36px;border-top:1px solid var(--soft);padding:18px 0;color:var(--muted)}
-    .footer-links{display:flex;gap:14px;flex-wrap:wrap;margin:8px 0}
-    .legal{font-size:.92rem}
-    @media (max-width:860px){
-      .hero{grid-template-columns:1fr;gap:18px}
-      .card{min-width:240px;max-width:240px}
-      .card img{height:160px}
-    }
-  </style>
+  <meta name="description" content="Whānau-first adventures with Tutu the Kiwi — stories, art, maps, and ways to support the journey across Aotearoa." />
+  <!-- Root-level assets based on your repo screenshot -->
+  <link rel="icon" href="tutu-logo.png" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
+  <header class="site-header">
     <div class="container nav">
-      <div class="nav-left">
-        <a href="./">
-          <img class="logo" src="assets/images/ui/tutu-logo.svg" alt="Tutu the Kiwi logo" />
-        </a>
-        <nav aria-label="Primary">
-          <ul>
-            <li><a href="./">Home</a></li>
-            <!-- These three are placeholders until pages exist -->
-            <li><a href="./books.html">Books</a></li>
-            <li><a href="./map.html">Map</a></li>
-            <li><a href="./merch.html">Merch</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./terms.html">Terms</a></li>
-          </ul>
-        </nav>
-      </div>
+      <a class="brand" href="/" aria-label="Tutu the Kiwi — Home">
+        <img class="logo" src="tutu-logo.png" alt="Tutu the Kiwi logo" />
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/books/">Books</a></li>
+          <li><a href="/map/">Map</a></li>
+          <li><a href="/merch/">Merch</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/terms.html">Terms</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
@@ -82,45 +32,40 @@
     <!-- HERO -->
     <section class="hero" aria-labelledby="home-hero">
       <div class="hero-card">
-        <div class="eyebrow">Kia ora — I’m Tutu!</div>
+        <p class="eyebrow">Kia ora — I’m Tutu!</p>
         <h1 id="home-hero">Join the adventure across Aotearoa</h1>
         <p class="lead">Explore my pukapuka, meet my whānau, and wander from maunga to moana. New chapters, new maps, same cheeky beak.</p>
-        <a class="btn" href="./books.html">Browse Books</a>
+        <a class="btn" href="/books/">Browse Books</a>
       </div>
       <figure class="hero-media">
-        <!-- FIXED PATH -->
-        <img src="assets/images/hero/image-hero.webp" alt="Tutu the Kiwi in a lush Aotearoa landscape" width="1600" height="900" />
+        <!-- Using your root hero image from the repo: hero.webp -->
+        <img src="hero.webp" alt="Tutu the Kiwi in a lush Aotearoa landscape" width="1600" height="900" />
       </figure>
     </section>
 
     <!-- FEATURED BOOKS -->
     <section aria-labelledby="featured-title">
       <h2 class="section-title" id="featured-title">Featured Pukapuka</h2>
-
       <div class="carousel-wrap">
         <div class="row" role="list">
-          <!-- Book 1 -->
           <article class="card" role="listitem">
-            <!-- FIXED PATH + REMOVED 'Book 1' label -->
-            <img src="assets/images/books/book1-cover.webp" alt="Tutu Finds His Glow" />
+            <img src="images/books/book1-cover.webp" alt="Tutu Finds His Glow" />
             <div class="card-body">
               <div class="card-title">Tutu Finds His Glow</div>
               <p class="hint">First print coming soon.</p>
             </div>
           </article>
 
-          <!-- Book 2 -->
           <article class="card" role="listitem">
-            <img src="assets/images/books/book2-cover.webp" alt="Noa and the Missing Cookie Cloud" />
+            <img src="images/books/book2-cover.webp" alt="Noa and the Missing Cookie Cloud" />
             <div class="card-body">
               <div class="card-title">Noa and the Missing Cookie Cloud</div>
               <p class="hint">Illustrations in progress.</p>
             </div>
           </article>
 
-          <!-- Mystery -->
           <article class="card" role="listitem">
-            <img src="assets/images/books/mystery-cover.webp" alt="Mystery book coming soon" />
+            <img src="images/books/mystery-cover.webp" alt="Mystery book coming soon" />
             <div class="card-body">
               <div class="card-title">Mystery Title — Coming Soon</div>
               <p class="hint">Shhh… it’s a surprise.</p>
@@ -136,25 +81,26 @@
         <h2 class="section-title" id="support-title" style="margin:0 0 6px">Support Tutu</h2>
         <div class="hint">Help bring new adventures to life. Every koha counts.</div>
       </div>
-      <a class="btn" href="https://givealittle.co.nz" target="_blank" rel="noopener">Givealittle</a>
+      <a class="btn btn-accent" href="/adopt/" rel="noopener">Givealittle / Adopt a Feather</a>
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer>
+  <footer class="site-footer">
     <div class="container">
       <nav aria-label="Footer">
         <div class="footer-links">
-          <a href="./">Home</a>
-          <a href="./books.html">Books</a>
-          <a href="./map.html">Map</a>
-          <a href="./merch.html">Merch</a>
-          <a href="./about.html">About</a>
-          <a href="./terms.html">Terms</a>
+          <a href="/">Home</a>
+          <a href="/books/">Books</a>
+          <a href="/map/">Map</a>
+          <a href="/merch/">Merch</a>
+          <a href="/about/">About</a>
+          <a href="/terms.html">Terms</a>
         </div>
       </nav>
       <div class="legal">© 2025 Tutu the Kiwi — Kirikiriroa, Aotearoa.</div>
     </div>
   </footer>
+
+  <script src="/scripts/app.js" defer></script>
 </body>
 </html>
