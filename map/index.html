@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Browse Tutu the Kiwi books — adventures across Aotearoa with heart, humour, and whenua." />
-  <title>Tutu the Kiwi — Books</title>
+  <meta name="description" content="Adventure Map — explore the places Tutu visits as the world grows. See Tutu’s Weather Park with icons for sun, rain, wind, and snow." />
+  <title>Tutu the Kiwi — Adventure Map</title>
   <link rel="stylesheet" href="/style.css?v=20251019" />
   <link rel="icon" type="image/png" href="/images/favicon.png" />
 </head>
@@ -14,8 +14,8 @@
     <nav>
       <a href="/" class="logo">Tutu the Kiwi</a>
       <ul>
-        <li><a href="/books/" aria-current="page">Books</a></li>
-        <li><a href="/map/">Map</a></li>
+        <li><a href="/books/">Books</a></li>
+        <li><a href="/map/" aria-current="page">Map</a></li>
         <li><a href="/merch/">Merch</a></li>
         <li><a href="/about/">About</a></li>
         <li><a href="/terms.html">Terms</a></li>
@@ -24,49 +24,78 @@
   </header>
 
   <main>
+    <!-- Adventure Map -->
     <section class="page-hero">
-      <h1>Pukapuka — Tutu’s Books</h1>
-      <p>Stories from Aotearoa for kids and the kid-hearted. More adventures are on the way.</p>
+      <h1>Adventure Map</h1>
+      <p>Tūhura — explore the places Tutu visits as the world grows.</p>
     </section>
 
-    <section class="book-grid">
-      <!-- Book One -->
-      <article class="book">
-        <img src="/images/book1.webp" alt="Cover of Tutu Book 1" width="400" height="600" loading="eager" />
-        <div class="book-meta">
-          <h2>Book One</h2>
-          <p>Tutu’s first big adventure. Whakapapa, whenua, and wonder.</p>
-          <div class="actions">
-            <a href="/books/book1.html" class="button">View</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Book Two -->
-      <article class="book">
-        <img src="/images/book2.webp" alt="Cover of Tutu Book 2" width="400" height="600" loading="lazy" />
-        <div class="book-meta">
-          <h2>Book Two</h2>
-          <p>New friends, new places, same cheeky Tutu.</p>
-          <div class="actions">
-            <a href="/books/book2.html" class="button">View</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Coming Soon / Mystery -->
-      <article class="book coming-soon">
-        <img src="/images/unknown-book.webp" alt="Mystery Tutu Book — Coming Soon" width="400" height="600" loading="lazy" />
-        <div class="book-meta">
-          <h2>Coming Soon</h2>
-          <p>Another chapter opens. Keep an eye on this space.</p>
-          <div class="actions">
-            <a href="/books/tease.html" class="button">Tease</a>
-          </div>
-        </div>
-      </article>
+    <section class="map-hero">
+      <figure>
+        <img
+          src="/images/map.webp"
+          alt="Cartoon map of Aotearoa with locations Tutu visits"
+          width="1600"
+          height="900"
+          loading="eager"
+        />
+        <figcaption>Tap/click points as they appear in future updates.</figcaption>
+      </figure>
     </section>
 
+    <!-- Weather Park -->
+    <section class="weather-park">
+      <h2>Tutu’s Weather Park</h2>
+      <p>Icons for the current set: rā (sun), ua (rain), hau (wind), and hukarere (snow). More to come.</p>
+
+      <div class="weather-grid">
+        <figure class="weather-card">
+          <img
+            src="/images/sunny-day.webp"
+            alt="Sunny day icon"
+            width="160"
+            height="160"
+            loading="lazy"
+          />
+          <figcaption>Sunny day</figcaption>
+        </figure>
+
+        <figure class="weather-card">
+          <img
+            src="/images/rainy-day.webp"
+            alt="Rainy day icon"
+            width="160"
+            height="160"
+            loading="lazy"
+          />
+          <figcaption>Rainy day</figcaption>
+        </figure>
+
+        <figure class="weather-card">
+          <img
+            src="/images/windy-day.webp"
+            alt="Windy day icon"
+            width="160"
+            height="160"
+            loading="lazy"
+          />
+          <figcaption>Windy day</figcaption>
+        </figure>
+
+        <figure class="weather-card">
+          <img
+            src="/images/snowy-day.webp"
+            alt="Snowy day icon"
+            width="160"
+            height="160"
+            loading="lazy"
+          />
+          <figcaption>Snowy day</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Support -->
     <section class="support">
       <h2>Support Tutu</h2>
       <p>Help bring new adventures to life. Every koha counts.</p>
@@ -80,8 +109,8 @@
   <footer>
     <nav class="footer-nav">
       <a href="/">Home</a> ·
-      <a href="/books/" aria-current="page">Books</a> ·
-      <a href="/map/">Map</a> ·
+      <a href="/books/">Books</a> ·
+      <a href="/map/" aria-current="page">Map</a> ·
       <a href="/merch/">Merch</a> ·
       <a href="/about/">About</a> ·
       <a href="/terms.html">Terms</a>
