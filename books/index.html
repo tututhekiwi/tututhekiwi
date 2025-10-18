@@ -1,19 +1,73 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Books — Tutu the Kiwi</title><link rel="stylesheet" href="/assets/css/styles.css">
-</head><body>
-<header class="site-header"><a class="logo" href="/"><img src="/assets/img/logo.svg" alt="Tutu the Kiwi" width="120" height="40"></a>
-<button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-<nav id="site-nav" class="site-nav">
-  <a href="/">Home</a><a aria-current="page" href="/books.html">Books</a><a href="/map.html">Map</a><a href="/merch.html">Merch</a><a href="/about.html">About</a><a href="/terms.html">Terms</a>
-</nav></header>
-<main class="wrap">
-  <h1>Books</h1>
-  <div class="grid cards">
-    <article class="card"><img loading="lazy" src="/assets/img/books/book1.jpg" alt="Tutu Finds His Glow" width="400" height="600"><h2>Tutu Finds His Glow</h2><p>First adventure across Aotearoa.</p></article>
-    <article class="card"><img loading="lazy" src="/assets/img/books/book2.jpg" alt="Noa and the Missing Cookie Cloud" width="400" height="600"><h2>Noa and the Missing Cookie Cloud</h2><p>Whānau, cookies, and a breezy mystery.</p></article>
-    <article class="card"><img loading="lazy" src="/assets/img/books/mystery.jpg" alt="Mystery coming soon" width="400" height="600"><h2>Coming Soon</h2><p>Next chapter teased — stay tuned.</p></article>
-  </div>
-</main>
-<footer class="site-footer"><nav class="footer-nav"><a href="/">Home</a> · <a href="/books.html">Books</a> · <a href="/map.html">Map</a> · <a href="/merch.html">Merch</a> · <a href="/about.html">About</a> · <a href="/terms.html">Terms</a></nav>
-<p>© <span id="year"></span> Tutu the Kiwi.</p></footer><script src="/assets/js/main.js" defer></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Tutu the Kiwi — Books</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse Tutu the Kiwi pukapuka — stories from across Aotearoa.">
+  <link rel="canonical" href="https://www.tututhekiwi.com/books/">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">Tutu the Kiwi</a>
+    <nav aria-label="Primary">
+      <ul class="nav">
+        <li><a href="/books/">Books</a></li>
+        <li><a href="/map/">Map</a></li>
+        <li><a href="/merch/">Merch</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/terms.html">Terms</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="content">
+    <h1>Pukapuka</h1>
+    <p>Stories that celebrate te taiao (the natural world) and the people of Aotearoa.</p>
+
+    <div class="cards grid-3">
+      <article class="card" id="book-1">
+        <img src="/images/books/book-1.webp" alt="Cover of Tutu Book 1">
+        <h2>Book One</h2>
+        <p>A first adventure and a gentle intro to Tutu’s world.</p>
+        <div class="cta-row">
+          <a class="btn small" href="/merch/">Buy</a>
+          <a class="btn small btn-outline" href="/">Preview</a>
+        </div>
+      </article>
+
+      <article class="card" id="book-2">
+        <img src="/images/books/book-2.webp" alt="Cover of Tutu Book 2">
+        <h2>Book Two</h2>
+        <p>Deeper into the whenua, oceans, and starry skies.</p>
+        <div class="cta-row">
+          <a class="btn small" href="/merch/">Buy</a>
+          <a class="btn small btn-outline" href="/">Preview</a>
+        </div>
+      </article>
+
+      <article class="card" id="coming-soon">
+        <img src="/images/books/book-mystery.webp" alt="Mystery book — silhouette placeholder">
+        <h2>Coming Soon</h2>
+        <p>We’re cooking something special. Stay tuned.</p>
+        <div class="cta-row">
+          <a class="btn small" href="/about/">Updates</a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <nav aria-label="Footer">
+      <a href="/">Home</a> ·
+      <a href="/books/">Books</a> ·
+      <a href="/map/">Map</a> ·
+      <a href="/merch/">Merch</a> ·
+      <a href="/about/">About</a> ·
+      <a href="/terms.html">Terms</a>
+    </nav>
+    <p>© 2025 Tutu the Kiwi — Kirikiriroa, Aotearoa.</p>
+  </footer>
+</body>
+</html>
