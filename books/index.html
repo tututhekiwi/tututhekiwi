@@ -1,86 +1,89 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Browse Tutu the Kiwi books — adventures across Aotearoa with heart, humour, and whenua." />
   <title>Tutu the Kiwi — Books</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Browse Tutu the Kiwi pukapuka — new titles appear here as they’re released.">
-  <link rel="canonical" href="https://tututhekiwi.com/books/">
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/style.css?v=20251019" />
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
 </head>
+
 <body>
-  <header class="site-header">
-    <a class="brand" href="/">Tutu the Kiwi</a>
-    <nav aria-label="Primary">
-      <ul class="nav">
+  <header>
+    <nav>
+      <a href="/" class="logo">Tutu the Kiwi</a>
+      <ul>
         <li><a href="/books/" aria-current="page">Books</a></li>
         <li><a href="/map/">Map</a></li>
-        <li><a href="/weather/">Weather Park</a></li>
         <li><a href="/merch/">Merch</a></li>
         <li><a href="/about/">About</a></li>
-        <li><a href="/contact/">Contact</a></li>
         <li><a href="/terms.html">Terms</a></li>
       </ul>
     </nav>
   </header>
 
-  <main id="content">
-    <h1>Books</h1>
-    <p>New titles will appear here as they’re released.</p>
+  <main>
+    <section class="page-hero">
+      <h1>Pukapuka — Tutu’s Books</h1>
+      <p>Stories from Aotearoa for kids and the kid-hearted. More adventures are on the way.</p>
+    </section>
 
-    <div class="cards grid-3">
-      <!-- Book 1 -->
-      <article class="card" id="book-1">
-        <img
-          src="/images/books/book-1.webp"
-          alt="Cover of ‘Tutu Finds His Glow’"
-          width="800" height="1100" loading="lazy">
-        <h2>Tutu Finds His Glow</h2>
-        <p>Book 1 · Coming soon</p>
-        <div class="cta-row">
-          <a class="btn small" href="/merch/">Buy (soon)</a>
-          <a class="btn small btn-outline" href="/">Preview</a>
+    <section class="book-grid">
+      <!-- Book One -->
+      <article class="book">
+        <img src="/images/book1.webp" alt="Cover of Tutu Book 1" width="400" height="600" loading="eager" />
+        <div class="book-meta">
+          <h2>Book One</h2>
+          <p>Tutu’s first big adventure. Whakapapa, whenua, and wonder.</p>
+          <div class="actions">
+            <a href="/books/book1.html" class="button">View</a>
+          </div>
         </div>
       </article>
 
-      <!-- Book 2 -->
-      <article class="card" id="book-2">
-        <img
-          src="/images/books/book-2.webp"
-          alt="Cover of ‘Noa and the Missing Cookie Cloud’"
-          width="800" height="1100" loading="lazy">
-        <h2>Noa and the Missing Cookie Cloud</h2>
-        <p>Book 2 · Illustrations in progress</p>
-        <div class="cta-row">
-          <a class="btn small" href="/merch/">Buy (soon)</a>
-          <a class="btn small btn-outline" href="/">Preview</a>
+      <!-- Book Two -->
+      <article class="book">
+        <img src="/images/book2.webp" alt="Cover of Tutu Book 2" width="400" height="600" loading="lazy" />
+        <div class="book-meta">
+          <h2>Book Two</h2>
+          <p>New friends, new places, same cheeky Tutu.</p>
+          <div class="actions">
+            <a href="/books/book2.html" class="button">View</a>
+          </div>
         </div>
       </article>
 
-      <!-- Book 3 (mystery) -->
-      <article class="card" id="book-3">
-        <img
-          src="/images/books/book-mystery.webp"
-          alt="Single mystery book — title coming soon"
-          width="800" height="1100" loading="lazy">
-        <h2>Mystery Title — Coming Soon</h2>
-        <p>Book 3 · Shhh… it’s a surprise.</p>
-        <div class="cta-row">
-          <a class="btn small btn-outline" href="/about/">Get updates</a>
+      <!-- Coming Soon / Mystery -->
+      <article class="book coming-soon">
+        <img src="/images/unknown-book.webp" alt="Mystery Tutu Book — Coming Soon" width="400" height="600" loading="lazy" />
+        <div class="book-meta">
+          <h2>Coming Soon</h2>
+          <p>Another chapter opens. Keep an eye on this space.</p>
+          <div class="actions">
+            <a href="/books/tease.html" class="button">Tease</a>
+          </div>
         </div>
       </article>
-    </div>
+    </section>
+
+    <section class="support">
+      <h2>Support Tutu</h2>
+      <p>Help bring new adventures to life. Every koha counts.</p>
+      <p>
+        <a href="https://givealittle.co.nz/org/tututhekiwi" target="_blank" rel="noopener">Donate on Givealittle</a> |
+        <a href="/feather.html">Adopt a Feather</a>
+      </p>
+    </section>
   </main>
 
-  <footer class="site-footer">
-    <nav aria-label="Footer">
+  <footer>
+    <nav class="footer-nav">
       <a href="/">Home</a> ·
-      <a href="/books/">Books</a> ·
+      <a href="/books/" aria-current="page">Books</a> ·
       <a href="/map/">Map</a> ·
-      <a href="/weather/">Weather Park</a> ·
       <a href="/merch/">Merch</a> ·
       <a href="/about/">About</a> ·
-      <a href="/contact/">Contact</a> ·
       <a href="/terms.html">Terms</a>
     </nav>
     <p>© 2025 Tutu the Kiwi — Kirikiriroa, Aotearoa.</p>
