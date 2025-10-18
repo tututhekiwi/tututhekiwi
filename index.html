@@ -8,18 +8,13 @@
   <link rel="icon" href="assets/images/ui/favicon.png" />
   <style>
     :root{
-      --bg:#ffffff;
-      --text:#0f172a;        /* slate-900 */
-      --muted:#475569;       /* slate-600 */
-      --soft:#e2e8f0;        /* slate-200 */
-      --brand:#0ea5e9;       /* sky-500 */
-      --brand-dark:#0284c7;  /* sky-600 */
-      --accent:#f59e0b;      /* amber-500 (Tutu beak/feet vibe) */
-      --radius:16px;
-      --shadow:0 8px 30px rgba(2,8,23,.08);
+      --bg:#ffffff; --text:#0f172a; --muted:#475569; --soft:#e2e8f0;
+      --brand:#0ea5e9; --brand-dark:#0284c7; --accent:#f59e0b;
+      --radius:16px; --shadow:0 8px 30px rgba(2,8,23,.08);
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial,sans-serif}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
+      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial,sans-serif}
     a{color:var(--brand);text-decoration:none}
     a:hover{color:var(--brand-dark);text-decoration:underline}
     img{max-width:100%;display:block}
@@ -39,9 +34,7 @@
     .btn{display:inline-block;background:var(--brand);color:#fff;padding:10px 16px;border-radius:12px;font-weight:700}
     .btn:hover{background:var(--brand-dark);text-decoration:none}
     .hero-media{border-radius:var(--radius);overflow:hidden;border:1px solid var(--soft);box-shadow:var(--shadow)}
-    /* section title */
     .section-title{font-size:1.4rem;margin:8px 0 14px;font-weight:800}
-    /* carousel */
     .carousel-wrap{position:relative}
     .row{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 2px}
     .card{min-width:280px;max-width:280px;background:#fff;border:1px solid var(--soft);border-radius:var(--radius);box-shadow:var(--shadow);scroll-snap-align:start}
@@ -50,16 +43,12 @@
     .card-title{font-weight:700;margin:0 0 6px}
     .card-sub{color:var(--muted);font-size:.95rem;margin:0}
     .hint{color:var(--muted);font-size:.92rem;margin-top:6px}
-    /* support block */
     .support{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;margin-top:28px;border:1px dashed var(--soft);border-radius:var(--radius);padding:18px}
-    .support strong{font-weight:800}
     .support .btn{background:var(--accent)}
     .support .btn:hover{background:#d97706}
-    /* footer */
     footer{margin-top:36px;border-top:1px solid var(--soft);padding:18px 0;color:var(--muted)}
     .footer-links{display:flex;gap:14px;flex-wrap:wrap;margin:8px 0}
     .legal{font-size:.92rem}
-    /* small */
     @media (max-width:860px){
       .hero{grid-template-columns:1fr;gap:18px}
       .card{min-width:240px;max-width:240px}
@@ -77,6 +66,7 @@
         <nav aria-label="Primary">
           <ul>
             <li><a href="./">Home</a></li>
+            <!-- These three are placeholders until pages exist -->
             <li><a href="./books.html">Books</a></li>
             <li><a href="./map.html">Map</a></li>
             <li><a href="./merch.html">Merch</a></li>
@@ -98,7 +88,8 @@
         <a class="btn" href="./books.html">Browse Books</a>
       </div>
       <figure class="hero-media">
-        <img src="images/hero.webp" alt="Tutu the Kiwi in a lush Aotearoa landscape" width="1600" height="900" />
+        <!-- FIXED PATH -->
+        <img src="assets/images/hero/image-hero.webp" alt="Tutu the Kiwi in a lush Aotearoa landscape" width="1600" height="900" />
       </figure>
     </section>
 
@@ -110,30 +101,28 @@
         <div class="row" role="list">
           <!-- Book 1 -->
           <article class="card" role="listitem">
-            <img src="images/books/book1-cover.jpg" alt="Book 1 cover — Tutu Finds His Glow" />
+            <!-- FIXED PATH + REMOVED 'Book 1' label -->
+            <img src="assets/images/books/book1-cover.webp" alt="Tutu Finds His Glow" />
             <div class="card-body">
               <div class="card-title">Tutu Finds His Glow</div>
-              <p class="card-sub">Book 1</p>
               <p class="hint">First print coming soon.</p>
             </div>
           </article>
 
           <!-- Book 2 -->
           <article class="card" role="listitem">
-            <img src="images/books/book2-cover.jpg" alt="Book 2 cover — Noa and the Missing Cookie Cloud" />
+            <img src="assets/images/books/book2-cover.webp" alt="Noa and the Missing Cookie Cloud" />
             <div class="card-body">
               <div class="card-title">Noa and the Missing Cookie Cloud</div>
-              <p class="card-sub">Book 2</p>
               <p class="hint">Illustrations in progress.</p>
             </div>
           </article>
 
           <!-- Mystery -->
           <article class="card" role="listitem">
-            <img src="images/books/mystery-cover.jpg" alt="Mystery book coming soon" />
+            <img src="assets/images/books/mystery-cover.webp" alt="Mystery book coming soon" />
             <div class="card-body">
               <div class="card-title">Mystery Title — Coming Soon</div>
-              <p class="card-sub">Book 3</p>
               <p class="hint">Shhh… it’s a surprise.</p>
             </div>
           </article>
@@ -151,7 +140,7 @@
     </section>
   </main>
 
-  <!-- FOOTER with relative links at the bottom -->
+  <!-- FOOTER -->
   <footer>
     <div class="container">
       <nav aria-label="Footer">
