@@ -1,18 +1,19 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nau mai, haere mai ki Tutu the Kiwi — explore Aotearoa with Tutu through stories, maps, and adventures." />
   <title>Tutu the Kiwi — Home</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Tutu the Kiwi — adventures, pukapuka, and a growing world across Aotearoa.">
-  <link rel="canonical" href="https://www.tututhekiwi.com/">
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/style.css?v=20251019" />
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
 </head>
+
 <body>
-  <header class="site-header">
-    <a class="brand" href="/">Tutu the Kiwi</a>
-    <nav aria-label="Primary">
-      <ul class="nav">
+  <header>
+    <nav>
+      <a href="/" class="logo">Tutu the Kiwi</a>
+      <ul>
         <li><a href="/books/">Books</a></li>
         <li><a href="/map/">Map</a></li>
         <li><a href="/merch/">Merch</a></li>
@@ -22,53 +23,51 @@
     </nav>
   </header>
 
-  <main id="content">
+  <main>
     <section class="hero">
-      <img src="/images/hero.webp" alt="Tutu the Kiwi overlooking lakes, mountains, and beaches of Aotearoa">
-      <div class="hero-copy">
-        <h1>Nau mai, haere mai — Tutu’s world</h1>
-        <p>Explore pukapuka, maps, and the kaupapa behind Tutu’s adventures.</p>
-        <div class="cta-row">
-          <a class="btn" href="/books/">Browse Books</a>
-          <a class="btn btn-outline" href="/map/">Explore the Map</a>
-        </div>
+      <img src="/images/hero.webp" alt="Tutu the Kiwi overlooking lakes, mountains, and beaches of Aotearoa" width="1400" height="700" />
+      <h1>Nau mai, haere mai — Tutu’s world</h1>
+      <p>Explore pukapuka, maps, and the kaupapa behind Tutu’s adventures.</p>
+      <div class="hero-links">
+        <a href="/books/" class="button">Browse Books</a>
+        <a href="/map/" class="button">Explore the Map</a>
       </div>
     </section>
 
-    <section class="feature">
+    <section class="featured">
       <h2>Featured Pukapuka</h2>
-      <div class="cards">
-        <article class="card">
-          <img src="/images/books/book-1.webp" alt="Cover of Tutu Book 1">
-          <h3>Book One</h3>
-          <a class="btn small" href="/books/#book-1">View</a>
-        </article>
-        <article class="card">
-          <img src="/images/books/book-2.webp" alt="Cover of Tutu Book 2">
-          <h3>Book Two</h3>
-          <a class="btn small" href="/books/#book-2">View</a>
-        </article>
-        <article class="card">
-          <img src="/images/books/book-mystery.webp" alt="Mystery book — coming soon">
-          <h3>Coming Soon</h3>
-          <a class="btn small" href="/books/#coming-soon">Tease</a>
-        </article>
-      </div>
+
+      <article class="book">
+        <img src="/images/book1.webp" alt="Cover of Tutu Book 1" width="400" height="600" />
+        <h3>Book One</h3>
+        <a href="/books/book1.html" class="button">View</a>
+      </article>
+
+      <article class="book">
+        <img src="/images/book2.webp" alt="Cover of Tutu Book 2" width="400" height="600" />
+        <h3>Book Two</h3>
+        <a href="/books/book2.html" class="button">View</a>
+      </article>
+
+      <article class="book coming-soon">
+        <img src="/images/unknown-book.webp" alt="Mystery Tutu Book Cover Coming Soon" width="400" height="600" />
+        <h3>Coming Soon</h3>
+        <a href="/books/tease.html" class="button">Tease</a>
+      </article>
     </section>
 
     <section class="support">
       <h2>Support Tutu</h2>
       <p>Help bring new adventures to life. Every koha counts.</p>
-      <div class="cta-row">
-        <!-- Replace the placeholder URL with your real Givealittle link -->
-        <a class="btn" href="https://givealittle.co.nz/" target="_blank" rel="noopener">Donate on Givealittle</a>
-        <a class="btn btn-outline" href="/adopt/">Adopt a Feather</a>
-      </div>
+      <p>
+        <a href="https://givealittle.co.nz/org/tututhekiwi" target="_blank" rel="noopener">Donate on Givealittle</a> |
+        <a href="/feather.html">Adopt a Feather</a>
+      </p>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <nav aria-label="Footer">
+  <footer>
+    <nav class="footer-nav">
       <a href="/">Home</a> ·
       <a href="/books/">Books</a> ·
       <a href="/map/">Map</a> ·
