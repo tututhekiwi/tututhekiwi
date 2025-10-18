@@ -1,26 +1,209 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Image Check — Tutu</title>
-  <link rel="stylesheet" href="styles.css" />
-  <style>.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}</style>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tutu — Image Check</title>
+  <style>
+    :root {
+      --bg: #0f172a;         /* slate-900 */
+      --card: #111827;       /* gray-900 */
+      --muted: #9ca3af;      /* gray-400 */
+      --ok: #10b981;         /* emerald-500 */
+      --bad: #ef4444;        /* red-500 */
+      --warn: #f59e0b;       /* amber-500 */
+      --ink: #e5e7eb;        /* gray-200 */
+      --grid: 310px;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      background: var(--bg);
+      color: var(--ink);
+      font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      max-width: 1200px;
+      margin: 24px auto 8px;
+      padding: 0 16px;
+    }
+    header h1 { margin: 0 0 6px; font-size: 22px; }
+    header p  { margin: 0; color: var(--muted); font-size: 14px; }
+    .section {
+      max-width: 1200px;
+      margin: 18px auto;
+      padding: 0 16px 8px;
+    }
+    .section h2 {
+      margin: 8px 0 14px;
+      font-size: 18px;
+      color: #d1d5db;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(var(--grid), 1fr));
+      gap: 14px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid #1f2937; /* gray-800 */
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 260px;
+    }
+    .media {
+      position: relative;
+      background: #0b1220;
+      display: grid;
+      place-items: center;
+      min-height: 180px;
+      border-bottom: 1px solid #1f2937;
+    }
+    .media img, .media svg {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    .meta {
+      padding: 10px 12px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .path { color: #cbd5e1; word-break: break-all; }
+    .row { display: flex; align-items: center; gap: 8px; margin: 3px 0; }
+    .badge {
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .02em;
+      border: 1px solid transparent;
+    }
+    .ok    { color: #052e1d; background: #a7f3d0; border-color: #6ee7b7; }
+    .bad   { color: #4a0a0a; background: #fecaca; border-color: #fca5a5; }
+    .warn  { color: #422006; background: #fed7aa; border-color: #fdba74; }
+    .dims  { color: #bfdbfe; }
+    footer {
+      max-width: 1200px; margin: 20px auto 40px; padding: 0 16px; color: var(--muted);
+      font-size: 13px;
+    }
+    code { background: #0b1220; padding: 0 6px; border-radius: 6px; color: #d1fae5; }
+  </style>
 </head>
-<body class="container">
-  <h1>Image Check</h1>
-  <p class="hint">If any tile shows a broken icon, its path/filename is wrong.</p>
-  <div class="grid">
-    <figure class="card"><img src="tutu-logo.png" alt=""><figcaption>tutu-logo.png</figcaption></figure>
-    <figure class="card"><img src="hero.webp" alt=""><figcaption>hero.webp</figcaption></figure>
+<body>
+  <header>
+    <h1>Image Check — Tutu the Kiwi</h1>
+    <p>Verifies all Weather Park <code>.webp</code> images and Weather Icon <code>.svg</code> assets load correctly, with status and intrinsic dimensions.</p>
+  </header>
 
-    <figure class="card"><img src="assets/images/books/book1-cover.webp" alt=""><figcaption>assets/images/books/book1-cover.webp</figcaption></figure>
-    <figure class="card"><img src="assets/images/books/book2-cover.webp" alt=""><figcaption>assets/images/books/book2-cover.webp</figcaption></figure>
-    <figure class="card"><img src="assets/images/books/mystery-cover.webp" alt=""><figcaption>assets/images/books/mystery-cover.webp</figcaption></figure>
+  <!-- WEATHER PARK IMAGES -->
+  <section class="section">
+    <h2>Weather Park (.webp)</h2>
+    <div id="wp-grid" class="grid"></div>
+  </section>
 
-    <figure class="card"><img src="assets/images/weather/tutu-weather-park.png" alt=""><figcaption>assets/images/weather/tutu-weather-park.png</figcaption></figure>
-    <figure class="card"><img src="assets/images/weather/heroes/sunny-day.webp" alt=""><figcaption>assets/images/weather/heroes/sunny-day.webp</figcaption></figure>
-    <figure class="card"><img src="assets/images/weather/icons/sunny.svg" alt=""><figcaption>assets/images/weather/icons/sunny.svg</figcaption></figure>
-  </div>
+  <!-- WEATHER ICONS -->
+  <section class="section">
+    <h2>Weather Icons (.svg)</h2>
+    <div id="wi-grid" class="grid"></div>
+  </section>
+
+  <footer>
+    Tips: non-critical images are <code>loading="lazy"</code> and <code>decoding="async"</code>.  
+    SVGs are embedded with <code>img</code> for load/error reporting; in production you can inline or use <code>&lt;use&gt;</code> sprites if desired.
+  </footer>
+
+  <script>
+    // ---- Data: exact paths you standardized in the repo ----
+    const WEATHER_PARK = [
+      "clean-light.webp",
+      "clear-night.webp",
+      "cloudy-day.webp",
+      "foggy-day.webp",
+      "partly-cloudy-day.webp",
+      "partly-cloudy-night.webp",
+      "rainy-day.webp",
+      "rainy-night.webp",
+      "snowy-day.webp",
+      "stormy-day.webp",
+      "sunny-day.webp",
+      "windy-day.webp"
+    ].map(n => `/assets/weather-park/${n}`);
+
+    const WEATHER_ICONS = [
+      "icon-clean-light.svg",
+      "icon-clear-night.svg",
+      "icon-cloudy-day.svg",
+      "icon-foggy-day.svg",
+      "icon-partly-cloudy-day.svg",
+      "icon-partly-cloudy-night.svg",
+      "icon-rainy-day.svg",
+      "icon-rainy-night.svg",
+      "icon-snowy-day.svg",
+      "icon-stormy-day.svg",
+      "icon-sunny-day.svg",
+      "icon-windy-day.svg"
+    ].map(n => `/assets/weather-icons/${n}`);
+
+    // ---- Helpers to build cards and probe load state ----
+    function makeCard(src, label, isSVG) {
+      const card = document.createElement('div');
+      card.className = 'card';
+
+      const media = document.createElement('div');
+      media.className = 'media';
+
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = label || '';
+      img.loading = 'lazy';
+      img.decoding = 'async';
+
+      media.appendChild(img);
+
+      const meta = document.createElement('div');
+      meta.className = 'meta';
+      meta.innerHTML = `
+        <div class="row">
+          <span class="badge warn">Checking…</span>
+          <span class="dims">—</span>
+        </div>
+        <div class="row path">${src}</div>
+      `;
+
+      const statusBadge = meta.querySelector('.badge');
+      const dims = meta.querySelector('.dims');
+
+      img.addEventListener('load', () => {
+        statusBadge.textContent = 'Loaded';
+        statusBadge.className = 'badge ok';
+        const w = img.naturalWidth || '—';
+        const h = img.naturalHeight || '—';
+        dims.textContent = isSVG ? `SVG (vector)` : `${w}×${h}px`;
+      });
+
+      img.addEventListener('error', () => {
+        statusBadge.textContent = 'Failed';
+        statusBadge.className = 'badge bad';
+        dims.textContent = '—';
+      });
+
+      card.appendChild(media);
+      card.appendChild(meta);
+      return card;
+    }
+
+    function mountGrid(gridId, list, isSVG = false) {
+      const grid = document.getElementById(gridId);
+      list.forEach(src => grid.appendChild(makeCard(src, '', isSVG)));
+    }
+
+    // Mount both sections
+    mountGrid('wp-grid', WEATHER_PARK, false);
+    mountGrid('wi-grid', WEATHER_ICONS, true);
+  </script>
 </body>
 </html>
