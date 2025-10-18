@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Adopt — Single Feather</title>
+  <meta name="description" content="Adopt a single glowing feather to support Tutu the Kiwi. Includes a personalised certificate and updates."/>
+  <link rel="stylesheet" href="/assets/css/adopt.css"/>
+  <link rel="preload" as="image" href="/assets/images/adopt/single-feather.webp"/>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <h1>Tutu the Kiwi</h1>
+      </div>
+      <nav aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/adopt/">Adopt</a>
+        <a href="/shop/">Shop</a>
+        <a href="/about/">About</a>
+      </nav>
+    </header>
 
+    <section class="section">
+      <div class="section-grid">
+        <div class="section-media">
+          <img src="/assets/images/adopt/single-feather.webp" alt="Luminous, radiant single feather — intricate glow detail." width="1200" height="800" loading="eager"/>
+        </div>
+        <div class="card section-copy">
+          <p class="eyebrow">Tier 1</p>
+          <h2 class="title">Single Feather</h2>
+          <p class="subtitle">A small act with big wairua. Your feather keeps the glow alive as we build Tutu’s world.</p>
+          <p class="price">$ —</p>
+          <ul class="feature-list">
+            <li>Personalised digital certificate (PNG + PDF)</li>
+            <li>Monthly progress email</li>
+            <li>Optional name on supporter wall</li>
+          </ul>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="/products/YOUR_SINGLE_FEATHER_HANDLE">Adopt this feather</a>
+            <a class="btn btn-ghost" href="/adopt/">Back to tiers</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p class="small legal">Adoptions are supporter contributions (koha) that fund creative development. Not tax-deductible. Digital items are delivered by email.</p>
+      <p class="small">© <span id="yr"></span> Tutu the Kiwi</p>
+    </footer>
+  </div>
+  <script>document.getElementById('yr').textContent=new Date().getFullYear()</script>
+</body>
+</html>
