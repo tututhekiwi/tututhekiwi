@@ -1,1 +1,109 @@
+/* Certificate screen + print styles */
+.certificate{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.414/1; /* A4 portrait: 210x297 => 0.707; using inverse for readability on screen */
+  background: radial-gradient(120% 120% at 50% 10%, rgba(56,189,248,.10), rgba(245,158,11,.06) 40%, rgba(255,255,255,.02) 70%) , #0b0f10;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 20px;
+  box-shadow: 0 24px 60px rgba(0,0,0,.45);
+  overflow: hidden;
+}
+
+.cert-inner{
+  position: relative;
+  height: 100%;
+  padding: clamp(18px, 3vw, 32px);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  color: var(--ink, #e9f1f2);
+  font-family: system-ui, -apple-system, Segoe UI, Inter, Roboto, Arial, sans-serif;
+}
+
+.cert-watermark{
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(60% 60% at 80% 20%, rgba(56,189,248,.10), transparent 60%),
+    url("/assets/images/adopt/single-feather.webp") no-repeat right 6% top 8% / min(42%, 480px);
+  opacity: .25;
+  pointer-events: none;
+  filter: saturate(120%) blur(.2px);
+}
+
+.cert-top{ text-align: center; }
+.brand-mark{ display:inline-flex; gap:.55rem; align-items:center; margin-bottom:.35rem }
+.brand-mark .dot{ width:12px; height:12px; border-radius:50%; background:radial-gradient(circle at 30% 30%, #7dd3fc, #2563eb 60%, #0ea5e9) }
+.brand-mark .brand-text{ font-weight:700; letter-spacing:.04em; color:#cfe8f5 }
+.cert-eyebrow{ text-transform:uppercase; letter-spacing:.18em; font-size:.82rem; color:#9fb1b5 }
+.cert-title{ margin:.2rem 0 .6rem; font-size: clamp(1.4rem, 3.2vw, 2.2rem); }
+
+.cert-body{ display:grid; justify-items:center; gap:.35rem; margin-top: clamp(6px, 1.2vw, 12px); }
+.cert-line{ color:#b6c4c7; margin:0 }
+.cert-name{
+  margin:.1rem 0;
+  font-size: clamp(1.6rem, 4.2vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing:.01em;
+  color:#d9f3ff;
+  text-align:center;
+}
+.cert-tier{
+  margin:.2rem 0 .1rem;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-weight: 700;
+  color:#f0f7fa;
+}
+.cert-dedication{
+  margin:.35rem auto 0;
+  max-width: 80%;
+  text-align:center;
+  color:#c7d6da;
+  min-height: 1.4em;
+}
+
+.cert-meta{
+  margin-top: clamp(10px, 2.2vw, 20px);
+  display:flex; gap: clamp(16px, 4vw, 48px);
+}
+.meta-label{ font-size:.8rem; color:#9fb1b5; letter-spacing:.06em; text-transform:uppercase }
+.meta-value{ font-weight:700 }
+
+.cert-foot{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:1rem; margin-top: clamp(12px, 2.2vw, 22px);
+}
+.sign-line{
+  border-top:1px solid rgba(255,255,255,.2);
+  padding-top:.4rem; min-width: 200px;
+}
+.sign-name{ font-weight:700 }
+.sign-role{ font-size:.9rem; color:#9fb1b5 }
+.sign-seal{
+  font-weight: 800;
+  border:1px solid rgba(255,255,255,.18);
+  padding:.5rem .8rem; border-radius:999px;
+  background: rgba(255,255,255,.04);
+}
+
+/* Form */
+.form-grid{ display:grid; gap:.8rem }
+.form-grid label{ display:grid; gap:.35rem }
+.form-grid input, .form-grid select, .form-grid textarea{
+  background: rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:12px;
+  color:#e9f1f2;
+  padding:.7rem .8rem;
+  outline:none;
+}
+.form-row{ display:flex; gap:.6rem; flex-wrap:wrap }
+
+/* Print (A4 portrait) */
+@media print {
+  body{ background:#fff }
+  .wrap, header, nav, .section-copy .cta-row, .form-grid, footer{ display:none !important }
+  .certificate{ box-shadow:none; border:0; border-radius:0; width:210mm; height:297mm; }
+  .cert-inner{ padding:18mm }
+}
 
