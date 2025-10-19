@@ -1,112 +1,35 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Signature Badge • Hamaka Murray</title>
 <style>
-  /* ---- Brand tokens (scoped) ---- */
-  :root {
-    --bg-0:#0d2d2a;        /* deep green */
-    --ink:#eaf7f5;         /* near-white */
-    --muted:#b8d5d1;
-    --accent:#12b5a5;      /* paua teal */
-    --radius:18px;
-    --shadow:0 6px 22px rgba(0,0,0,.32);
-  }
+  :root{--bg-0:#0d2d2a;--ink:#eaf7f5;--muted:#b8d5d1;--shadow:0 6px 22px rgba(0,0,0,.32)}
   html,body{height:100%}
-  body{
-    margin:0; background:radial-gradient(1100px 520px at 20% 0%,#0f3a36,var(--bg-0));
-    color:var(--ink); font:16px/1.5 system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial,sans-serif;
-    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
-    display:grid; place-items:center; padding:24px;
-  }
-
-  /* ---- Signature badge ---- */
-  .signature-badge{
-    display:flex; gap:14px; align-items:center;
-    padding:12px 16px; border-radius:999px;
-    background:rgba(255,255,255,.03);
-    border:1px solid rgba(255,255,255,.08);
-    box-shadow:var(--shadow);
-    backdrop-filter:saturate(120%) blur(6px);
-  }
-  .sig-mark{
-    width:clamp(28px,5vw,44px); aspect-ratio:1/1; flex:0 0 auto;
-    display:grid; place-items:center; position:relative; overflow:hidden;
-    border-radius:50%;
-    background:conic-gradient(from 120deg,#09a89a,#27e0cf,#0a7e74,#09a89a);
-  }
-  /* optional: place your PNG/SVG inside for exact artwork */
-  .sig-mark img{
-    width:82%; height:auto; display:block;
-    filter:drop-shadow(0 1px 0 rgba(0,0,0,.35));
-  }
-
-  /* Foil shine overlay (toggle by adding .foil to .sig-mark) */
-  .sig-mark.foil::after{
-    content:""; position:absolute; inset:-40% -60%;
-    background:linear-gradient(120deg, transparent 20%, rgba(255,255,255,.85) 50%, transparent 80%);
-    transform:translateX(-120%) rotate(12deg);
-    animation:shine 3.2s cubic-bezier(.22,.61,.36,1) infinite;
-    mix-blend-mode:screen; pointer-events:none;
-  }
-  @keyframes shine{
-    to{ transform:translateX(120%) rotate(12deg); }
-  }
-
-  .sig-text{ display:flex; flex-direction:column; }
-  .sig-text strong{ font-weight:800; letter-spacing:.2px; line-height:1.1 }
-  .sig-text span{ color:var(--muted); font-size:.9rem }
-
-  /* ---- Watermark variant for artwork corners ---- */
-  .watermark{
-    position:fixed; right:18px; bottom:18px;
-    display:flex; gap:10px; align-items:center;
-    background:rgba(13,45,42,.65);
-    border:1px solid rgba(255,255,255,.12);
-    border-radius:999px; padding:10px 12px;
-    box-shadow:0 8px 24px rgba(0,0,0,.35);
-  }
-  .watermark .sig-mark{ width:34px }
-  .watermark .sig-text strong{ font-size:.95rem }
-  .watermark .sig-text span{ font-size:.8rem }
-
-  /* ---- Duotone option for light sections ---- */
-  .duotone .sig-mark{
-    background:#1a1a1a;
-  }
-  .duotone .sig-mark img{
-    filter:contrast(1.15) brightness(1.2) drop-shadow(0 1px 0 rgba(0,0,0,.35));
-  }
+  body{margin:0;background:radial-gradient(1100px 520px at 20% 0%,#0f3a36,var(--bg-0));color:var(--ink);
+    font:16px/1.5 system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial,sans-serif;display:grid;place-items:center;padding:24px}
+  .signature-badge{display:flex;gap:14px;align-items:center;padding:12px 16px;border-radius:999px;background:rgba(255,255,255,.03);
+    border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow);backdrop-filter:saturate(120%) blur(6px)}
+  .sig-mark{width:clamp(28px,5vw,44px);aspect-ratio:1/1;border-radius:50%;position:relative;overflow:hidden;display:grid;place-items:center;
+    background:conic-gradient(from 120deg,#09a89a,#27e0cf,#0a7e74,#09a89a)}
+  .sig-mark img{width:82%;filter:drop-shadow(0 1px 0 rgba(0,0,0,.35))}
+  .sig-mark.foil::after{content:"";position:absolute;inset:-40% -60%;background:linear-gradient(120deg,transparent 20%,rgba(255,255,255,.85) 50%,transparent 80%);
+    transform:translateX(-120%) rotate(12deg);animation:shine 3.2s cubic-bezier(.22,.61,.36,1) infinite;mix-blend-mode:screen}
+  @keyframes shine{to{transform:translateX(120%) rotate(12deg)}}
+  .sig-text{display:flex;flex-direction:column}
+  .sig-text strong{font-weight:800;line-height:1.1}
+  .sig-text span{color:var(--muted);font-size:.9rem}
 </style>
 </head>
 <body>
-
-  <!-- Badge for footer or about pages -->
-  <div class="signature-badge" aria-label="Creator mark">
+  <div class="signature-badge">
     <div class="sig-mark foil">
-      <!-- Replace src with your official signature asset -->
-      <img src="/images/Artwork Signature.png" alt="Hamaka Murray signature mark">
+      <img src="/images/Artwork Signature.png" alt="Hamaka Murray signature">
     </div>
     <div class="sig-text">
       <strong>Hamaka Murray</strong>
       <span>Creator &amp; Author — Aotearoa</span>
     </div>
   </div>
-
-  <!-- Watermark corner variant (toggle visibility per page) -->
-  <!--
-  <div class="watermark">
-    <div class="sig-mark foil">
-      <img src="/images/Artwork Signature.png" alt="Hamaka Murray signature mark">
-    </div>
-    <div class="sig-text">
-      <strong>Hamaka Murray</strong>
-      <span>Limited Artwork</span>
-    </div>
-  </div>
-  -->
-
 </body>
 </html>
