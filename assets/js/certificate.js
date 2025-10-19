@@ -16,9 +16,8 @@
   const btnPng = $("#btn-png");
   const btnPdf = $("#btn-pdf");
 
-  // Init defaults
+  /* ===== Utility ===== */
   function formatDate(d = new Date()) {
-    // Locale NZ with month name; supports macrons in user input but date is standard
     return d.toLocaleDateString("en-NZ", { year: "numeric", month: "long", day: "numeric" });
   }
 
@@ -27,6 +26,7 @@
     return Array.from(rand, b => b.toString(16).padStart(2, "0")).join("").slice(0, 10);
   }
 
+  /* ===== Update preview ===== */
   function updatePreview() {
     const nm = (nameInput.value || "Your Name").trim();
     const tier = (tierInput.value || "Single Feather").trim();
@@ -36,21 +36,21 @@
     tierOut.textContent = tier;
     dedicationOut.textContent = ded ? `“${ded}”` : "";
 
-    // date & id once if empty
     if (!dateOut.textContent) dateOut.textContent = formatDate();
     if (!idOut.textContent) idOut.textContent = shortId();
   }
 
+  /* ===== Canvas capture for screen export ===== */
   async function toCanvas() {
-    // Ensure fonts/layout settled
     await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
     return html2canvas(certEl, {
       backgroundColor: null,
-      scale: 2, // nice crisp export
+      scale: 3,
       useCORS: true
     });
   }
 
+  /* ===== PNG Download ===== */
   async function downloadPNG() {
     updatePreview();
     const canvas = await toCanvas();
@@ -62,34 +62,73 @@
     a.click();
   }
 
+  /* ===== PDF (Print-ready) ===== */
   async function downloadPDF() {
     updatePreview();
     const canvas = await toCanvas();
     const imgData = canvas.toDataURL("image/png");
 
     const { jsPDF } = window.jspdf;
-    // A4 portrait in mm
-    const pdf = new jsPDF({ orientation: "portrait", unit: "mm", format: "a4" });
+    const pdf = new jsPDF({
+      orientation: "portrait",
+      unit: "mm",
+      format: "a4"
+    });
+
     const pageW = pdf.internal.pageSize.getWidth();
     const pageH = pdf.internal.pageSize.getHeight();
 
-    // Calculate fit while preserving aspect ratio
-    const imgWpx = canvas.width;
-    const imgHpx = canvas.height;
-    const imgRatio = imgWpx / imgHpx;
-    let w = pageW, h = w / imgRatio;
-    if (h > pageH) { h = pageH; w = h * imgRatio; }
+    /* Margin & scaling — exact A4 bleed safe zone */
+    const margin = 8; // mm margin around
+    const usableW = pageW - margin * 2;
+    const usableH = pageH - margin * 2;
+
+    const imgRatio = canvas.width / canvas.height;
+    let w = usableW;
+    let h = w / imgRatio;
+    if (h > usableH) { h = usableH; w = h * imgRatio; }
 
     const x = (pageW - w) / 2;
     const y = (pageH - h) / 2;
 
     pdf.addImage(imgData, "PNG", x, y, w, h, undefined, "FAST");
 
+    /* Footer metadata line for authenticity */
+    pdf.setFont("helvetica", "normal");
+    pdf.setFontSize(8);
+    pdf.setTextColor(180);
+    pdf.text("Tutu the Kiwi — Certificate of Adoption", margin, pageH - 5);
+
     const nm = (nameInput.value || "Your Name").trim().replace(/\s+/g, "_");
     pdf.save(`Tutu_Certificate_${nm}.pdf`);
   }
 
-  // Events
+  /* ===== Print window version (for real printing) ===== */
+  async function printVersion() {
+    updatePreview();
+    const canvas = await toCanvas();
+    const data = canvas.toDataURL("image/png");
+
+    const win = window.open("", "_blank");
+    win.document.write(`
+      <html>
+        <head>
+          <title>Tutu Certificate — Print</title>
+          <style>
+            body { margin:0; background:#fff; text-align:center; }
+            img { width:210mm; height:297mm; object-fit:contain; }
+          </style>
+        </head>
+        <body>
+          <img src="${data}" alt="Tutu Certificate">
+          <script>window.onload = function(){ setTimeout(()=>window.print(),300); }</script>
+        </body>
+      </html>
+    `);
+    win.document.close();
+  }
+
+  /* ===== Events ===== */
   formEl.addEventListener("submit", (e) => {
     e.preventDefault();
     updatePreview();
@@ -97,10 +136,26 @@
   nameInput.addEventListener("input", updatePreview);
   tierInput.addEventListener("change", updatePreview);
   dedicationInput.addEventListener("input", updatePreview);
-  btnPng.addEventListener("click", (e) => { e.preventDefault(); downloadPNG(); });
-  btnPdf.addEventListener("click", (e) => { e.preventDefault(); downloadPDF(); });
 
-  // First render
+  btnPng.addEventListener("click", (e) => {
+    e.preventDefault();
+    downloadPNG();
+  });
+  btnPdf.addEventListener("click", (e) => {
+    e.preventDefault();
+    downloadPDF();
+  });
+
+  /* Add print button dynamically */
+  const printBtn = document.createElement("button");
+  printBtn.textContent = "Print Certificate (A4)";
+  printBtn.className = "btn btn-ghost";
+  printBtn.style.marginLeft = "0.5rem";
+  document.querySelector(".cta-row").appendChild(printBtn);
+  printBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    printVersion();
+  });
+
   updatePreview();
 })();
-
