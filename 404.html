@@ -1,22 +1,23 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-NZ">
 <head>
-  <meta charset="utf-8">
-  <title>Page not found — Tutu the Kiwi</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex">
-  <link rel="stylesheet" href="/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Page Not Found — Tutu the Kiwi</title>
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .notfound{min-height:70vh;display:grid;place-items:center;text-align:center;}
+    .notfound .card{padding:1.4rem;}
+  </style>
 </head>
 <body>
-  <main id="content" class="centered">
-    <h1>404</h1>
-    <p>Kāore i kitea — that page isn’t here.</p>
-    <nav class="cta-row">
-      <a class="btn" href="/">Home</a>
-      <a class="btn btn-outline" href="/books/">Books</a>
-      <a class="btn btn-outline" href="/map/">Map</a>
-      <a class="btn btn-outline" href="/adopt/">Adopt a Feather</a>
-    </nav>
+  <main class="notfound">
+    <section class="card">
+      <h1>Kāore i kitea — Not Found</h1>
+      <p class="lead">The page you’re looking for has wandered off like a curious kiwi.</p>
+      <p><a class="btn" href="/">Return Home</a></p>
+    </section>
   </main>
 </body>
 </html>
