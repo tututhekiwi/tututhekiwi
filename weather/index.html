@@ -1,9 +1,157 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Weather — Tutu’s Weather Park</title>
-  <meta name="description" content="Check the day’s vibe at Tutu’s Weather Park—sun, rain, wind, or snow." />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css
+<html lang="en-NZ">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Weather Park — Tutu the Kiwi</title>
+    <meta name="description" content="Explore the Weather Park — a showcase of Tutu the Kiwi’s weather icons and environmental moods across Aotearoa." />
+    <meta name="author" content="Hamaka Murray" />
+    <meta name="robots" content="index,follow" />
 
+    <link rel="canonical" href="https://www.tututhekiwi.com/weather/" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#0b3a2e" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Weather Park — Tutu the Kiwi" />
+    <meta property="og:description" content="A luminous collection of Tutu’s weather icons — from sunshine to starlight." />
+    <meta property="og:image" content="https://www.tututhekiwi.com/images/weather-park.webp" />
+    <meta property="og:url" content="https://www.tututhekiwi.com/weather/" />
+
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .weather-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 1rem;
+        margin-top: 1.5rem;
+        text-align: center;
+      }
+      .weather-grid figure {
+        background: rgba(255,255,255,.04);
+        border: 1px solid rgba(255,255,255,.08);
+        border-radius: 14px;
+        padding: .8rem;
+        box-shadow: var(--shadow);
+      }
+      .weather-grid img {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+      }
+      .weather-grid figcaption {
+        color: var(--ink-dim);
+        margin-top: .5rem;
+        font-size: .9rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="Tutu the Kiwi — Home">
+          <img src="/images/logo-tutu.svg" alt="Tutu the Kiwi logo" width="120" height="48" loading="eager" />
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <button class="nav__toggle" aria-expanded="false" aria-controls="navMenu" id="navToggle">
+            <span class="nav__bar" aria-hidden="true"></span>
+            <span class="nav__bar" aria-hidden="true"></span>
+            <span class="nav__bar" aria-hidden="true"></span>
+            <span class="sr-only">Menu</span>
+          </button>
+          <ul id="navMenu" class="nav__list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/adopt/">Adopt</a></li>
+            <li><a href="/books/">Books</a></li>
+            <li><a href="/donate/">Donate</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="section section--weather">
+      <div class="container">
+        <div class="section__head">
+          <h1>Tutu’s Weather Park</h1>
+          <p class="section__sub">
+            A gallery of luminous weather icons used throughout Tutu’s world — each representing a mood, a moment, and the shifting skies of Aotearoa.
+          </p>
+        </div>
+
+        <div class="weather-grid">
+          <figure>
+            <img src="/images/icon-sunny.svg" alt="Sunny" />
+            <figcaption>Sunny</figcaption>
+          </figure>
+          <figure>
+            <img src="/images/icon-partly-cloudy-day.svg" alt="Partly Cloudy (Day)" />
+            <figcaption>Partly Cloudy (Day)</figcaption>
+          </figure>
+          <figure>
+            <img src="/images/icon-partly-cloudy-night.svg" alt="Partly Cloudy (Night)" />
+            <figcaption>Partly Cloudy (Night)</figcaption>
+          </figure>
+          <figure>
+            <img src="/images/icon-cloudy.svg" alt="Cloudy" />
+            <figcaption>Cloudy</figcaption>
+          </figure>
+          <figure>
+            <img src="/images/icon-rain.svg" alt="Rain" />
+            <figcaption>Rain</figcaption>
+          </figure>
+          <figure>
+            <img src="/images/icon-storm.svg" alt="Storm" />
+            <figcaption>Storm</figcaption>
+          </figure>
+          <figure>
+            <img src="/images/icon-fog.svg" alt="Fog" />
+            <figcaption>Fog</figcaption>
+          </figure>
+          <figure>
+            <img src="/images/icon-snow.svg" alt="Snow" />
+            <figcaption>Snow</figcaption>
+          </figure>
+          <figure>
+            <img src="/images/icon-wind.svg" alt="Wind" />
+            <figcaption>Wind</figcaption>
+          </figure>
+          <figure>
+            <img src="/images/icon-moon.svg" alt="Moonlight" />
+            <figcaption>Moonlight</figcaption>
+          </figure>
+        </div>
+
+        <div style="margin-top:2rem;text-align:center;">
+          <p class="lead">
+            All icons are hand-crafted to match Tutu’s luminous world — clean, simple, and full of life.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <img src="/images/Hamaka-Murray-Signature.png" alt="Hamaka Murray signature" width="180" height="60" loading="lazy" />
+          <p class="footnote">© <span id="year"></span> Tutu the Kiwi • Hamilton, Aotearoa</p>
+        </div>
+        <nav class="footer__nav" aria-label="Footer">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/adopt/">Adopt</a></li>
+            <li><a href="/books/">Books</a></li>
+            <li><a href="/privacy/">Privacy</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>
