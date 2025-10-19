@@ -1,81 +1,251 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Nau mai, haere mai ki Tutu the Kiwi — explore Aotearoa with Tutu through stories, maps, and adventures." />
-  <title>Tutu the Kiwi — Home</title>
-  <link rel="stylesheet" href="/style.css?v=20251019" />
-  <link rel="icon" type="image/png" href="/images/favicon.png" />
-</head>
+<!doctype html>
+<html lang="en-NZ">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<body>
-  <header>
-    <nav>
-      <a href="/" class="logo">Tutu the Kiwi</a>
-      <ul>
-        <li><a href="/books/">Books</a></li>
-        <li><a href="/map/">Map</a></li>
-        <li><a href="/merch/">Merch</a></li>
-        <li><a href="/about/">About</a></li>
-        <li><a href="/terms.html">Terms</a></li>
-      </ul>
-    </nav>
-  </header>
+    <title>Tutu the Kiwi — Official Site</title>
+    <meta name="description" content="Tutu the Kiwi — adventures, books, and luminous pāua-blue-green magic. Adopt a Feather, explore the world, and follow the journey." />
 
-  <main>
-    <section class="hero">
-      <img src="/images/hero.webp" alt="Tutu the Kiwi overlooking lakes, mountains, and beaches of Aotearoa" width="1400" height="700" />
-      <h1>Nau mai, haere mai — Tutu’s world</h1>
-      <p>Explore pukapuka, maps, and the kaupapa behind Tutu’s adventures.</p>
-      <div class="hero-links">
-        <a href="/books/" class="button">Browse Books</a>
-        <a href="/map/" class="button">Explore the Map</a>
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.tututhekiwi.com/" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Theme color -->
+    <meta name="theme-color" content="#0b3a2e" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tutu the Kiwi — Official Site" />
+    <meta property="og:description" content="Adopt a Feather, discover the books, and step into Tutu’s luminous world." />
+    <meta property="og:url" content="https://www.tututhekiwi.com/" />
+    <meta property="og:image" content="https://www.tututhekiwi.com/images/home-1200x630.webp" />
+    <meta property="og:image:alt" content="Tutu the Kiwi in a luminous pāua-blue-green scene" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tutu the Kiwi — Official Site" />
+    <meta name="twitter:description" content="Adopt a Feather, discover the books, and step into Tutu’s luminous world." />
+    <meta name="twitter:image" content="https://www.tututhekiwi.com/images/home-1200x630.webp" />
+
+    <!-- Preloads -->
+    <link rel="preload" as="image" href="/images/home-1200x630.webp" imagesrcset="/images/home-1200x630.webp 1200w" imagesizes="(max-width: 1200px) 100vw, 1200px">
+    <link rel="preload" as="image" href="/images/adopt-feather-1200x630.webp">
+    <link rel="preload" as="image" href="/images/book-unknown.webp">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/styles.css" />
+
+    <!-- Accessibility & SEO helpers -->
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="Hamaka Murray" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Header / Nav -->
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="Tutu the Kiwi — Home">
+          <img src="/images/logo-tutu.svg" alt="Tutu the Kiwi logo" width="120" height="48" loading="eager" />
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <button class="nav__toggle" aria-expanded="false" aria-controls="navMenu" id="navToggle">
+            <span class="nav__bar" aria-hidden="true"></span>
+            <span class="nav__bar" aria-hidden="true"></span>
+            <span class="nav__bar" aria-hidden="true"></span>
+            <span class="sr-only">Menu</span>
+          </button>
+          <ul id="navMenu" class="nav__list">
+            <li><a href="/adopt/">Adopt a Feather</a></li>
+            <li><a href="/books/">Books</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/connect/">Connect</a></li>
+          </ul>
+        </nav>
       </div>
-    </section>
+    </header>
 
-    <section class="featured">
-      <h2>Featured Pukapuka</h2>
+    <!-- Main -->
+    <main id="main">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <h1>Tutu the Kiwi</h1>
+            <p class="lead">
+              A luminous, pāua-blue-green kiwi on big adventures across Aotearoa.
+              Join the journey, adopt a feather, and help Tutu find his glow.
+            </p>
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="/adopt/">Adopt a Feather</a>
+              <a class="btn btn--ghost" href="/books/">Explore the Books</a>
+            </div>
+          </div>
+          <div class="hero__art">
+            <picture>
+              <img
+                src="/images/home-1200x630.webp"
+                alt="Tutu the Kiwi in his luminous world"
+                width="1200" height="630"
+                decoding="async" loading="eager" />
+            </picture>
+          </div>
+        </div>
+      </section>
 
-      <article class="book">
-        <img src="/images/book1.webp" alt="Cover of Tutu Book 1" width="400" height="600" />
-        <h3>Book One</h3>
-        <a href="/books/book1.html" class="button">View</a>
-      </article>
+      <!-- Adopt a Feather -->
+      <section id="adopt" class="section section--adopt" aria-labelledby="adopt-title">
+        <div class="container">
+          <div class="section__head">
+            <h2 id="adopt-title">Adopt a Feather</h2>
+            <p class="section__sub">
+              Support Tutu’s journey with a symbolic adoption — from a single feather to a whole wing.
+            </p>
+          </div>
 
-      <article class="book">
-        <img src="/images/book2.webp" alt="Cover of Tutu Book 2" width="400" height="600" />
-        <h3>Book Two</h3>
-        <a href="/books/book2.html" class="button">View</a>
-      </article>
+          <div class="adopt__grid">
+            <!-- Tier: One Feather -->
+            <article class="card">
+              <div class="card__media">
+                <img src="/images/adopt-feather-1200x630.webp" alt="Adopt one luminous feather" width="1200" height="630" loading="lazy" decoding="async" />
+              </div>
+              <div class="card__body">
+                <h3>One Feather</h3>
+                <p>A simple koha to join the flock. Receive a digital certificate with your name.</p>
+                <a class="btn btn--primary" href="/adopt/">Adopt One Feather</a>
+              </div>
+            </article>
 
-      <article class="book coming-soon">
-        <img src="/images/unknown-book.webp" alt="Mystery Tutu Book Cover Coming Soon" width="400" height="600" />
-        <h3>Coming Soon</h3>
-        <a href="/books/tease.html" class="button">Tease</a>
-      </article>
-    </section>
+            <!-- Tier: Three Feathers -->
+            <article class="card">
+              <div class="card__media">
+                <img src="/images/adopt-3feathers.webp" alt="Adopt three glowing feathers" width="1200" height="630" loading="lazy" decoding="async" />
+              </div>
+              <div class="card__body">
+                <h3>Three Feathers</h3>
+                <p>Boost your mana with three. Certificate + behind-the-scenes update.</p>
+                <a class="btn btn--primary" href="/adopt/">Adopt Three Feathers</a>
+              </div>
+            </article>
 
-    <section class="support">
-      <h2>Support Tutu</h2>
-      <p>Help bring new adventures to life. Every koha counts.</p>
-      <p>
-        <a href="https://givealittle.co.nz/org/tututhekiwi" target="_blank" rel="noopener">Donate on Givealittle</a> |
-        <a href="/feather.html">Adopt a Feather</a>
-      </p>
-    </section>
-  </main>
+            <!-- Tier: Whole Wing -->
+            <article class="card">
+              <div class="card__media">
+                <img src="/images/adopt-wing.webp" alt="Adopt an entire radiant wing" width="1200" height="630" loading="lazy" decoding="async" />
+              </div>
+              <div class="card__body">
+                <h3>Whole Wing</h3>
+                <p>Go all-in: illuminate a whole wing. Certificate + special shout-out.</p>
+                <a class="btn btn--primary" href="/adopt/">Adopt a Wing</a>
+              </div>
+            </article>
 
-  <footer>
-    <nav class="footer-nav">
-      <a href="/">Home</a> ·
-      <a href="/books/">Books</a> ·
-      <a href="/map/">Map</a> ·
-      <a href="/merch/">Merch</a> ·
-      <a href="/about/">About</a> ·
-      <a href="/terms.html">Terms</a>
-    </nav>
-    <p>© 2025 Tutu the Kiwi — Kirikiriroa, Aotearoa.</p>
-  </footer>
-</body>
+            <!-- Optional Tier: Guardian of the Glow -->
+            <article class="card">
+              <div class="card__media">
+                <img src="/images/adopt-guardian.webp" alt="Guardian of the Glow tier" width="1200" height="630" loading="lazy" decoding="async" />
+              </div>
+              <div class="card__body">
+                <h3>Guardian of the Glow</h3>
+                <p>Champion Tutu’s world. Includes limited art print + early previews.</p>
+                <a class="btn btn--primary" href="/adopt/">Become a Guardian</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Books -->
+      <section id="books" class="section section--books" aria-labelledby="books-title">
+        <div class="container">
+          <div class="section__head">
+            <h2 id="books-title">Books</h2>
+            <p class="section__sub">Stories of curiosity, courage, and glow.</p>
+          </div>
+
+          <div class="books__grid">
+            <article class="book">
+              <a class="book__link" href="/books/noa-and-the-missing-cookie-cloud/">
+                <img src="/images/book-noa-missing-cookie-cloud.webp" alt="Noa and the Missing Cookie Cloud — official cover" width="700" height="980" loading="lazy" decoding="async" />
+                <h3 class="book__title">Noa and the Missing Cookie Cloud</h3>
+              </a>
+            </article>
+
+            <article class="book">
+              <a class="book__link" href="/books/tutu-finds-his-glow/">
+                <img src="/images/book-unknown.webp" alt="Tutu Finds His Glow — cover" width="700" height="980" loading="lazy" decoding="async" />
+                <h3 class="book__title">Tutu Finds His Glow</h3>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="section section--about" aria-labelledby="about-title">
+        <div class="container">
+          <div class="about__wrap">
+            <div class="about__copy">
+              <h2 id="about-title">About Tutu</h2>
+              <p>
+                Tutu is a kiwi with pāua-inspired blue-green feathers, bright orange beak and feet, a woven piupiu, and
+                eyes wide with wonder. This world blends Māori artistry with playful storytelling — all guided by strict
+                design rules so Tutu always looks exactly right.
+              </p>
+              <p>
+                The kaupapa: creativity, mātauranga, and kindness — inviting tamariki and big kids alike to explore,
+                learn, and give back.
+              </p>
+            </div>
+            <div class="about__media">
+              <img src="/images/tutu-profile.webp" alt="Portrait of Tutu the Kiwi" width="900" height="900" loading="lazy" decoding="async" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Connect -->
+      <section id="connect" class="section section--connect" aria-labelledby="connect-title">
+        <div class="container">
+          <h2 id="connect-title">Connect</h2>
+          <ul class="social">
+            <li><a rel="me" href="https://instagram.com/tututhekiwi" target="_blank">Instagram @tututhekiwi</a></li>
+            <li><a rel="me" href="https://facebook.com/tututhekiwi" target="_blank">Facebook</a></li>
+            <li><a rel="me" href="https://tiktok.com/@tututhekiwi" target="_blank">TikTok @tututhekiwi</a></li>
+            <li><a href="mailto:kiaora@tututhekiwi.com">kiaora@tututhekiwi.com</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <img src="/images/Hamaka-Murray-Signature.png" alt="Hamaka Murray signature" width="180" height="60" loading="lazy" decoding="async" />
+          <p class="footnote">
+            © <span id="year"></span> Tutu the Kiwi • Hamilton, Aotearoa
+          </p>
+        </div>
+        <nav class="footer__nav" aria-label="Footer">
+          <ul>
+            <li><a href="/adopt/">Adopt a Feather</a></li>
+            <li><a href="/books/">Books</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/privacy/">Privacy</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <!-- Minimal JS -->
+    <script src="/app.js" defer></script>
+  </body>
 </html>
