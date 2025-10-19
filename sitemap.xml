@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://tututhekiwi.com/</loc></url>
-  <url><loc>https://tututhekiwi.com/books.html</loc></url>
-  <url><loc>https://tututhekiwi.com/map.html</loc></url>
-  <url><loc>https://tututhekiwi.com/merch.html</loc></url>
-  <url><loc>https://tututhekiwi.com/about.html</loc></url>
-  <url><loc>https://tututhekiwi.com/terms.html</loc></url>
+  <url>
+    <loc>https://www.tututhekiwi.com/</loc>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url><loc>https://www.tututhekiwi.com/adopt/</loc></url>
+  <url><loc>https://www.tututhekiwi.com/donate/</loc></url>
+  <url><loc>https://www.tututhekiwi.com/about/</loc></url>
+  <url><loc>https://www.tututhekiwi.com/supporters/</loc></url>
+  <url><loc>https://www.tututhekiwi.com/weather/</loc></url>
+  <url><loc>https://www.tututhekiwi.com/books/</loc></url>
+  <url><loc>https://www.tututhekiwi.com/privacy/</loc></url>
 </urlset>
