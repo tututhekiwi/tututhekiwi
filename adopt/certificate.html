@@ -7,16 +7,12 @@
   <meta name="description" content="Generate and download your Tutu the Kiwi adoption certificate as PNG or PDF."/>
   <link rel="stylesheet" href="/assets/css/adopt.css"/>
   <link rel="stylesheet" href="/assets/css/certificate.css"/>
-
-  <!-- Fonts for display (Cormorant Garamond + Inter) are already imported via certificate.css -->
 </head>
 <body>
-  <!-- Optional: set your Shopify store domain if needed -->
   <script>window.SHOPIFY_STORE_DOMAIN="YOUR-STORE.myshopify.com";</script>
 
-  <!-- Libraries for rendering and exporting -->
-  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" integrity="sha256-rS2yQ2VQe1mXH+o2aQK8k5iKQq0F4cZB7j9iO1kSJnQ=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js" integrity="sha256-9fZb9nYF+1QH9m6wM0Qq2PG1bJb1kHY0y88oC5wDB5o=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js" crossorigin="anonymous"></script>
 
   <div class="wrap">
     <header>
@@ -34,15 +30,11 @@
 
     <section class="section">
       <div class="section-grid">
-        <!-- Certificate preview -->
         <div class="card section-copy">
           <p class="eyebrow">Certificate Preview</p>
 
-          <!-- Certificate container -->
           <div id="cert" class="certificate" role="img" aria-label="Adoption certificate preview">
-            <!-- 🌀 New koru border overlay -->
             <div class="koru-frame" aria-hidden="true"></div>
-
             <div class="cert-inner">
               <div class="cert-watermark"></div>
 
@@ -92,7 +84,6 @@
           </div>
         </div>
 
-        <!-- Form -->
         <div class="card section-copy">
           <p class="eyebrow">Personalise</p>
           <form id="cert-form" class="form-grid">
@@ -134,7 +125,6 @@
     </footer>
   </div>
 
-  <!-- Certificate rendering logic -->
   <script src="/assets/js/certificate.js"></script>
   <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
 </body>
