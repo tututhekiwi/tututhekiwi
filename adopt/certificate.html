@@ -1,1 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Tutu the Kiwi — Adoption Certificate</title>
+  <meta name="description" content="Generate and download your Tutu the Kiwi adoption certificate as PNG or PDF."/>
+  <link rel="stylesheet" href="/assets/css/adopt.css"/>
+  <link rel="stylesheet" href="/assets/css/certificate.css"/>
+</head>
+<body>
+  <script>window.SHOPIFY_STORE_DOMAIN="YOUR-STORE.myshopify.com";</script>
+
+  <!-- Libraries for rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" integrity="sha256-rS2yQ2VQe1mXH+o2aQK8k5iKQq0F4cZB7j9iO1kSJnQ=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js" integrity="sha256-9fZb9nYF+1QH9m6wM0Qq2PG1bJb1kHY0y88oC5wDB5o=" crossorigin="anonymous"></script>
+
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <h1>Tutu the Kiwi</h1>
+      </div>
+      <nav aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/adopt/">Adopt</a>
+        <a href="/shop/">Shop</a>
+        <a href="/about/">About</a>
+      </nav>
+    </header>
+
+    <section class="section">
+      <div class="section-grid">
+        <!-- Certificate preview -->
+        <div class="card section-copy">
+          <p class="eyebrow">Certificate Preview</p>
+          <div id="cert" class="certificate" role="img" aria-label="Adoption certificate preview">
+            <div class="cert-inner">
+              <div class="cert-watermark"></div>
+
+              <div class="cert-top">
+                <div class="brand-mark">
+                  <span class="dot"></span>
+                  <span class="brand-text">Tutu the Kiwi</span>
+                </div>
+                <div class="cert-eyebrow">Certificate of Adoption</div>
+                <h2 class="cert-title">Adopt a Feather</h2>
+              </div>
+
+              <div class="cert-body">
+                <p class="cert-line">This certifies that</p>
+                <h3 id="cert-name" class="cert-name">Your Name</h3>
+                <p class="cert-line">has adopted</p>
+
+                <h4 id="cert-tier" class="cert-tier">Single Feather</h4>
+
+                <p id="cert-dedication" class="cert-dedication" aria-live="polite"></p>
+
+                <div class="cert-meta">
+                  <div>
+                    <div class="meta-label">Date</div>
+                    <div id="cert-date" class="meta-value"></div>
+                  </div>
+                  <div>
+                    <div class="meta-label">Certificate ID</div>
+                    <div id="cert-id" class="meta-value"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cert-foot">
+                <div class="sign-line">
+                  <div class="sign-name">Hamaka Murray</div>
+                  <div class="sign-role">Creator & Author</div>
+                </div>
+                <div class="sign-seal">Tutu the Kiwi</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta-row" style="margin-top:1rem">
+            <button id="btn-png" class="btn btn-primary">Download PNG</button>
+            <button id="btn-pdf" class="btn btn-ghost">Download PDF (A4)</button>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="card section-copy">
+          <p class="eyebrow">Personalise</p>
+          <form id="cert-form" class="form-grid">
+            <label>
+              <span>Recipient name</span>
+              <input id="name" type="text" placeholder="e.g., Aroha Tāwhiao" maxlength="80" required/>
+            </label>
+
+            <label>
+              <span>Tier</span>
+              <select id="tier">
+                <option value="Single Feather" selected>Single Feather</option>
+                <option value="Three Feathers">Three Feathers</option>
+                <option value="Whole Wing">Whole Wing</option>
+                <option value="Kōhanga Patron">Kōhanga Patron</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Dedication (optional)</span>
+              <textarea id="dedication" rows="3" placeholder="A short message to appear on the certificate…"></textarea>
+            </label>
+
+            <div class="form-row">
+              <button type="submit" class="btn btn-primary">Update Preview</button>
+              <a href="/adopt/" class="btn btn-ghost">Back to Adopt</a>
+            </div>
+          </form>
+
+          <p class="small legal" style="margin-top:.75rem">
+            By downloading, you agree that this certificate is a digital keepsake acknowledging your support (koha). It is not a tax-deductible donation receipt.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p class="small">© <span id="yr"></span> Tutu the Kiwi • All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="/assets/js/certificate.js"></script>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
 
