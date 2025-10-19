@@ -62,18 +62,19 @@
           <div class="card" style="max-width:600px;margin-inline:auto;">
             <div class="card__body">
               <p>
-                Your support directly fuels new adventures, books, and community outreach from Aotearoa. Whether
-                it’s one cup of coffee’s worth or a whole flock’s feast, it makes a real difference.
+                Your support directly fuels new adventures, books, and community outreach from Aotearoa.
+                Whether it’s one cup of coffee’s worth or a whole flock’s feast, it makes a real difference.
               </p>
 
+              <!-- PayPal donation using your Gmail -->
               <form
                 action="https://www.paypal.com/donate"
                 method="post"
                 target="_blank"
                 style="margin-top:1rem;"
               >
-                <!-- Replace with your verified PayPal button or donation link -->
-                <input type="hidden" name="hosted_button_id" value="YOUR_PAYPAL_ID_HERE" />
+                <input type="hidden" name="business" value="tututhekiwi@gmail.com" />
+                <input type="hidden" name="currency_code" value="NZD" />
                 <button class="btn btn--primary" type="submit">Donate via PayPal</button>
               </form>
 
@@ -109,4 +110,3 @@
     <script src="/app.js" defer></script>
   </body>
 </html>
-
