@@ -1,56 +1,109 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Tutu the Kiwi — About the Kaupapa</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Who is Tutu, what is this project, and where it’s headed.">
-  <link rel="canonical" href="https://www.tututhekiwi.com/about/">
-  <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-  <header class="site-header">
-    <a class="brand" href="/">Tutu the Kiwi</a>
-    <nav aria-label="Primary">
-      <ul class="nav">
-        <li><a href="/books/">Books</a></li>
-        <li><a href="/map/">Map</a></li>
-        <li><a href="/merch/">Merch</a></li>
-        <li><a href="/about/">About</a></li>
-        <li><a href="/terms.html">Terms</a></li>
-      </ul>
-    </nav>
-  </header>
+<html lang="en-NZ">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>About — Tutu the Kiwi</title>
+    <meta name="description" content="Learn about Tutu the Kiwi — his world, his feathers, and the kaupapa of creativity, mātauranga, and kindness behind every story." />
+    <meta name="author" content="Hamaka Murray" />
+    <meta name="robots" content="index,follow" />
 
-  <main id="content">
-    <h1>About</h1>
-    <p>Tutu the Kiwi is a growing world of stories and images inspired by te taiao and te ao Māori.</p>
+    <link rel="canonical" href="https://www.tututhekiwi.com/about/" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#0b3a2e" />
 
-    <div class="about-grid">
-      <img class="about-hero" src="/images/about.webp" alt="Collage of Tutu’s world — coastlines, forests, mountains">
-      <div>
-        <h2>Kaupapa</h2>
-        <p>We’re building a creative universe step by step — books, maps, and playful web features.</p>
-        <h2>Whai wāhi mai</h2>
-        <p>Your koha helps fund art, print runs, and new interactive bits kids can explore.</p>
-        <div class="cta-row">
-          <a class="btn" href="https://givealittle.co.nz/" target="_blank" rel="noopener">Donate on Givealittle</a>
-          <a class="btn btn-outline" href="/adopt/">Adopt a Feather</a>
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="About — Tutu the Kiwi" />
+    <meta property="og:description" content="The story of Tutu — a luminous kiwi inspired by Aotearoa, Māori artistry, and the spirit of curiosity." />
+    <meta property="og:image" content="https://www.tututhekiwi.com/images/tutu-profile.webp" />
+    <meta property="og:url" content="https://www.tututhekiwi.com/about/" />
+
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="Tutu the Kiwi — Home">
+          <img src="/images/logo-tutu.svg" alt="Tutu the Kiwi logo" width="120" height="48" loading="eager" />
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <button class="nav__toggle" aria-expanded="false" aria-controls="navMenu" id="navToggle">
+            <span class="nav__bar" aria-hidden="true"></span>
+            <span class="nav__bar" aria-hidden="true"></span>
+            <span class="nav__bar" aria-hidden="true"></span>
+            <span class="sr-only">Menu</span>
+          </button>
+          <ul id="navMenu" class="nav__list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/adopt/">Adopt</a></li>
+            <li><a href="/books/">Books</a></li>
+            <li><a href="/donate/">Donate</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="section section--about">
+      <div class="container">
+        <div class="about__wrap">
+          <div class="about__copy">
+            <h1>About Tutu the Kiwi</h1>
+            <p class="lead">
+              Beneath the moonlit canopy of Aotearoa, Tutu the Kiwi glows with colours of the pāua shell — 
+              greens, blues, and flickers of gold. He’s curious, cheeky, and always searching for his next story.
+            </p>
+
+            <p>
+              Tutu’s world is woven from te ao Māori — full of connection, respect, and wonder. 
+              Each feather tells a story of collaboration, learning, and creativity. Through art, design, 
+              and storytelling, this kaupapa shares what it means to explore with courage and kindness.
+            </p>
+
+            <p>
+              Every illustration and word is created with aroha, guided by tikanga and authenticity. 
+              The goal is simple: to inspire tamariki and grown-ups alike to create, question, 
+              and see the world through a brighter lens.
+            </p>
+
+            <p>
+              Tutu’s journey began as an idea — a spark between imagination and culture — and now grows 
+              into books, art, merchandise, and community collaborations that honour Aotearoa’s spirit.
+            </p>
+
+            <a class="btn btn--primary" href="/adopt/">Adopt a Feather</a>
+            <a class="btn btn--ghost" href="/donate/">Support the Journey</a>
+          </div>
+
+          <div class="about__media">
+            <img src="/images/tutu-profile.webp" alt="Portrait of Tutu the Kiwi with pāua-blue-green feathers" width="900" height="900" loading="lazy" decoding="async" />
+          </div>
         </div>
       </div>
-    </div>
-  </main>
+    </main>
 
-  <footer class="site-footer">
-    <nav aria-label="Footer">
-      <a href="/">Home</a> ·
-      <a href="/books/">Books</a> ·
-      <a href="/map/">Map</a> ·
-      <a href="/merch/">Merch</a> ·
-      <a href="/about/">About</a> ·
-      <a href="/terms.html">Terms</a>
-    </nav>
-    <p>© 2025 Tutu the Kiwi — Kirikiriroa, Aotearoa.</p>
-  </footer>
-</body>
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <img src="/images/Hamaka-Murray-Signature.png" alt="Hamaka Murray signature" width="180" height="60" loading="lazy" />
+          <p class="footnote">© <span id="year"></span> Tutu the Kiwi • Hamilton, Aotearoa</p>
+        </div>
+        <nav class="footer__nav" aria-label="Footer">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/adopt/">Adopt</a></li>
+            <li><a href="/books/">Books</a></li>
+            <li><a href="/privacy/">Privacy</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="/app.js" defer></script>
+  </body>
 </html>
