@@ -1,5 +1,5 @@
 /* ============================
-   Tutu the Kiwi — Certificate (Polished + Koru Border)
+   Tutu the Kiwi — Certificate (Polished + Koru Border + Seal)
    ============================ */
 
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;600;800&display=swap");
@@ -8,8 +8,8 @@
   --bg:#0b0f10;
   --ink:#e9f1f2;
   --muted:#b6c4c7;
-  --accent:#38bdf8;   /* pāua-leaning blue */
-  --accent-2:#f59e0b; /* warm beak/feet orange */
+  --accent:#38bdf8;
+  --accent-2:#f59e0b;
 
   --font-sans: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
@@ -17,15 +17,13 @@
   --radius: 20px;
   --shadow: 0 24px 60px rgba(0,0,0,.45);
 
-  --wm-opacity: .18;
+  --wm-opacity: .16;            /* lowered a touch for the seal */
   --wm-shimmer: 20s;
   --wm-scale: min(60vmin, 520px);
-  --wm-image: url("/assets/images/adopt/single-feather.webp");
+  --wm-image: url("/assets/images/certificate/tutu-seal.svg"); /* <-- NEW: use the seal */
 
-  /* New: koru border overlay (SVG) */
   --koru-frame: url("/assets/images/certificate/koru-border.svg");
 
-  /* Type scale tweaks */
   --title: clamp(1.8rem, 3.8vw, 2.8rem);
   --name: clamp(2.2rem, 5.2vw, 3.3rem);
   --tier: clamp(1.4rem, 3.4vw, 2.1rem);
@@ -34,7 +32,7 @@
 .certificate{
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1.414; /* A4 portrait */
+  aspect-ratio: 1 / 1.414;
   background:
     radial-gradient(120% 120% at 50% 10%, rgba(56,189,248,.10), rgba(245,158,11,.06) 40%, rgba(255,255,255,.02) 70%),
     var(--bg);
@@ -44,16 +42,13 @@
   outline: 1px solid rgba(255,255,255,.12);
 }
 
-/* Engraved frame layers */
+/* Frame layers */
 .certificate::before,
 .certificate::after{
   content:"";
   position:absolute; inset:0;
-  border-radius:inherit;
-  pointer-events:none;
+  border-radius:inherit; pointer-events:none;
 }
-
-/* Outer engraved shimmer */
 .certificate::before{
   background:
     conic-gradient(from 45deg at 12% 12%, rgba(255,255,255,.06) 0 6deg, transparent 6deg 360deg),
@@ -67,8 +62,6 @@
   padding: 10px;
   opacity:.55;
 }
-
-/* Inner highlight rim */
 .certificate::after{
   inset: 8px;
   border-radius: calc(var(--radius) - 8px);
@@ -79,7 +72,7 @@
   opacity:.35;
 }
 
-/* Koru border overlay (SVG), sits above both frame layers but below content */
+/* Koru border overlay (SVG) */
 .certificate > .koru-frame{
   position:absolute; inset:0;
   background: var(--koru-frame) center/100% 100% no-repeat;
@@ -88,7 +81,7 @@
   pointer-events:none;
 }
 
-/* Layout grid */
+/* Layout */
 .cert-inner{
   position: relative;
   height: 100%;
@@ -99,7 +92,7 @@
   font-family: var(--font-sans);
 }
 
-/* Watermark (centred) */
+/* Watermark */
 .cert-watermark{
   position:absolute; inset:0; overflow:hidden; pointer-events:none;
 }
@@ -115,7 +108,7 @@
   position:absolute; inset:0;
   background:
     radial-gradient(80% 80% at 50% 50%, rgba(245,158,11,.10), transparent 70%) center/ 100% 100% no-repeat,
-    var(--wm-image) center / clamp(280px, 45vmin, 640px) auto no-repeat;
+    var(--wm-image) center / clamp(300px, 45vmin, 640px) auto no-repeat;
   opacity: calc(var(--wm-opacity) + .02);
   animation: shimmer var(--wm-shimmer) linear infinite;
 }
@@ -172,7 +165,7 @@
   font-style: italic;
 }
 
-/* Meta row */
+/* Meta */
 .cert-meta{
   margin-top: clamp(12px, 2.4vw, 24px);
   display:flex; gap: clamp(16px, 4vw, 48px);
@@ -226,7 +219,6 @@
     box-shadow:none; outline:0; border-radius:0;
     width:210mm; height:297mm; background:#0b0f10;
   }
-  /* Lighten koru & stop shimmer for print */
   .certificate > .koru-frame{ opacity:.35; filter:none }
   .cert-watermark::after{ animation: none }
   .cert-inner{ padding:18mm }
