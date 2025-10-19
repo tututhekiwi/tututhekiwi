@@ -1,3 +1,11 @@
+# Tutu the Kiwi — robots
 User-agent: *
 Allow: /
-Sitemap: https://tututhekiwi.com/sitemap.xml
+
+# Keep crawlers away from temporary and non-public areas
+Disallow: /images/temp/
+Disallow: /scripts/
+
+# Sitemap reference
+Sitemap: https://www.tututhekiwi.com/sitemap.xml
+
