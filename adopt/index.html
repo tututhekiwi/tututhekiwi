@@ -1,109 +1,136 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Adopt — Tutu the Kiwi</title>
-  <meta name="description" content="Choose your adoption tier: Single Feather, Three Feathers, Whole Wing, or Kōhanga Patron to support Tutu the Kiwi."/>
-  <link rel="stylesheet" href="/assets/css/adopt.css"/>
-  <link rel="preload" as="image" href="/assets/images/adopt/whole-wing.webp"/>
-</head>
-<body>
-  <!-- Set your store domain once here -->
-  <script>window.SHOPIFY_STORE_DOMAIN="YOUR-STORE.myshopify.com";</script>
-  <script src="/assets/js/buy.js" defer></script>
+<!doctype html>
+<html lang="en-NZ">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Adopt a Feather — Tutu the Kiwi</title>
+    <meta name="description" content="Adopt a Feather and help Tutu the Kiwi keep glowing. From one feather to a whole wing, every koha makes a difference." />
+    <meta name="author" content="Hamaka Murray" />
+    <meta name="robots" content="index,follow" />
 
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <span class="dot" aria-hidden="true"></span>
-        <h1>Tutu the Kiwi</h1>
+    <link rel="canonical" href="https://www.tututhekiwi.com/adopt/" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#0b3a2e" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Adopt a Feather — Tutu the Kiwi" />
+    <meta property="og:description" content="Support Tutu’s adventures by adopting a luminous feather. Help his world grow brighter." />
+    <meta property="og:image" content="https://www.tututhekiwi.com/images/adopt-feather-1200x630.webp" />
+    <meta property="og:url" content="https://www.tututhekiwi.com/adopt/" />
+
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="Tutu the Kiwi — Home">
+          <img src="/images/logo-tutu.svg" alt="Tutu the Kiwi logo" width="120" height="48" loading="eager" />
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <button class="nav__toggle" aria-expanded="false" aria-controls="navMenu" id="navToggle">
+            <span class="nav__bar" aria-hidden="true"></span>
+            <span class="nav__bar" aria-hidden="true"></span>
+            <span class="nav__bar" aria-hidden="true"></span>
+            <span class="sr-only">Menu</span>
+          </button>
+          <ul id="navMenu" class="nav__list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/books/">Books</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/donate/">Donate</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav aria-label="Primary">
-        <a href="/">Home</a>
-        <a href="/adopt/" aria-current="page">Adopt</a>
-        <a href="/shop/">Shop</a>
-        <a href="/about/">About</a>
-      </nav>
     </header>
 
-    <section class="hero">
-      <div class="card hero-copy">
-        <p class="eyebrow">Koha • Community • Story</p>
-        <h2 class="title">Adopt a Feather — fuel the journey</h2>
-        <p class="subtitle">Pick a path to support the art and world-building of Tutu the Kiwi. Each tier comes with a certificate and special perks.</p>
-        <div class="badges">
-          <span class="badge">Instant certificate</span>
-          <span class="badge">Name wall (opt-in)</span>
-          <span class="badge">Behind-the-scenes updates</span>
+    <main id="main" class="section section--adopt">
+      <div class="container">
+        <div class="section__head">
+          <h1>Adopt a Feather</h1>
+          <p class="section__sub">
+            Support Tutu’s luminous journey. Each feather you adopt adds light to his world and keeps his stories alive.
+          </p>
         </div>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="/adopt/single-feather.html">Start with a Single Feather</a>
-          <a class="btn btn-ghost" href="#tiers">See all tiers</a>
-        </div>
-      </div>
-      <div class="section-media">
-        <img src="/assets/images/adopt/whole-wing.webp"
-             alt="Luminous kiwi wing artwork, glowing in pāua tones."
-             width="1200" height="800" loading="eager"/>
-      </div>
-    </section>
 
-    <section id="tiers" class="section">
-      <div class="section-grid">
-        <div class="card section-copy">
-          <p class="eyebrow">Tier 1</p>
-          <h3 class="title">Single Feather</h3>
-          <p class="subtitle">A luminous standalone feather — small act, big mana.</p>
-          <a class="btn btn-primary" href="/adopt/single-feather.html">Open tier page</a>
+        <div class="adopt__grid">
+          <!-- Tier 1: One Feather -->
+          <article class="card">
+            <div class="card__media">
+              <img src="/images/adopt-feather-1200x630.webp" alt="One luminous feather glowing" width="1200" height="630" loading="lazy" decoding="async" />
+            </div>
+            <div class="card__body">
+              <h2>One Feather</h2>
+              <p>Symbolic koha — receive a digital adoption certificate with your name.</p>
+              <a class="btn btn--primary" href="/donate/">Adopt One Feather</a>
+            </div>
+          </article>
+
+          <!-- Tier 2: Three Feathers -->
+          <article class="card">
+            <div class="card__media">
+              <img src="/images/adopt-3feathers.webp" alt="Three luminous feathers" width="1200" height="630" loading="lazy" decoding="async" />
+            </div>
+            <div class="card__body">
+              <h2>Three Feathers</h2>
+              <p>Triple the mana — certificate, updates, and your name in the next project shout-out.</p>
+              <a class="btn btn--primary" href="/donate/">Adopt Three Feathers</a>
+            </div>
+          </article>
+
+          <!-- Tier 3: Whole Wing -->
+          <article class="card">
+            <div class="card__media">
+              <img src="/images/adopt-wing.webp" alt="Radiant glowing wing" width="1200" height="630" loading="lazy" decoding="async" />
+            </div>
+            <div class="card__body">
+              <h2>Whole Wing</h2>
+              <p>Go all-in — illuminate a full wing. Get early previews and a signed digital print.</p>
+              <a class="btn btn--primary" href="/donate/">Adopt a Wing</a>
+            </div>
+          </article>
+
+          <!-- Tier 4: Guardian of the Glow -->
+          <article class="card">
+            <div class="card__media">
+              <img src="/images/adopt-guardian.webp" alt="Guardian of the Glow luminous pattern" width="1200" height="630" loading="lazy" decoding="async" />
+            </div>
+            <div class="card__body">
+              <h2>Guardian of the Glow</h2>
+              <p>Champion the kaupapa — receive a limited edition art print and exclusive behind-the-scenes previews.</p>
+              <a class="btn btn--primary" href="/donate/">Become a Guardian</a>
+            </div>
+          </article>
         </div>
-        <div class="section-media">
-          <img src="/assets/images/adopt/single-feather.webp" alt="Glowing single feather artwork." width="1200" height="800" loading="lazy"/>
+
+        <div style="margin-top:2rem;text-align:center;">
+          <p class="lead">Every koha adds to Tutu’s light. Ngā mihi nui for helping this story take flight.</p>
         </div>
       </div>
+    </main>
 
-      <div class="section-grid" style="margin-top:var(--gap)">
-        <div class="card section-copy">
-          <p class="eyebrow">Tier 2</p>
-          <h3 class="title">Three Feathers</h3>
-          <p class="subtitle">A trio for momentum — more glow, more go.</p>
-          <a class="btn btn-primary" href="/adopt/three-feathers.html">Open tier page</a>
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <img src="/images/Hamaka-Murray-Signature.png" alt="Hamaka Murray signature" width="180" height="60" loading="lazy" />
+          <p class="footnote">© <span id="year"></span> Tutu the Kiwi • Hamilton, Aotearoa</p>
         </div>
-        <div class="section-media">
-          <img src="/assets/images/adopt/three-feathers.webp" alt="Three luminous feathers artwork." width="1200" height="800" loading="lazy"/>
-        </div>
+        <nav class="footer__nav" aria-label="Footer">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/books/">Books</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/privacy/">Privacy</a></li>
+          </ul>
+        </nav>
       </div>
-
-      <div class="section-grid" style="margin-top:var(--gap)">
-        <div class="card section-copy">
-          <p class="eyebrow">Tier 3</p>
-          <h3 class="title">Whole Wing</h3>
-          <p class="subtitle">Full-wing glow — help Tutu soar.</p>
-          <a class="btn btn-primary" href="/adopt/whole-wing.html">Open tier page</a>
-        </div>
-        <div class="section-media">
-          <img src="/assets/images/adopt/whole-wing.webp" alt="Whole glowing wing artwork." width="1200" height="800" loading="lazy"/>
-        </div>
-      </div>
-
-      <div class="section-grid" style="margin-top:var(--gap)">
-        <div class="card section-copy">
-          <p class="eyebrow">Tier 4</p>
-          <h3 class="title">Kōhanga Patron</h3>
-          <p class="subtitle">Nest patron. Keep the kaupapa warm and growing.</p>
-          <a class="btn btn-primary" href="/adopt/kohanga-patron.html">Open tier page</a>
-        </div>
-        <div class="section-media">
-          <img src="/assets/images/adopt/kohanga.webp" alt="Abstract pāua-toned glowing nest artwork." width="1200" height="800" loading="lazy"/>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <p class="small legal">Adoptions are supporter contributions (koha) that fund creative development. They aren’t charitable donations and aren’t tax-deductible. Digital items are delivered by email.</p>
-      <p class="small">© <span id="yr"></span> Tutu the Kiwi • All rights reserved.</p>
     </footer>
-  </div>
-  <script>document.getElementById('yr').textContent=new Date().getFullYear()</script>
-</body>
+
+    <script src="/app.js" defer></script>
+  </body>
 </html>
