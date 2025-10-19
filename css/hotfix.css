@@ -8,7 +8,7 @@ footer, .site-footer { position: relative !important; }
   padding-inline: clamp(16px,4vw,28px) !important;
 }
 
-/* Grid sanity */
+/* Grid sanity for card layouts */
 .tiers, .card-grid {
   display: grid !important;
   grid-template-columns: repeat(4, minmax(0,1fr)) !important;
@@ -40,7 +40,7 @@ button, .btn, input[type=submit] {
   font-weight: 700 !important;
 }
 
-/* Footer logo not floating up */
+/* Footer/logo stability */
 footer img, .footer-logo { max-width: 100% !important; height: auto !important; display: block !important; }
 
 /* Kill stray overflow + z-index traps */
