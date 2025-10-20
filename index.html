@@ -1,47 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tutu the Kiwi Digital Print</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tutu the Kiwi — Digital Print: “Finds His Glow”</title>
+  <meta name="description" content="High-resolution Tutu the Kiwi digital print — A3 @ 300 DPI + web version. Instant download via secure Stripe checkout. Personal use only.">
+  <meta name="robots" content="index,follow">
+
+  <!-- Open Graph (nice unfurl when you share the page) -->
+  <meta property="og:title" content="Tutu the Kiwi — Digital Print: “Finds His Glow”">
+  <meta property="og:description" content="A3 @ 300 DPI + web version. Instant download. Personal use only.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/">
+  <!-- If you have a cover image file in your repo, update this path -->
+  <meta property="og:image" content="/images/tutu-glow-cover.jpg">
+
   <style>
+    :root {
+      --brand:#17A2A3; /* pāua blue-green */
+      --brand-dark:#128081;
+      --text:#222;
+      --muted:#444;
+      --bg:#f8f8f8;
+      --card:#ffffff;
+    }
+    * { box-sizing: border-box; }
     body {
-      font-family: Arial, sans-serif;
-      background: #f8f8f8;
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.5;
+    }
+    header {
+      padding: 24px 16px;
       text-align: center;
-      padding: 100px 20px;
+    }
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 16px 60px;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
     }
     h1 {
-      color: #222;
+      margin: 0 0 8px;
+      font-size: clamp(24px, 3.5vw, 36px);
+      letter-spacing: 0.2px;
     }
-    p {
-      color: #444;
+    .subtitle {
+      color: var(--muted);
+      margin: 0 0 20px;
+      font-size: 16px;
+    }
+    .media {
+      margin: 12px 0 24px;
+      display: grid;
+      place-items: center;
+    }
+    .media img {
+      width: 100%;
+      max-width: 720px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
+    .details {
+      font-size: 16px;
+      color: var(--muted);
+    }
+    .details ul {
+      margin: 8px 0 16px 18px;
+    }
+    .price {
+      font-weight: 700;
       font-size: 18px;
-      margin-bottom: 40px;
+      margin: 8px 0 20px;
+      color: var(--text);
     }
     .buy-button {
       display: inline-block;
       padding: 14px 22px;
-      border-radius: 8px;
-      background: #17A2A3; /* paua blue-green */
+      border-radius: 10px;
+      background: var(--brand);
       color: #fff;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
       font-size: 18px;
-      transition: background 0.2s ease-in-out;
+      transition: background .18s ease;
     }
-    .buy-button:hover {
-      background: #128081; /* darker shade for hover */
+    .buy-button:hover,
+    .buy-button:focus { background: var(--brand-dark); }
+    .legal {
+      margin-top: 18px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    footer {
+      text-align: center;
+      padding: 40px 16px 24px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .sr-only {
+      position: absolute !important;
+      height: 1px; width: 1px;
+      overflow: hidden; clip: rect(1px,1px,1px,1px);
+      white-space: nowrap; border: 0; padding: 0; margin: -1px;
     }
   </style>
 </head>
 <body>
-  <h1>Tutu the Kiwi Digital Print — “Finds His Glow”</h1>
-  <p>High-resolution PNG (A3 at 300 DPI) + web-optimized version.<br>
-     Personal use only. No resale or redistribution.</p>
-  <a href="https://buy.stripe.com/dRm14gf72cLD3j12nf28800" 
-     target="_blank" rel="noopener" class="buy-button">
-    Buy Digital Print – NZ$12
-  </a>
+  <header>
+    <span class="sr-only">Tutu the Kiwi</span>
+  </header>
+
+  <main class="container">
+    <div class="card" role="region" aria-labelledby="title">
+      <h1 id="title">Tutu the Kiwi — Digital Print: “Finds His Glow”</h1>
+      <p class="subtitle">Instant download via secure Stripe checkout.</p>
+
+      <div class="media">
+        <!-- Optional preview image: replace the src with your real path or remove this <img> entirely -->
+        <img src="/images/tutu-glow-cover.jpg" alt="Tutu the Kiwi artwork: ‘Finds His Glow’">
+      </div>
+
+      <div class="details">
+        <p>What you get:</p>
+        <ul>
+          <li>High-resolution PNG — <strong>A3 at 300 DPI</strong></li>
+          <li>Web-optimized PNG for sharing online</li>
+          <li>Instant download link sent by email after purchase</li>
+        </ul>
+      </div>
+
+      <p class="price">Price: NZ$12</p>
+
+      <a class="buy-button"
+         href="https://buy.stripe.com/dRm14gf72cLD3j12nf28800"
+         target="_blank" rel="noopener">
+        Buy Digital Print — NZ$12
+      </a>
+
+      <p class="legal">
+        Personal use only. No resale or redistribution. If your email with the download link doesn’t arrive within a few minutes,
+        check spam or contact <a href="mailto:kiaora@tututhekiwi.com">kiaora@tututhekiwi.com</a>.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Tutu the Kiwi — All rights reserved.
+  </footer>
+
+  <script>
+    // Tiny nicety so the footer date stays current
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
