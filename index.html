@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tutu the Kiwi</title>
+    
+    <!-- 
+      UPDATED: This now points to your official website logo for the browser tab.
+      Save your new logo as 'tutu-logo.png'
+    -->
+    <link rel="icon" href="tutu-logo.png" type="image/png">
+    
     <!-- 1. Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -61,24 +68,30 @@
             -->
             <div class="flex justify-center">
                 <!-- 
-                  ****************************************************************
-                  * IMPORTANT: Replace this 'src' with the path to your image!  *
-                  ****************************************************************
-                  
-                  The file you uploaded is named: 
-                  "ChatGPT Image Oct 28, 2025, 07_14_00 AM.png"
-                  
-                  You will need to put that file in the same folder as this 
-                  index.html file and change the `src` attribute below to:
-                  src="ChatGPT Image Oct 28, 2025, 07_14_00 AM.png"
+                  This image path is now set. 
+                  Just save your image as 'tutu-the-kiwi.png' 
+                  in the same folder as this file.
                 -->
-                <img src="https://placehold.co/600x600/FDE68A/333?text=Replace+Me+With\nYour+Kiwi+Image" 
+                <img src="tutu-the-kiwi.png" 
                      alt="Tutu the Kiwi cartoon character" 
-                     class="rounded-3xl shadow-2xl w-full max-w-lg">
+                     class="rounded-3xl shadow-2xl w-full max-w-lg"
+                     onerror="this.src='https://placehold.co/600x600/FDE68A/333?text=Image+not+found\n(Name+it+tutu-the-kiwi.png)';">
             </div>
 
         </div>
     </main>
+
+    <!-- 
+      BRAND SIGNATURE (Unchanged)
+      This is your personal brand signature, fixed to the bottom-right corner.
+      File: 'brand-signature.png'
+    -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <img src="brand-signature.png" 
+             alt="Brand Signature" 
+             class="h-16 w-auto opacity-75 hover:opacity-100 transition-opacity duration-300"
+             onerror="this.src='https://placehold.co/100x100/eeeeee/333?text=Signature'; this.style.opacity=1;">
+    </div>
 
 </body>
 </html>
