@@ -1,121 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-NZ">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Adventure Map — explore the places Tutu visits as the world grows. See Tutu’s Weather Park with icons for sun, rain, wind, and snow." />
   <title>Tutu the Kiwi — Adventure Map</title>
-  <link rel="stylesheet" href="/style.css?v=20251019" />
-  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0b3a2e" />
+  <style>
+    .map-hero img { border-radius: var(--radius); box-shadow: var(--shadow); }
+    .weather-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+    .weather-grid figure {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 14px;
+      padding: .8rem;
+      overflow: hidden;
+    }
+    .weather-grid img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16/10;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .weather-grid figcaption {
+      color: var(--ink-dim);
+      margin-top: .5rem;
+      font-size: .9rem;
+    }
+  </style>
 </head>
-
 <body>
-  <header>
-    <nav>
-      <a href="/" class="logo">Tutu the Kiwi</a>
-      <ul>
-        <li><a href="/books/">Books</a></li>
-        <li><a href="/map/" aria-current="page">Map</a></li>
-        <li><a href="/merch/">Merch</a></li>
-        <li><a href="/about/">About</a></li>
-        <li><a href="/terms.html">Terms</a></li>
-      </ul>
-    </nav>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Tutu the Kiwi — Home">
+        <img src="/images/logo-tutu.svg" alt="Tutu the Kiwi logo" width="120" height="48" loading="eager" />
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav__toggle" aria-expanded="false" aria-controls="navMenu" id="navToggle">
+          <span class="nav__bar" aria-hidden="true"></span>
+          <span class="nav__bar" aria-hidden="true"></span>
+          <span class="nav__bar" aria-hidden="true"></span>
+          <span class="sr-only">Menu</span>
+        </button>
+        <ul id="navMenu" class="nav__list">
+          <li><a href="/adopt/">Adopt a Feather</a></li>
+          <li><a href="/books/">Books</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/supporters/">Supporters</a></li>
+          <li><a href="/donate/">Donate</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <!-- Adventure Map -->
-    <section class="page-hero">
-      <h1>Adventure Map</h1>
-      <p>Tūhura — explore the places Tutu visits as the world grows.</p>
-    </section>
-
-    <section class="map-hero">
-      <figure>
-        <img
-          src="/images/map.webp"
-          alt="Cartoon map of Aotearoa with locations Tutu visits"
-          width="1600"
-          height="900"
-          loading="eager"
-        />
-        <figcaption>Tap/click points as they appear in future updates.</figcaption>
-      </figure>
-    </section>
-
-    <!-- Weather Park -->
-    <section class="weather-park">
-      <h2>Tutu’s Weather Park</h2>
-      <p>Icons for the current set: rā (sun), ua (rain), hau (wind), and hukarere (snow). More to come.</p>
-
-      <div class="weather-grid">
-        <figure class="weather-card">
-          <img
-            src="/images/sunny-day.webp"
-            alt="Sunny day icon"
-            width="160"
-            height="160"
-            loading="lazy"
-          />
-          <figcaption>Sunny day</figcaption>
-        </figure>
-
-        <figure class="weather-card">
-          <img
-            src="/images/rainy-day.webp"
-            alt="Rainy day icon"
-            width="160"
-            height="160"
-            loading="lazy"
-          />
-          <figcaption>Rainy day</figcaption>
-        </figure>
-
-        <figure class="weather-card">
-          <img
-            src="/images/windy-day.webp"
-            alt="Windy day icon"
-            width="160"
-            height="160"
-            loading="lazy"
-          />
-          <figcaption>Windy day</figcaption>
-        </figure>
-
-        <figure class="weather-card">
-          <img
-            src="/images/snowy-day.webp"
-            alt="Snowy day icon"
-            width="160"
-            height="160"
-            loading="lazy"
-          />
-          <figcaption>Snowy day</figcaption>
-        </figure>
+  <main id="main">
+    <section class="section" aria-labelledby="map-title">
+      <div class="container">
+        <div class="section__head">
+          <h1 id="map-title">Adventure Map</h1>
+          <p class="section__sub">Tūhura — explore the places Tutu visits as the world grows.</p>
+        </div>
+        <div class="map-hero">
+          <figure>
+            <img src="/images/map.webp" alt="Cartoon map of Aotearoa with locations Tutu visits" width="1600" height="900" loading="eager" />
+          </figure>
+        </div>
       </div>
     </section>
 
-    <!-- Support -->
-    <section class="support">
-      <h2>Support Tutu</h2>
-      <p>Help bring new adventures to life. Every koha counts.</p>
-      <p>
-        <a href="https://givealittle.co.nz/org/tututhekiwi" target="_blank" rel="noopener">Donate on Givealittle</a> |
-        <a href="/feather.html">Adopt a Feather</a>
-      </p>
+    <section class="section" aria-labelledby="weather-title">
+      <div class="container">
+        <div class="section__head">
+          <h2 id="weather-title">Tutu’s Weather Park</h2>
+          <p class="section__sub">Icons for the current set: rā (sun), ua (rain), hau (wind), and hukarere (snow).</p>
+        </div>
+
+        <div class="weather-grid">
+          <figure class="weather-card">
+            <img src="/assets/weather-park/sunny-day.webp" alt="Sunny day illustration" loading="lazy" />
+            <figcaption>Sunny day</figcaption>
+          </figure>
+          <figure class="weather-card">
+            <img src="/assets/weather-park/rainy-day.webp" alt="Rainy day illustration" loading="lazy" />
+            <figcaption>Rainy day</figcaption>
+          </figure>
+          <figure class="weather-card">
+            <img src="/assets/weather-park/windy-day.webp" alt="Windy day illustration" loading="lazy" />
+            <figcaption>Windy day</figcaption>
+          </figure>
+          <figure class="weather-card">
+            <img src="/assets/weather-park/snowy-day.webp" alt="Snowy day illustration" loading="lazy" />
+            <figcaption>Snowy day</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="text-align: center;">
+      <div class="container">
+        <h2>Support Tutu</h2>
+        <p class="lead">Help bring new adventures to life. Every koha counts.</p>
+        <div class="hero__cta" style="justify-content: center;">
+          <a href="https://givealittle.co.nz/org/tututhekiwi" target="_blank" rel="noopener" class="btn">Donate on Givealittle</a>
+          <a href="/adopt/" class="btn btn--ghost">Adopt a Feather</a>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <nav class="footer-nav">
-      <a href="/">Home</a> ·
-      <a href="/books/">Books</a> ·
-      <a href="/map/" aria-current="page">Map</a> ·
-      <a href="/merch/">Merch</a> ·
-      <a href="/about/">About</a> ·
-      <a href="/terms.html">Terms</a>
-    </nav>
-    <p>© 2025 Tutu the Kiwi — Kirikiriroa, Aotearoa.</p>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="/images/Hamaka-Murray-Signature.png" alt="Hamaka Murray signature" width="180" height="60" loading="lazy" />
+        <p class="footnote">© <span id="year"></span> Tutu the Kiwi • Hamilton, Aotearoa</p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer">
+        <ul>
+          <li><a href="/adopt/">Adopt</a></li>
+          <li><a href="/books/">Books</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/terms/">Terms</a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+        </ul>
+        <ul class="social-links">
+          <li><a href="https://instagram.com/YOUR_USERNAME" aria-label="Instagram">IG</a></li>
+          <li><a href="https://facebook.com/YOUR_USERNAME" aria-label="Facebook">FB</a></li>
+        </ul>
+      </nav>
+    </div>
   </footer>
+
+  <script src="/app.js" defer></script>
 </body>
 </html>
