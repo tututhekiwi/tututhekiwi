@@ -1,229 +1,101 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-NZ">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tutu the Kiwi — Adopt a Feather</title>
   <meta name="description" content="Adopt a Feather: support Tutu the Kiwi’s world — one feather, three feathers, a whole wing, or become a Guardian of the Glow." />
-
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0b3a2e" />
   <style>
-    /* =======================
-       BRAND + LAYOUT SYSTEM
-       ======================= */
-    :root{
-      --bg-0:#0d2d2a; --bg-1:#0f3a36; --card:#0f2f2c;
-      --ink:#eaf7f5; --muted:#b8d5d1;
-      --accent:#12b5a5; --accent-ink:#022e2a;
-      --ring:rgba(18,181,165,.45); --shadow:0 6px 22px rgba(0,0,0,.32);
-      --radius:18px; --radius-lg:22px; --maxw:1120px; --gap:22px;
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html,body{height:100%}
-    body{
-      color:var(--ink);
-      background:radial-gradient(1200px 600px at 20% 0%,var(--bg-1),var(--bg-0));
-      font:16px/1.5 system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial,sans-serif;
-      -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
-    }
-    img{max-width:100%;height:auto;display:block}
-    a{color:inherit;text-decoration:none}
-    button{font:inherit}
-
-    .shell{max-width:var(--maxw);margin:0 auto;padding:24px clamp(16px,4vw,28px)}
-
-    /* =======================
-       HEADER
-       ======================= */
-    header.site{
-      position:sticky;top:0;z-index:20;
-      background:linear-gradient(180deg,rgba(13,45,42,.92),rgba(13,45,42,.86));
-      backdrop-filter:saturate(120%) blur(6px);
-      border-bottom:1px solid rgba(255,255,255,.06);
-    }
-    .brand{display:flex;align-items:center;gap:12px;padding:12px 0}
-    .brand__mark{
-      width:28px;height:28px;border-radius:50%;
-      background:conic-gradient(from 120deg,#09a89a,#27e0cf,#0a7e74,#09a89a);
-      box-shadow:0 0 0 3px rgba(255,255,255,.07) inset;
-    }
-    .brand__name{font-weight:700;letter-spacing:.2px}
-
-    /* =======================
-       HERO
-       ======================= */
-    .hero{
-      margin-top:18px;
-      padding:clamp(18px,4vw,30px);
-      border-radius:var(--radius-lg);
-      background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.00));
-      border:1px solid rgba(255,255,255,.06);
-      box-shadow:var(--shadow);
-    }
-    .hero h1{
-      margin:0 0 8px;
-      font-size:clamp(28px,3.6vw,40px);
-      line-height:1.15;
-      letter-spacing:.2px;
-    }
-    .hero p{color:var(--muted);max-width:64ch}
-
-    /* =======================
-       GRID OF TIERS
-       ======================= */
-    .tiers{
-      margin-top:26px;
-      display:grid;
-      grid-template-columns:repeat(4,minmax(0,1fr));
-      gap:var(--gap);
-    }
-    @media (max-width:1100px){.tiers{grid-template-columns:repeat(2,1fr)}}
-    @media (max-width:640px){.tiers{grid-template-columns:1fr}}
-
-    .card{
-      background:linear-gradient(180deg,#103734,#0e2f2c 55%);
-      border:1px solid rgba(255,255,255,.07);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      display:flex;flex-direction:column;
-      min-height:240px;
-      overflow:hidden;
-      position:relative;
-      isolation:isolate;
-      transition:transform .15s ease;
-    }
-    .card:hover{transform:translateY(-3px)}
-    .card__body{padding:18px;flex:1}
-    .card h3{margin-bottom:6px;font-size:18px}
-    .card p{color:var(--muted)}
-    .cta-row{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
-
-    /* =======================
-       BUTTONS
-       ======================= */
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:10px 14px;border-radius:999px;
-      border:1px solid transparent;
-      background:var(--accent);color:var(--accent-ink);
-      font-weight:700;letter-spacing:.2px;
-      box-shadow:0 2px 0 rgba(0,0,0,.18);
-      transition:transform .06s ease,box-shadow .06s ease,background .2s ease;
-      cursor:pointer;
-    }
-    .btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px var(--ring)}
-    .btn--ghost{background:transparent;color:var(--ink);border-color:rgba(255,255,255,.14)}
-
-    /* =======================
-       FOOTER + SIGNATURE
-       ======================= */
-    footer.site{
-      margin-top:40px;padding:24px 0 60px;
-      color:var(--muted);
-      border-top:1px solid rgba(255,255,255,.06);
-    }
-    .foot-grid{display:grid;gap:12px;grid-template-columns:1fr auto;align-items:center}
-
-    .sig{
-      display:flex;gap:12px;align-items:center;
-      background:rgba(255,255,255,.03);
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:999px;
-      padding:10px 12px;
-      box-shadow:0 6px 22px rgba(0,0,0,.32);
-      backdrop-filter:saturate(120%) blur(6px);
-    }
-    .sig__mark{
-      width:34px;aspect-ratio:1/1;border-radius:50%;
-      background:conic-gradient(from 120deg,#09a89a,#27e0cf,#0a7e74,#09a89a);
-      position:relative;overflow:hidden;display:grid;place-items:center;
-    }
-    .sig__mark img{
-      width:82%;height:auto;display:block;
-      filter:drop-shadow(0 1px 0 rgba(0,0,0,.35));
-    }
-    .sig__mark.foil::after{
-      content:"";position:absolute;inset:-40% -60%;
-      background:linear-gradient(120deg,transparent 20%,rgba(255,255,255,.85) 50%,transparent 80%);
-      transform:translateX(-120%) rotate(12deg);
-      animation:shine 3.2s cubic-bezier(.22,.61,.36,1) infinite;
-      mix-blend-mode:screen;pointer-events:none;
-    }
-    @keyframes shine{to{transform:translateX(120%) rotate(12deg)}}
-    .sig__text{display:flex;flex-direction:column}
-    .sig__text strong{font-weight:800;line-height:1.1}
-    .sig__text span{color:var(--muted);font-size:.85rem}
-
-    /* =======================
-       SAFETY OVERRIDES
-       ======================= */
-    section,.section{min-height:unset!important;height:auto!important}
-    header,.hero{position:relative!important}
-    footer.site{position:relative!important}
-    .tiers,.card,.hero,.shell{overflow:visible!important}
-    .card button,.card .btn{width:auto!important}
+    /* Page-specific styles for adopt page */
+    .sig { display:flex; gap:12px; align-items:center; background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.08); border-radius:999px; padding:10px 12px; box-shadow:var(--shadow); }
+    .sig__mark { width:34px; aspect-ratio:1/1; border-radius:50%; background:conic-gradient(from 120deg,#09a89a,#27e0cf,#0a7e74,#09a89a); display:grid; place-items:center; }
+    .sig__mark img { width:82%; height:auto; display:block; filter:drop-shadow(0 1px 0 rgba(0,0,0,.35)); }
+    .sig__text { display:flex; flex-direction:column; }
+    .sig__text strong { font-weight:800; line-height:1.1; }
+    .sig__text span { color:var(--muted); font-size:.85rem; }
   </style>
 </head>
-
 <body>
-  <header class="site">
-    <div class="shell">
-      <div class="brand">
-        <div class="brand__mark" aria-hidden="true"></div>
-        <div class="brand__name">Tutu the Kiwi</div>
-        <div style="margin-left:auto;opacity:.9">Adopt a Feather</div>
-      </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Tutu the Kiwi — Home">
+        <img src="/images/logo-tutu.svg" alt="Tutu the Kiwi logo" width="120" height="48" loading="eager" />
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav__toggle" aria-expanded="false" aria-controls="navMenu" id="navToggle">
+          <span class="nav__bar" aria-hidden="true"></span>
+          <span class="nav__bar" aria-hidden="true"></span>
+          <span class="nav__bar" aria-hidden="true"></span>
+          <span class="sr-only">Menu</span>
+        </button>
+        <ul id="navMenu" class="nav__list">
+          <li><a href="/adopt/" class="active">Adopt a Feather</a></li>
+          <li><a href="/books/">Books</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/supporters/">Supporters</a></li>
+          <li><a href="/donate/">Donate</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <main class="shell" id="main">
+  <main id="main">
     <section class="hero" aria-labelledby="adopt-title">
-      <h1 id="adopt-title">Adopt a Feather</h1>
-      <p>Back the world of Tutu by adopting part of his glow. Choose a tier below—every koha helps us make stories, art, and adventures in Aotearoa.</p>
+      <div class="container">
+        <h1 id="adopt-title">Adopt a Feather</h1>
+        <p class="lead">Back the world of Tutu by adopting part of his glow. Choose a tier below—every koha helps us make stories, art, and adventures in Aotearoa.</p>
+      </div>
     </section>
 
-    <section class="tiers" aria-label="Adoption tiers">
-      <article class="card"><div class="card__body">
-        <h3>One Feather</h3>
-        <p>Entry-level support. Your name on our thank-you wall and a downloadable artwork.</p>
-        <div class="cta-row">
-          <button class="btn">Adopt 1 Feather</button>
-          <a class="btn btn--ghost" href="#learn-1">Learn more</a>
-        </div>
-      </div></article>
+    <section class="section" aria-label="Adoption tiers">
+      <div class="container adopt__grid">
+        <article class="card"><div class="card__body">
+          <h3>One Feather</h3>
+          <p>Entry-level support. Your name on our thank-you wall and a downloadable artwork.</p>
+          <div class="hero__cta">
+            <a href="/adopt/single-feather.html" class="btn">Adopt 1 Feather</a>
+          </div>
+        </div></article>
 
-      <article class="card"><div class="card__body">
-        <h3>Three Feathers</h3>
-        <p>Extra sparkle. Includes the One Feather perks + a behind-the-scenes mini pack.</p>
-        <div class="cta-row">
-          <button class="btn">Adopt 3 Feathers</button>
-          <a class="btn btn--ghost" href="#learn-3">Learn more</a>
-        </div>
-      </div></article>
+        <article class="card"><div class="card__body">
+          <h3>Three Feathers</h3>
+          <p>Extra sparkle. Includes the One Feather perks + a behind-the-scenes mini pack.</p>
+          <div class="hero__cta">
+            <a href="/adopt/three-feathers.html" class="btn">Adopt 3 Feathers</a>
+          </div>
+        </div></article>
 
-      <article class="card"><div class="card__body">
-        <h3>Whole Wing</h3>
-        <p>Big mana. All previous perks + your name in the next digital book edition.</p>
-        <div class="cta-row">
-          <button class="btn">Adopt a Wing</button>
-          <a class="btn btn--ghost" href="#learn-wing">Learn more</a>
-        </div>
-      </div></article>
+        <article class="card"><div class="card__body">
+          <h3>Whole Wing</h3>
+          <p>Big mana. All previous perks + your name in the next digital book edition.</p>
+          <div class="hero__cta">
+            <a href="/adopt/whole-wing.html" class="btn">Adopt a Wing</a>
+          </div>
+        </div></article>
 
-      <article class="card"><div class="card__body">
-        <h3>Guardian of the Glow</h3>
-        <p>Founding backer recognition, invites, and a special limited artwork drop.</p>
-        <div class="cta-row">
-          <button class="btn">Become a Guardian</button>
-          <a class="btn btn--ghost" href="#learn-guardian">Learn more</a>
-        </div>
-      </div></article>
+        <article class="card"><div class="card__body">
+          <h3>Kōhanga Patron</h3>
+          <p>Founding backer recognition, invites, and a special limited artwork drop.</p>
+          <div class="hero__cta">
+            <a href="/adopt/kohanga-patron.html" class="btn">Become a Patron</a>
+          </div>
+        </div></article>
+      </div>
     </section>
+  </main>
 
-    <footer class="site">
-      <div class="foot-grid">
-        <div>© <span id="yr"></span> Tutu the Kiwi — Made in Aotearoa</div>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer__grid">
+      <div class="footer__brand">
         <div class="sig" aria-label="Creator mark">
-          <div class="sig__mark foil">
+          <div class="sig__mark">
             <img src="/images/Artwork Signature.svg" alt="Hamaka Murray signature">
           </div>
           <div class="sig__text">
@@ -231,10 +103,24 @@
             <span>Creator &amp; Author</span>
           </div>
         </div>
+        <p class="footnote">© <span id="year"></span> Tutu the Kiwi • Hamilton, Aotearoa</p>
       </div>
-    </footer>
-  </main>
+      <nav class="footer__nav" aria-label="Footer">
+        <ul>
+          <li><a href="/adopt/">Adopt</a></li>
+          <li><a href="/books/">Books</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/terms/">Terms</a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+        </ul>
+        <ul class="social-links">
+          <li><a href="https://instagram.com/YOUR_USERNAME" aria-label="Instagram">IG</a></li>
+          <li><a href="https://facebook.com/YOUR_USERNAME" aria-label="Facebook">FB</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
 
-  <script>document.getElementById('yr').textContent=new Date().getFullYear()</script>
+  <script src="/app.js" defer></script>
 </body>
 </html>
