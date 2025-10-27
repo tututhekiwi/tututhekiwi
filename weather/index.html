@@ -5,41 +5,29 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Weather Park — Tutu the Kiwi</title>
     <meta name="description" content="Explore the Weather Park — a showcase of Tutu the Kiwi’s weather icons and environmental moods across Aotearoa." />
-    <meta name="author" content="Hamaka Murray" />
-    <meta name="robots" content="index,follow" />
-
     <link rel="canonical" href="https://www.tututhekiwi.com/weather/" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="theme-color" content="#0b3a2e" />
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Weather Park — Tutu the Kiwi" />
-    <meta property="og:description" content="A luminous collection of Tutu’s weather icons — from sunshine to starlight." />
-    <meta property="og:image" content="https://www.tututhekiwi.com/images/weather-park.webp" />
-    <meta property="og:url" content="https://www.tututhekiwi.com/weather/" />
-
     <link rel="stylesheet" href="/styles.css" />
     <style>
       .weather-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
         gap: 1rem;
         margin-top: 1.5rem;
         text-align: center;
       }
       .weather-grid figure {
-        background: rgba(255,255,255,.04);
+        background: var(--card);
         border: 1px solid rgba(255,255,255,.08);
         border-radius: 14px;
         padding: .8rem;
-        box-shadow: var(--shadow);
       }
       .weather-grid img {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
         margin: 0 auto;
       }
       .weather-grid figcaption {
@@ -49,7 +37,6 @@
       }
     </style>
   </head>
-
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
@@ -66,9 +53,10 @@
             <span class="sr-only">Menu</span>
           </button>
           <ul id="navMenu" class="nav__list">
-            <li><a href="/">Home</a></li>
-            <li><a href="/adopt/">Adopt</a></li>
+            <li><a href="/adopt/">Adopt a Feather</a></li>
             <li><a href="/books/">Books</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/supporters/">Supporters</a></li>
             <li><a href="/donate/">Donate</a></li>
           </ul>
         </nav>
@@ -86,51 +74,45 @@
 
         <div class="weather-grid">
           <figure>
-            <img src="/images/icon-sunny.svg" alt="Sunny" />
+            <img src="/assets/weather-icons/icon-sunny-day.svg" alt="Sunny" />
             <figcaption>Sunny</figcaption>
           </figure>
           <figure>
-            <img src="/images/icon-partly-cloudy-day.svg" alt="Partly Cloudy (Day)" />
+            <img src="/assets/weather-icons/icon-partly-cloudy-day.svg" alt="Partly Cloudy (Day)" />
             <figcaption>Partly Cloudy (Day)</figcaption>
           </figure>
           <figure>
-            <img src="/images/icon-partly-cloudy-night.svg" alt="Partly Cloudy (Night)" />
-            <figcaption>Partly Cloudy (Night)</figcaption>
-          </figure>
-          <figure>
-            <img src="/images/icon-cloudy.svg" alt="Cloudy" />
+            <img src="/assets/weather-icons/icon-cloudy-day.svg" alt="Cloudy" />
             <figcaption>Cloudy</figcaption>
           </figure>
           <figure>
-            <img src="/images/icon-rain.svg" alt="Rain" />
-            <figcaption>Rain</figcaption>
-          </figure>
-          <figure>
-            <img src="/images/icon-storm.svg" alt="Storm" />
-            <figcaption>Storm</figcaption>
-          </figure>
-          <figure>
-            <img src="/images/icon-fog.svg" alt="Fog" />
+            <img src="/assets/weather-icons/icon-foggy-day.svg" alt="Fog" />
             <figcaption>Fog</figcaption>
           </figure>
           <figure>
-            <img src="/images/icon-snow.svg" alt="Snow" />
-            <figcaption>Snow</figcaption>
-          </figure>
-          <figure>
-            <img src="/images/icon-wind.svg" alt="Wind" />
+            <img src="/assets/weather-icons/icon-windy-day.svg" alt="Wind" />
             <figcaption>Wind</figcaption>
           </figure>
           <figure>
-            <img src="/images/icon-moon.svg" alt="Moonlight" />
-            <figcaption>Moonlight</figcaption>
+            <img src="/assets/weather-icons/icon-rainy-day.svg" alt="Rain" />
+            <figcaption>Rain</figcaption>
           </figure>
-        </div>
-
-        <div style="margin-top:2rem;text-align:center;">
-          <p class="lead">
-            All icons are hand-crafted to match Tutu’s luminous world — clean, simple, and full of life.
-          </p>
+          <figure>
+            <img src="/assets/weather-icons/icon-stormy-day.svg" alt="Storm" />
+            <figcaption>Storm</figcaption>
+          </figure>
+          <figure>
+            <img src="/assets/weather-icons/icon-snowy-day.svg" alt="Snow" />
+            <figcaption>Snow</figcaption>
+          </figure>
+          <figure>
+            <img src="/assets/weather-icons/icon-clear-night.svg" alt="Clear Night" />
+            <figcaption>Clear Night</figcaption>
+          </figure>
+          <figure>
+            <img src="/assets/weather-icons/icon-partly-cloudy-night.svg" alt="Partly Cloudy (Night)" />
+            <figcaption>Partly Cloudy (Night)</figcaption>
+          </figure>
         </div>
       </div>
     </main>
@@ -143,10 +125,15 @@
         </div>
         <nav class="footer__nav" aria-label="Footer">
           <ul>
-            <li><a href="/">Home</a></li>
             <li><a href="/adopt/">Adopt</a></li>
             <li><a href="/books/">Books</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/terms/">Terms</a></li>
             <li><a href="/privacy/">Privacy</a></li>
+          </ul>
+          <ul class="social-links">
+            <li><a href="https://instagram.com/YOUR_USERNAME" aria-label="Instagram">IG</a></li>
+            <li><a href="https://facebook.com/YOUR_USERNAME" aria-label="Facebook">FB</a></li>
           </ul>
         </nav>
       </div>
