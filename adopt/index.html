@@ -1,126 +1,114 @@
 <!doctype html>
 <html lang="en-NZ">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tutu the Kiwi — Adopt a Feather</title>
-  <meta name="description" content="Adopt a Feather: support Tutu the Kiwi’s world — one feather, three feathers, a whole wing, or become a Guardian of the Glow." />
-  <link rel="stylesheet" href="/styles.css" />
-  <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <meta name="theme-color" content="#0b3a2e" />
-  <style>
-    /* Page-specific styles for adopt page */
-    .sig { display:flex; gap:12px; align-items:center; background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.08); border-radius:999px; padding:10px 12px; box-shadow:var(--shadow); }
-    .sig__mark { width:34px; aspect-ratio:1/1; border-radius:50%; background:conic-gradient(from 120deg,#09a89a,#27e0cf,#0a7e74,#09a89a); display:grid; place-items:center; }
-    .sig__mark img { width:82%; height:auto; display:block; filter:drop-shadow(0 1px 0 rgba(0,0,0,.35)); }
-    .sig__text { display:flex; flex-direction:column; }
-    .sig__text strong { font-weight:800; line-height:1.1; }
-    .sig__text span { color:var(--muted); font-size:.85rem; }
-  </style>
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>About — Tutu the Kiwi</title>
+    <meta name="description" content="Learn about Tutu the Kiwi — his world, his feathers, and the kaupapa of creativity, mātauranga, and kindness behind every story." />
+    <meta name="author" content="Hamaka Murray" />
+    <meta name="robots" content="index,follow" />
 
-  <header class="site-header" role="banner">
-    <div class="container header-inner">
-      <a class="brand" href="/" aria-label="Tutu the Kiwi — Home">
-        <img src="/images/logo-tutu.svg" alt="Tutu the Kiwi logo" width="120" height="48" loading="eager" />
-      </a>
-      <nav class="nav" aria-label="Primary">
-        <button class="nav__toggle" aria-expanded="false" aria-controls="navMenu" id="navToggle">
-          <span class="nav__bar" aria-hidden="true"></span>
-          <span class="nav__bar" aria-hidden="true"></span>
-          <span class="nav__bar" aria-hidden="true"></span>
-          <span class="sr-only">Menu</span>
-        </button>
-        <ul id="navMenu" class="nav__list">
-          <li><a href="/adopt/" class="active">Adopt a Feather</a></li>
-          <li><a href="/books/">Books</a></li>
-          <li><a href="/about/">About</a></li>
-          <li><a href="/supporters/">Supporters</a></li>
-          <li><a href="/donate/">Donate</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <link rel="canonical" href="https://www.tututhekiwi.com/about/" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#0b3a2e" />
 
-  <main id="main">
-    <section class="hero" aria-labelledby="adopt-title">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="About — Tutu the Kiwi" />
+    <meta property="og:description" content="The story of Tutu — a luminous kiwi inspired by Aotearoa, Māori artistry, and the spirit of curiosity." />
+    <meta property="og:image" content="https://www.tututhekiwi.com/images/tutu-profile.webp" />
+    <meta property="og:url" content="https://www.tututhekiwi.com/about/" />
+
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="Tutu the Kiwi — Home">
+          <img src="/images/logo-tutu.svg" alt="Tutu the Kiwi logo" width="120" height="48" loading="eager" />
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <button class="nav__toggle" aria-expanded="false" aria-controls="navMenu" id="navToggle">
+            <span class="nav__bar" aria-hidden="true"></span>
+            <span class="nav__bar" aria-hidden="true"></span>
+            <span class="nav__bar" aria-hidden="true"></span>
+            <span class="sr-only">Menu</span>
+          </button>
+          <ul id="navMenu" class="nav__list">
+            <li><a href="/adopt/">Adopt a Feather</a></li>
+            <li><a href="/books/">Books</a></li>
+            <li><a href="/about/" class="active">About</a></li>
+            <li><a href="/supporters/">Supporters</a></li>
+            <li><a href="/donate/">Donate</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="section section--about">
       <div class="container">
-        <h1 id="adopt-title">Adopt a Feather</h1>
-        <p class="lead">Back the world of Tutu by adopting part of his glow. Choose a tier below—every koha helps us make stories, art, and adventures in Aotearoa.</p>
-      </div>
-    </section>
+        <div class="about__wrap">
+          <div class="about__copy">
+            <h1>About Tutu the Kiwi</h1>
+            <p class="lead">
+              Beneath the moonlit canopy of Aotearoa, Tutu the Kiwi glows with colours of the pāua shell — 
+              greens, blues, and flickers of gold. He’s curious, cheeky, and always searching for his next story.
+            </p>
 
-    <section class="section" aria-label="Adoption tiers">
-      <div class="container adopt__grid">
-        <article class="card"><div class="card__body">
-          <h3>One Feather</h3>
-          <p>Entry-level support. Your name on our thank-you wall and a downloadable artwork.</p>
-          <div class="hero__cta">
-            <a href="/adopt/single-feather.html" class="btn">Adopt 1 Feather</a>
-          </div>
-        </div></article>
+            <p>
+              Tutu’s world is woven from te ao Māori — full of connection, respect, and wonder. 
+              Each feather tells a story of collaboration, learning, and creativity. Through art, design, 
+              and storytelling, this kaupapa shares what it means to explore with courage and kindness.
+            </p>
 
-        <article class="card"><div class="card__body">
-          <h3>Three Feathers</h3>
-          <p>Extra sparkle. Includes the One Feather perks + a behind-the-scenes mini pack.</p>
-          <div class="hero__cta">
-            <a href="/adopt/three-feathers.html" class="btn">Adopt 3 Feathers</a>
-          </div>
-        </div></article>
+            <p>
+              Every illustration and word is created with aroha, guided by tikanga and authenticity. 
+              The goal is simple: to inspire tamariki and grown-ups alike to create, question, 
+              and see the world through a brighter lens.
+            </p>
 
-        <article class="card"><div class="card__body">
-          <h3>Whole Wing</h3>
-          <p>Big mana. All previous perks + your name in the next digital book edition.</p>
-          <div class="hero__cta">
-            <a href="/adopt/whole-wing.html" class="btn">Adopt a Wing</a>
-          </div>
-        </div></article>
+            <p>
+              Tutu’s journey began as an idea — a spark between imagination and culture — and now grows 
+              into books, art, merchandise, and community collaborations that honour Aotearoa’s spirit.
+            </p>
 
-        <article class="card"><div class="card__body">
-          <h3>Kōhanga Patron</h3>
-          <p>Founding backer recognition, invites, and a special limited artwork drop.</p>
-          <div class="hero__cta">
-            <a href="/adopt/kohanga-patron.html" class="btn">Become a Patron</a>
+            <a class="btn btn--primary" href="/adopt/">Adopt a Feather</a>
+            <a class="btn btn--ghost" href="/donate/">Support the Journey</a>
           </div>
-        </div></article>
-      </div>
-    </section>
-  </main>
 
-  <footer class="site-footer" role="contentinfo">
-    <div class="container footer__grid">
-      <div class="footer__brand">
-        <div class="sig" aria-label="Creator mark">
-          <div class="sig__mark">
-            <img src="/images/Artwork Signature.svg" alt="Hamaka Murray signature">
-          </div>
-          <div class="sig__text">
-            <strong>Hamaka Murray</strong>
-            <span>Creator &amp; Author</span>
+          <div class="about__media">
+            <img src="/images/tutu-profile.webp" alt="Portrait of Tutu the Kiwi with pāua-blue-green feathers" width="900" height="900" loading="lazy" decoding="async" />
           </div>
         </div>
-        <p class="footnote">© <span id="year"></span> Tutu the Kiwi • Hamilton, Aotearoa</p>
       </div>
-      <nav class="footer__nav" aria-label="Footer">
-        <ul>
-          <li><a href="/adopt/">Adopt</a></li>
-          <li><a href="/books/">Books</a></li>
-          <li><a href="/about/">About</a></li>
-          <li><a href="/terms/">Terms</a></li>
-          <li><a href="/privacy/">Privacy</a></li>
-        </ul>
-        <ul class="social-links">
-          <li><a href="https://instagram.com/YOUR_USERNAME" aria-label="Instagram">IG</a></li>
-          <li><a href="https://facebook.com/YOUR_USERNAME" aria-label="Facebook">FB</a></li>
-        </ul>
-      </nav>
-    </div>
-  </footer>
+    </main>
 
-  <script src="/app.js" defer></script>
-</body>
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <img src="/images/Hamaka-Murray-Signature.png" alt="Hamaka Murray signature" width="180" height="60" loading="lazy" />
+          <p class="footnote">© <span id="year"></span> Tutu the Kiwi • Hamilton, Aotearoa</p>
+        </div>
+        <nav class="footer__nav" aria-label="Footer">
+          <ul>
+            <li><a href="/adopt/">Adopt</a></li>
+            <li><a href="/books/">Books</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/terms/">Terms</a></li>
+            <li><a href="/privacy/">Privacy</a></li>
+          </ul>
+          <ul class="social-links">
+            <li><a href="https://instagram.com/tututhekiwi" aria-label="Instagram">IG</a></li>
+            <li><a href="https://facebook.com/tututhekiwi" aria-label="Facebook">FB</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="/app.js" defer></script>
+  </body>
 </html>
