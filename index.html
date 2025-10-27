@@ -1,110 +1,83 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Tutu the Kiwi — Home</title>
-  <meta name="description" content="Welcome to the official home of Tutu the Kiwi — stories, artwork, and glowing adventures from Aotearoa." />
-  <link rel="icon" href="/assets/favicon.ico" />
-  <link rel="stylesheet" href="/css/main.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, sans-serif;
-      color: #0f172a;
-      background-color: #f8fafc;
-      line-height: 1.6;
-    }
-    header {
-      background: white;
-      border-bottom: 1px solid #e2e8f0;
-      position: sticky;
-      top: 0;
-    }
-    nav {
-      max-width: 1100px;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem;
-    }
-    nav a {
-      color: #0f172a;
-      text-decoration: none;
-      font-weight: 600;
-      margin: 0 0.75rem;
-    }
-    nav a.cta {
-      background: #16a34a;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 12px;
-    }
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 2rem;
-      max-width: 1100px;
-      margin: auto;
-      padding: 3rem 1rem;
-    }
-    .hero img {
-      width: 100%;
-      border-radius: 20px;
-    }
-    .hero h1 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      margin-bottom: 0.5rem;
-    }
-    .hero p {
-      font-size: 1.1rem;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 1rem;
-      background: #f97316;
-      color: white;
-      padding: 0.75rem 1.25rem;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 700;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      background: white;
-      border-top: 1px solid #e2e8f0;
-      font-size: 0.9rem;
-      color: #64748b;
-    }
-  </style>
-</head>
+<html lang="en-NZ">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tutu the Kiwi — Home</title>
+    <meta name="description" content="Welcome to the official home of Tutu the Kiwi — stories, artwork, and glowing adventures from Aotearoa." />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#0b3a2e" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-<body>
-  <header>
-    <nav>
-      <a href="/">Tutu the Kiwi</a>
-      <div>
-        <a href="#stories">Stories</a>
-        <a href="#art">Artwork</a>
-        <a href="/buy/" class="cta">Digital Prints</a>
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="Tutu the Kiwi — Home">
+          <img src="/images/logo-tutu.svg" alt="Tutu the Kiwi logo" width="120" height="48" loading="eager" />
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <button class="nav__toggle" aria-expanded="false" aria-controls="navMenu" id="navToggle">
+            <span class="nav__bar" aria-hidden="true"></span>
+            <span class="nav__bar" aria-hidden="true"></span>
+            <span class="nav__bar" aria-hidden="true"></span>
+            <span class="sr-only">Menu</span>
+          </button>
+          <ul id="navMenu" class="nav__list">
+            <li><a href="/adopt/">Adopt a Feather</a></li>
+            <li><a href="/books/">Books</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/supporters/">Supporters</a></li>
+            <li><a href="/donate/">Donate</a></li>
+          </ul>
+        </nav>
       </div>
-    </nav>
-  </header>
+    </header>
 
-  <section class="hero">
-    <div>
-      <h1>Tutu finds his glow here first.</h1>
-      <p>Discover stories, artwork, and glowing adventures from Aotearoa. Each print helps bring Tutu’s next tale to life.</p>
-      <a href="/buy/" class="btn">See Latest Drop</a>
-    </div>
-    <img src="/assets/hero.webp" alt="Tutu the Kiwi hero image">
-  </section>
+    <main id="main">
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <h1>Tutu finds his glow here first.</h1>
+            <p class="lead">Discover stories, artwork, and glowing adventures from Aotearoa. Each print helps bring Tutu’s next tale to life.</p>
+            <div class="hero__cta">
+              <a href="/buy/" class="btn">See Latest Drop</a>
+              <a href="/about/" class="btn btn--ghost">Learn More</a>
+            </div>
+          </div>
+          <div class="hero__art">
+            <img src="/images/hero.webp" alt="Tutu the Kiwi wearing a piupiu and waving" width="1200" height="630" loading="eager" />
+          </div>
+        </div>
+      </section>
 
-  <footer>
-    © 2025 Tutu the Kiwi — All rights reserved.
-  </footer>
-</body>
+      </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <img src="/images/Hamaka-Murray-Signature.png" alt="Hamaka Murray signature" width="180" height="60" loading="lazy" />
+          <p class="footnote">© <span id="year"></span> Tutu the Kiwi • Hamilton, Aotearoa</p>
+        </div>
+        <nav class="footer__nav" aria-label="Footer">
+          <ul>
+            <li><a href="/adopt/">Adopt</a></li>
+            <li><a href="/books/">Books</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/terms/">Terms</a></li>
+            <li><a href="/privacy/">Privacy</a></li>
+          </ul>
+          <ul class="social-links">
+            <li><a href="https://instagram.com/YOUR_USERNAME" aria-label="Instagram">IG</a></li>
+            <li><a href="https://facebook.com/YOUR_USERNAME" aria-label="Facebook">FB</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="/app.js" defer></script>
+  </body>
 </html>
