@@ -9,35 +9,72 @@
     <meta property="og:title" content="Tutu the Kiwi — Stories & Adventures" />
     <meta property="og:description" content="Explore the world of Tutu the Kiwi, full of fun stories and exciting adventures." />
     <meta property="og:type" content="website" />
-
-    <meta property="og:url" content="https://www.yourwebsite.com/" />
-    
-    <meta property="og:image" content="https://www.yourwebsite.com/images/tutu-hero-image.jpg" />
-    
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Tutu the Kiwi — Stories & Adventures" />
     <meta name="twitter:description" content="Explore the world of Tutu the Kiwi, full of fun stories and exciting adventures." />
-    
+
+    <meta property="og:url" content="https://www.yourwebsite.com/" />
+    <meta property="og:image" content="https://www.yourwebsite.com/images/tutu-hero-image.jpg" />
     <meta name="twitter:url" content="https://www.yourwebsite.com/" />
-    
     <meta name="twitter:image" content="https://www.yourwebsite.com/images/tutu-hero-image.jpg" />
 
-    </head>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
 <body>
+    
+    <a href="#main-content" class="skip-link">Skip to content</a>
 
-    <header>
-        </header>
+    <header class="site-header">
+        <div class="logo">
+            <a href="/">Tutu the Kiwi</a>
+        </div>
+        <nav class="global-nav">
+            <ul>
+                <li><a href="/" aria-current="page">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="supporters.html">Supporters</a></li>
+                <li><a href="donate.html" class="nav-button">Donate</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <main>
-        <h1>Tutu the Kiwi</h1>
-        <p>Your site content goes here.</p>
+    <main id="main-content">
+
+        <section class="hero">
+            <img src="https://www.yourwebsite.com/images/tutu-hero-image.jpg" 
+                 alt="An illustration of Tutu the Kiwi, with glowing pāua-blue and green feathers, waving hello." 
+                 class="hero-image">
+            
+            <h1>Tutu the Kiwi</h1>
+            <p class="subtitle">Beneath the moonlit canopy of Aotearoa, a story of connection, respect, and wonder begins.</p>
+        </section>
+
+        <section class="cta-section">
+            <h2>Start Your Adventure</h2>
+            <div class="cta-buttons">
+                <a href="books.html" class="cta-button">See the Books</a>
+                <a href="adopt.html" class="cta-button cta-secondary">Adopt a Feather</a>
+                <a href="donate.html" class="cta-button cta-secondary">Donate</a>
+            </div>
+        </section>
+
     </main>
     
-    <footer>
-        </footer>
+    <footer class="site-footer">
+        <nav class="footer-nav">
+            <a href="terms.html">Terms & Privacy</a>
+            <a href="mailto:your-email@example.com">Contact</a>
+        </nav>
+        <p>&copy; 2025 Tutu the Kiwi. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
