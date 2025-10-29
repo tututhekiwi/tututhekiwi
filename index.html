@@ -1,98 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-NZ">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutu the Kiwi</title>
-    
-    <!-- 
-      UPDATED: This now points to your official website logo for the browser tab.
-      Save your new logo as 'tutu-logo.png'
-    -->
-    <link rel="icon" href="tutu-logo.png" type="image/png">
-    
-    <!-- 1. Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- 2. Load the 'Inter' font (a clean, modern font) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
-    
-    <style>
-        /* 3. Apply the 'Inter' font as the default */
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
-</head>
-<body class="bg-gray-50">
 
-    <!-- 
-      HERO SECTION
-      This is the main container for the top "hero" part of your page.
-    -->
-    <main class="min-h-screen flex items-center justify-center py-16 px-4">
-        
-        <!-- 
-          CONTENT WRAPPER
-          This centers the content and makes it split into two columns on large screens.
-        -->
-        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            
-            <!-- 
-              COLUMN 1: TEXT CONTENT
-              This column holds the headline, description, and button.
-            -->
-            <div class="text-center lg:text-left">
-                <h1 class="text-5xl md:text-7xl font-black text-teal-600 drop-shadow-sm">
-                    Meet Tutu!
-                </h1>
-                <p class="mt-4 text-xl md:text-2xl font-medium text-gray-700">
-                    Your friendly guide to all things New Zealand.
-                </p>
-                <p class="mt-6 text-lg text-gray-500">
-                    Join Tutu on an amazing adventure to explore misty mountains, sparkling coastlines, and learn all about the wonders of Aotearoa.
-                </p>
-                
-                <!-- Call-to-Action (CTA) Button -->
-                <a href="#" 
-                   class="mt-10 inline-block bg-orange-500 text-white text-lg font-bold px-10 py-4 rounded-full shadow-lg hover:bg-orange-600 transition-all duration-300 ease-in-out transform hover:scale-105">
-                    Start Your Adventure
-                </a>
-            </div>
-            
-            <!-- 
-              COLUMN 2: IMAGE CONTENT
-              This column holds your kiwi image.
-            -->
-            <div class="flex justify-center">
-                <!-- 
-                  This image path is now set. 
-                  Just save your image as 'tutu-the-kiwi.png' 
-                  in the same folder as this file.
-                -->
-                <img src="tutu-the-kiwi.png" 
-                     alt="Tutu the Kiwi cartoon character" 
-                     class="rounded-3xl shadow-2xl w-full max-w-lg"
-                     onerror="this.src='https://placehold.co/600x600/FDE68A/333?text=Image+not+found\n(Name+it+tutu-the-kiwi.png)';">
-            </div>
+    <title>Tutu the Kiwi — Stories & Adventures</title>
+    
+    <meta property="og:title" content="Tutu the Kiwi — Stories & Adventures" />
+    <meta property="og:description" content="Explore the world of Tutu the Kiwi, full of fun stories and exciting adventures." />
+    <meta property="og:type" content="website" />
 
-        </div>
+    <meta property="og:url" content="https://www.yourwebsite.com/" />
+    
+    <meta property="og:image" content="https://www.yourwebsite.com/images/tutu-hero-image.jpg" />
+    
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tutu the Kiwi — Stories & Adventures" />
+    <meta name="twitter:description" content="Explore the world of Tutu the Kiwi, full of fun stories and exciting adventures." />
+    
+    <meta name="twitter:url" content="https://www.yourwebsite.com/" />
+    
+    <meta name="twitter:image" content="https://www.yourwebsite.com/images/tutu-hero-image.jpg" />
+
+    </head>
+<body>
+
+    <header>
+        </header>
+
+    <main>
+        <h1>Tutu the Kiwi</h1>
+        <p>Your site content goes here.</p>
     </main>
-
-    <!-- 
-      BRAND SIGNATURE (Unchanged)
-      This is your personal brand signature, fixed to the bottom-right corner.
-      File: 'brand-signature.png'
-    -->
-    <div class="fixed bottom-6 right-6 z-50">
-        <img src="brand-signature.png" 
-             alt="Brand Signature" 
-             class="h-16 w-auto opacity-75 hover:opacity-100 transition-opacity duration-300"
-             onerror="this.src='https://placehold.co/100x100/eeeeee/333?text=Signature'; this.style.opacity=1;">
-    </div>
+    
+    <footer>
+        </footer>
 
 </body>
 </html>
-
