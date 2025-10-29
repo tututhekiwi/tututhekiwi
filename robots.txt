@@ -1,4 +1,3 @@
-# Tutu the Kiwi — robots
 User-agent: *
 Allow: /
 
@@ -8,4 +7,3 @@ Disallow: /scripts/
 
 # Sitemap reference
 Sitemap: https://www.tututhekiwi.com/sitemap.xml
-
