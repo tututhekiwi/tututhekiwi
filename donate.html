@@ -1,239 +1,234 @@
 <!DOCTYPE html>
 <html lang="en-NZ">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Stand Alive Independently — Donate</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stand Alive Independently — Donate</title>
 
-  <link rel="canonical" href="https://www.tututhekiwi.com/donate.html" />
-  <meta name="description" content="Donate directly to support Stand Alive Independently — helping Tutu the Kiwi keep creating, inspiring, and staying independent." />
-  <meta name="theme-color" content="#0b3a2e" /> 
+  <link rel="canonical" href="https://www.tututhekiwi.com/donate.html" />
+  <meta name="description" content="Donate directly to support Stand Alive Independently — helping Tutu the Kiwi keep creating, inspiring, and staying independent." />
+  <meta name="theme-color" content="#0b3a2e" /> 
 
-  <meta property="og:title" content="Stand Alive Independently — Donate" />
-  <meta property="og:description" content="Contribute directly via PayPal or NZ bank transfer to help Tutu the Kiwi stay independent." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.tututhekiwi.com/donate.html" />
-  <meta property="og:image" content="https://www.tututhekiwi.com/assets/og/donate-1200x630.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+  <meta property="og:title" content="Stand Alive Independently — Donate" />
+  <meta property="og:description" content="Contribute directly via PayPal or NZ bank transfer to help Tutu the Kiwi stay independent." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.tututhekiwi.com/donate.html" />
+  <meta property="og:image" content="https://www.tututhekiwi.com/assets/og/donate-1200x630.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Stand Alive Independently — Donate" />
-  <meta name="twitter:description" content="Contribute directly via PayPal or NZ bank transfer to help Tutu the Kiwi stay independent." />
-  <meta name="twitter:image" content="https://www.tututhekiwi.com/assets/og/donate-1200x630.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Stand Alive Independently — Donate" />
+s   <meta name="twitter:description" content="Contribute directly via PayPal or NZ bank transfer to help Tutu the Kiwi stay independent." />
+  <meta name="twitter:image" content="https://www.tututhekiwi.com/assets/og/donate-1200x630.jpg" />
 
-  <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
 
-  <style>
-    /* Using site variables but keeping local styles for cards */
-    .hero{
-      background: linear-gradient(135deg,#e0f2fe,#f0f9ff);
-      border-radius:var(--radius);
-      padding:28px;
-      box-shadow:var(--shadow);
-      display:grid;
-      grid-template-columns:1.2fr 1fr;
-      gap:24px;
-      align-items:center;
-      color: var(--ink); /* This will be dark */
-      border-bottom: none;
-    }
-    .hero h2{margin:0 0 8px;font-size:34px;line-height:1.1; color: var(--ink);}
-    .tag{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border-radius:999px;background:#e6fffb;color:#065f46;font-weight:700;font-size:12px;margin-bottom:12px}
-    .hero p{margin:6px 0 0; color: #333;}
-    .hero figure{text-align:center;margin:0}
-    .hero img{max-width:320px;width:100%;height:auto;filter:drop-shadow(0 12px 18px rgba(2,6,23,.18))}
-    
-    .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
-    .card{background:var(--paper, #fff);border-radius:16px;padding:18px;box-shadow:var(--shadow); color: var(--ink);}
-    .card h3{margin:0 0 8px; color: var(--ink);}
-    
-    .amounts{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 14px}
-    .chip{background:#e2e8f0;border-radius:999px;padding:8px 12px;font-weight:700;cursor:pointer;user-select:none; color: var(--ink);}
-    .chip[aria-pressed="true"]{background:#0ea5e9;color:white}
-    .row{display:flex;gap:10px;align-items:center;margin-top:8px}
-    input[type="number"],input[type="text"]{padding:10px 12px;border:1px solid #cbd5e1;border-radius:12px;flex:1; font-family: inherit;}
-    .btn{display:inline-block;text-align:center;padding:12px 14px;border-radius:12px;background:#0e7490;color:white;font-weight:800;border:none;cursor:pointer}
-    .btn.secondary{background:#0f766e}
-    .small{font-size:12px;color:#64748b}
-    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
-    .notice{margin-top:12px;padding:10px;border-radius:12px;background:#f1f5f9; color: var(--ink);}
-    .foot{margin-top:40px;font-size:14px;color:#475569}
-    
-    @media (max-width:980px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}
-  </style>
+  <style>
+    /* Using site variables but keeping local styles for cards */
+    .hero{
+      background: linear-gradient(135deg,#e0f2fe,#f0f9ff);
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:var(--shadow);
+      display:grid;
+      grid-template-columns:1.2fr 1fr;
+      gap:24px;
+      align-items:center;
+      color: var(--ink); /* This will be dark */
+s     border-bottom: none;
+    }
+    .hero h2{margin:0 0 8px;font-size:34px;line-height:1.1; color: var(--ink);}
+    .tag{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border-radius:999px;background:#e6fffb;color:#065f46;font-weight:700;font-size:12px;margin-bottom:12px}
+s   .hero p{margin:6px 0 0; color: #333;}
+    .hero figure{text-align:center;margin:0}
+    .hero img{max-width:320px;width:100%;height:auto;filter:drop-shadow(0 12px 18px rgba(2,6,23,.18))}
+    
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+    .card{background:var(--paper, #fff);border-radius:16px;padding:18px;box-shadow:var(--shadow); color: var(--ink);}
+    .card h3{margin:0 0 8px; color: var(--ink);}
+    
+    .amounts{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 14px}
+s   .chip{background:#e2e8f0;border-radius:999px;padding:8px 12px;font-weight:700;cursor:pointer;user-select:none; color: var(--ink);}
+  .chip[aria-pressed="true"]{background:#0ea5e9;color:white}
+    .row{display:flex;gap:10px;align-items:center;margin-top:8px}
+    input[type="number"],input[type="text"]{padding:10px 12px;border:1px solid #cbd5e1;border-radius:12px;flex:1; font-family: inherit;}
+    .btn{display:inline-block;text-align:center;padding:12px 14px;border-radius:12px;background:#0e7490;color:white;font-weight:800;border:none;cursor:pointer}
+    .btn.secondary{background:#0f766e}
+    .small{font-size:12px;color:#64748b}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
+    .notice{margin-top:12px;padding:10px;border-radius:12px;background:#f1f5f9; color: var(--ink);}
+    .foot{margin-top:40px;font-size:14px;color:#475569}
+    
+    @media (max-width:980px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}
+A </style>
 </head>
 
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header" role="banner">
-    <div class="container header-inner">
-      <a class="brand" href="/" aria-label="Tutu the Kiwi — Home">
-        <img src="/images/logo-tutu.svg" alt="Tutu the Kiwi logo" width="120" height="48" loading="eager" />
-      </a>
-      <nav class="nav" aria-label="Primary">
-        <button class="nav__toggle" aria-expanded="false" aria-controls="navMenu" id="navToggle">
-          <span class="nav__bar" aria-hidden="true"></span>
-          <span class="nav__bar" aria-hidden="true"></span>
-          <span class="nav__bar" aria-hidden="true"></span>
-          <span class="sr-only">Menu</span>
-        </button>
-        <ul id="navMenu" class="nav__list">
-          <li><a href="books.html">Books</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="supporters.html">Supporters</a></li>
-          <li><a href="donate.html" aria-current="page">Donate</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header class="site-header">
+    <a class="brand" href="./">
+      <img class="brand__logo" src="./tutu-logo.png" alt="Tutu the Kiwi logo" width="36" height="36" />
+      <span>Tutu the Kiwi</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <button class="nav__toggle" aria-expanded="false" aria-controls="navmenu">Menu</button>
+      <ul id="navmenu" class="nav__list">
+        <li><a href="./books.html">Books</a></li>
+        <li><a href="./about/">About</a></li>
+        <li><a href="./supporters/">Supporters</a></li>
+        <li><a href="./donate.html" aria-current="page">Donate</a></li>
+        <li><a href="./terms.html">Terms &amp; Privacy</a></li>
+      </ul>
+    </nav>
   </header>
-  <main id="main" class="section">
-    <div class="container">
-      <section class="hero">
-        <div>
-          <span class="tag">Direct support • 100% independent</span>
-          <h2>Stand Alive Independently</h2>
-          <p>Your koha keeps Tutu’s stories alive and independent — no middlemen, just creativity and community.</p>
-          <p class="notice small">You can donate safely through PayPal or by NZ bank transfer. Every dollar helps sustain local storytelling.</p>
-        </div>
-        <figure>
-          <img src="/assets/images/tutu/tutu-master-transparent.png" alt="Tutu the Kiwi waving" />
-        </figure>
-      </section>
+    <main id="main" class="section">
+    <div class="container">
+      <section class="hero">
+        <div>
+          <span class="tag">Direct support • 100% independent</span>
+Remember       <h2>Stand Alive Independently</h2>
+          <p>Your koha keeps Tutu’s stories alive and independent — no middlemen, just creativity and community.</p>
+          <p class="notice small">You can donate safely through PayPal or by NZ bank transfer. Every dollar helps sustain local storytelling.</p>
+        </div>
+        <figure>
+          <img src="/assets/images/tutu/tutu-master-transparent.png" alt="Tutu the Kiwi waving" />
+Note       </figure>
+      </section>
 
-      <section class="grid">
-        <article class="card">
-          <h3>Donate via PayPal (NZD)</h3>
-          <p class="small">Recipient: <span class="mono">tututhekiwi@gmail.com</span></p>
+      <section class="grid">
+        <article class="card">
+          <h3>Donate via PayPal (NZD)</h3>
+          <p class="small">Recipient: <span class="mono">tututhekiwi@gmail.com</span></p>
 
-          <div class="amounts">
-            <button class="chip" data-amt="5" aria-pressed="false">$5</button>
-            <button class="chip" data-amt="10" aria-pressed="false">$10</button>
-            <button class="chip" data-amt="20" aria-pressed="false">$20</button>
-            <button class="chip" data-amt="50" aria-pressed="false">$50</button>
-            <button class="chip" data-amt="100" aria-pressed="false">$100</button>
-          </div>
+          <div class="amounts">
+            <button class="chip" data-amt="5" aria-pressed="false">$5</button>
+Note         <button class="chip" data-amt="10" aria-pressed="false">$10</button>
+            <button class="chip" data-amt="20" aria-pressed="false">$20</button>
+            <button class="chip" data-amt="50" aria-pressed="false">$50</button>
+            <button class="chip" data-amt="100" aria-pressed="false">$100</button>
+Note       </div>
 
-          <div class="row">
-            <label for="amt" class="small">Custom amount (NZD)</label>
-            <input id="amt" type="number" min="1" step="1" placeholder="Enter amount" />
-          </div>
+          <div class="row">
+            <label for="amt" class="small">Custom amount (NZD)</label>
+            <input id="amt" type="number" min="1" step="1" placeholder="Enter amount" />
+          </div>
 
-          <div id="paypal-button-container" style="margin-top:14px;"></div>
+          <div id="paypal-button-container" style="margin-top:14px;"></div>
 
-          <form id="paypal-fallback" action="https://www.paypal.com/donate" method="post" target="_blank" style="margin-top:10px;">
-            <input type="hidden" name="business" value="UWN2RYPENYNFW" />
-            <input type="hidden" name="item_name" value="Stand Alive Independently" />
-            <input type="hidden" name="currency_code" value="NZD" />
-            <input type="hidden" name="amount" id="pp-amt" value="" />
-            <button class="btn" type="submit">Donate with PayPal</button>
-          </form>
+Remember         <form id="paypal-fallback" action="https://www.paypal.com/donate" method="post" target="_blank" style="margin-top:10px;">
+            <input type="hidden" name="business" value="UWN2RYPENYNFW" />
+            <input type="hidden" name="item_name" value="Stand Alive Independently" />
+Note         <input type="hidden" name="currency_code" value="NZD" />
+            <input type="hidden" name="amount" id="pp-amt" value="" />
+Note         <button class="btn" type="submit">Donate with PayPal</button>
+          </form>
 
-          <p class="small notice">If the PayPal button doesn’t load, the fallback Donate button above will open PayPal in a new tab.</p>
-        </article>
+          <p class="small notice">If the PayPal button doesn’t load, the fallback Donate button above will open PayPal in a new tab.</p>
+        </article>
 
-        <article class="card">
-          <h3>Donate via NZ Bank Transfer</h3>
-          <p>Use your banking app:</p>
-          <p class="mono">Account name: Hamaka Murray</p>
-          <p class="mono">Account number: 38-9020-0742096-17</p>
+        <article class="card">
+          <h3>Donate via NZ Bank Transfer</h3>
+          <p>Use your banking app:</p>
+          <p class="mono">Account name: Hamaka Murray</p>
+          <p class="mono">Account number: 38-9020-0742096-17</p>
 
-          <div class="row">
-            <input id="ref" type="text" placeholder="Reference (e.g., SA-Donate or your name)" />
-            <button class="btn secondary" id="copy-bank">Copy details</button>
-          </div>
-          <p class="small notice">We can send a thank-you if you email <a href="mailto:tututhekiwi@gmail.com">tututhekiwi@gmail.com</a>.</p>
-        </article>
-      </section>
+Remember         <div class="row">
+            <input id="ref" type="text" placeholder="Reference (e.g., SA-Donate or your name)" />
+Note         <button class="btn secondary" id="copy-bank">Copy details</button>
+          </div>
+          <p class="small notice">We can send a thank-you if you email <a href="mailto:tututhekiwi@gmail.com">tututhekiwi@gmail.com</a>.</p>
+Note     </article>
+      </section>
 
-      <section class="foot">
-        <p>Ngā mihi nui — your generosity keeps Tutu creating, teaching, and standing independently for Aotearoa storytelling.</p>
-      </section>
-    </div>
-  </main>
+      <section class="foot">
+        <p>Ngā mihi nui — your generosity keeps Tutu creating, teaching, and standing independently for Aotearoa storytelling.</p>
+      </section>
+    </div>
+  </main>
 
-  <footer class="site-footer" role="contentinfo">
-    <div class="container footer__grid">
-      <div class="footer__brand">
-        <img src="/images/Hamaka-Murray-Signature.png" alt="Hamaka Murray signature" width="180" height="60" loading="lazy" />
-        <p class="footnote">© <span id="year"></span> Tutu the Kiwi • Hamilton, Aotearoa</p>
-      </div>
-      <nav class="footer__nav" aria-label="Footer">
-        <ul>
-          <li><a href="books.html">Books</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="terms.html">Terms</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
-        </ul>
-        <ul class="social-links">
-          <li><a href="https://instagram.com/tututhekiwi" aria-label="Instagram">IG</a></li>
-          <li><a href="https://facebook.com/tututhekiwi" aria-label="Facebook">FB</a></li>
-        </ul>
-      </nav>
-    </div>
-  </footer>
-  <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=NZD&intent=donate&merchant-id=UWN2RYPENYNFW"></script>
-  <script src="/app.js" defer></script> <script>
-    const chips = document.querySelectorAll('.chip');
-    const amtInput = document.getElementById('amt');
-    const ppAmt = document.getElementById('pp-amt');
-    const fallbackForm = document.getElementById('paypal-fallback');
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer__grid">
+  S   <div class="footer__brand">
+          <img src="/images/Hamaka-Murray-Signature.png" alt="Hamaka Murray signature" width="180" height="60" loading="lazy" />
+Note         <p class="footnote">© <span id="year"></span> Tutu the Kiwi • Hamilton, Aotearoa</p>
+        </div>
+        <nav class="footer__nav" aria-label="Footer">
+          <ul>
+            <li><a href="books.html">Books</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+          </ul>
+          <ul class="social-links">
+            <li><a href="https://instagram.com/tututhekiwi" aria-label="Instagram">IG</a></li>
+            <li><a href="https://facebook.com/tututhekiwi" aria-label="Facebook">FB</a></li>
+          </ul>
+        </nav>
+      </div>
+  </footer>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=NZD&intent=donate&merchant-id=UWN2RYPENYNFW"></script>
+  <script src="/app.js" defer></script> <script>
+    const chips = document.querySelectorAll('.chip');
+    const amtInput = document.getElementById('amt');
+    const ppAmt = document.getElementById('pp-amt');
+    const fallbackForm = document.getElementById('paypal-fallback');
 
-    function setAmount(v){
-      amtInput.value = v || '';
-      ppAmt.value = v || '';
-      chips.forEach(c => c.setAttribute('aria-pressed', c.dataset.amt === String(v)));
-    }
-    chips.forEach(c => c.addEventListener('click',()=>setAmount(c.dataset.amt)));
-    amtInput.addEventListener('input',()=>ppAmt.value=amtInput.value);
+    function setAmount(v){
+      amtInput.value = v || '';
+      ppAmt.value = v || '';
+      chips.forEach(c => c.setAttribute('aria-pressed', c.dataset.amt === String(v)));
+s   }
+    chips.forEach(c => c.addEventListener('click',()=>setAmount(c.dataset.amt)));
+    amtInput.addEventListener('input',()=>ppAmt.value=amtInput.value);
 
-    // Copy bank info
-    document.getElementById('copy-bank').addEventListener('click',async e=>{
-      e.preventDefault();
-      const ref = document.getElementById('ref').value || 'SA-Donate';
-      const txt = `Account name: Hamaka Murray
+s   // Copy bank info
+    document.getElementById('copy-bank').addEventListener('click',async e=>{
+      e.preventDefault();
+      const ref = document.getElementById('ref').value || 'SA-Donate';
+Methods     const txt = `Account name: Hamaka Murray
 Account number: 38-9020-0742096-17
 Reference: ${ref}`;
-      try{
-        await navigator.clipboard.writeText(txt);
-        e.target.textContent='Copied!';
-        setTimeout(()=>e.target.textContent='Copy details',1800);
-      }catch{alert('Copy failed. Please copy manually.')}
-    });
+      try{
+  all     await navigator.clipboard.writeText(txt);
+        e.target.textContent='Copied!';
+        setTimeout(()=>e.target.textContent='Copy details',1800);
+      }catch{alert('Copy failed. Please copy manually.')}
+    });
 
-    // Render PayPal Smart Buttons (works with Merchant ID)
-    if(window.paypal){
-      paypal.Buttons({
-        style:{layout:'vertical',shape:'rect',label:'donate'},
-        createOrder:(data,actions)=>{
-          const amount = Number(amtInput.value||0);
-          if(!amount){alert('Please enter or select an amount.');return;}
-          return actions.order.create({
-            purchase_units:[{
-              amount:{currency_code:'NZD',value:amount.toFixed(2)},
-              payee:{merchant_id:'UWN2RYPENYNFW'},
-              description:'Stand Alive Independently'
-            }]
-          });
-        },
-        // === FIXED: Redirect on success ===
-        onApprove:(data,actions)=>actions.order.capture().then(()=>{
-          setAmount('');
-          // Redirect to a branded thank you page
-          window.location.href = 'thank-you.html'; 
-        }),
-        onError:(err)=>{
-          console.error(err);
-          alert('PayPal error — opening fallback Donate button.');
-          if(amtInput.value){fallbackForm.submit();}
-        }
-      }).render('#paypal-button-container');
-    }
-  </script>
+    // Render PayPal Smart Buttons (works with Merchant ID)
+    if(window.paypal){
+      paypal.Buttons({
+        style:{layout:'vertical',shape:'rect',label:'donate'},
+        createOrder:(data,actions)=>{
+          const amount = Number(amtInput.value||0);
+          if(!amount){alert('Please enter or select an amount.');return;}
+Methods         return actions.order.create({
+            purchase_units:[{
+              amount:{currency_code:'NZD',value:amount.toFixed(2)},
+              payee:{merchant_id:'UWN2RYPENYNFW'},
+              description:'Stand Alive Independently'
+            }]
+          });
+        },
+        // === FIXED: Redirect on success ===
+        onApprove:(data,actions)=>actions.order.capture().then(()=>{
+          setAmount('');
+          // Redirect to a branded thank you page
+  E.g.,       window.location.href = 'thank-you.html'; 
+        }),
+        onError:(err)=>{
+          console.error(err);
+          alert('PayPal error — opening fallback Donate button.');
+          if(amtInput.value){fallbackForm.submit();}
+        }
+      }).render('#paypal-button-container');
+    }
+Methods </script>
 </body>
 </html>
