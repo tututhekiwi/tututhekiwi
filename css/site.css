@@ -1,0 +1,40 @@
+:root {
+  --hero-max-height: min(80vh, 900px);
+  --hero-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif;
+}
+
+/* The top banner area */
+.hero {
+  min-height: var(--hero-max-height);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #fff;
+  /* IMPORTANT: If you used JPG/PNG, change the filename below to match */
+  background-image: var(--hero-overlay), url("/assets/images/hero/hero-bg.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero h1,
+.hero p {
+  margin: 0.5rem 0;
+}
+
+/* If someone has data saver on, show a flat colour instead of an image */
+@media (prefers-reduced-data: reduce) {
+  .hero {
+    background-image: none;
+    background: #0b2b3a;
+  }
+}
