@@ -1,95 +1,55 @@
-<!DOCTYPE html>
-<html lang="en-NZ">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Tutu the Kiwi — Stories & Adventures</title>
-
-  <meta name="description" content="Explore Tutu’s world: stories, art, and adventures in Aotearoa." />
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@400;600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="/css/global.css" />
-
-    <meta property="og:title" content="Tutu the Kiwi — Stories & Adventures" />
-  <meta property="og:description" content="Explore Tutu’s world: stories, art, and adventures in Aotearoa." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://www.tututhekiwi.com/assets/images/brand/tutu-hero-bg.webp" />
-  <meta property="og:url" content="https://www.tututhekiwi.com/" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-    <link rel="manifest" href="/site.webmanifest" />
-  <link rel="icon" href="/icons/favicon.png" sizes="512x512" type="image/png" />
-  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
-  <meta name="theme-color" content="#0b3d2e" />
-</head>
-
-<body>
-    <a class="skip-link" href="#content">Skip to main content</a>
-
-  <header class="site-header">
-    <a class="brand" href="/">
-            <img class="brand__logo" src="./tutu-logo.png" alt="" width="36" height="36" />
-      <span>Tutu the Kiwi</span>
-    </a>
-    <nav class="nav" aria-label="Primary">
-      <button class="nav__toggle" aria-expanded="false" aria-controls="navmenu">Menu</button>
-      <ul id="navmenu" class="nav__list">
-                <li><a href="/books/">Books</a></li>
-        <li><a href="/about/">About</a></li>
-        <li><a href="/supporters/">Supporters</a></li>
-        <li><a href="/donate/">Donate</a></li>
-        <li><a href="/terms/">Terms &amp; Privacy</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main id="content">
-    <section class="hero" aria-label="Welcome">
-      <div class="hero__inner">
-        <h1 class="hero__title">Kia ora — Nau mai ki te ao o Tutu</h1>
-        <p class="hero__tagline">Playful stories, glowing feathers, and Aotearoa magic.</p>
-        <div class="hero__actions">
-          <a class="btn btn--primary" href="#showcase">Explore</a>
-          <a class="btn btn--ghost" href="#support">Support</a>
-        </div>
-      </div>
-          </section>
-
-    <section id="showcase" class="section">
-      <h2 class="section__title">Showcase</h2>
-      <p>Featured art and stories coming soon.</p>
-    </section>
-
-    <section id="seasonal" class="section">
-      <h2 class="section__title">Seasonal</h2>
-      <p>Halloween, Guy Fawkes, and festive magic.</p>
-    </section>
-
-    <section id="support" class="section">
-      <h2 class="section__title">Support Tutu</h2>
-      <p>Help Tutu’s adventures continue — donations and feathers wall coming soon.</p>
-a   </section>
-
-    <section id="about" class="section">
-      <h2 class="section__title">About</h2>
-      <p>Ko Tutu te Kiwi — a playful guide through the stories of Aotearoa.</p>
-    </section>
-
-    <section id="contact" class="section">
-      <h2 class="section__title">Contact</h2>
-      <p>Get in touch for collaborations and support.</p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>© <span id="year"></span> Tutu the Kiwi — All rights reserved.</p>
-  </footer>
-
-  <script>
-    // Sets the copyright year automatically
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+{
+  "name": "Tutu the Kiwi — Books & Adventures",
+  "short_name": "Tutu",
+  "lang": "en",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0b3d2e",
+  "description": "Stories, art, and adventures with Tutu the Kiwi from Aotearoa.",
+  "icons": [
+    {
+      "src": "/icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["books", "education", "kids", "entertainment"],
+  "shortcuts": [
+    {
+      "name": "About Tutu",
+      "short_name": "About",
+      "url": "/about/"
+    },
+    {
+      "name": "Books",
+      "short_name": "Books",
+      "url": "/books/"
+    },
+    {
+      "name": "Merch",
+      "short_name": "Merch",
+      "url": "/merch/"
+    }
+  ]
+}
